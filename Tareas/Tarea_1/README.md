@@ -74,9 +74,40 @@ Estas variables globales son útiles si se tiene que usar una misma variable en 
 
 Su principal diferencia radica en que, el bucle do-while, realizá el ciclo dentro de el, al menos una vez, ya que sus condiciones están escritas al final, mientras que el while primero revisara sus condiciones para funcionar, y si no se cumple no realizá ningún ciclo.
 
-11. 
+11. ¿Es permitido almacenar funciones en una estructura en C++? En el caso de los datos, ¿se pueden encapsular en miembros privados y públicos dentro de una estructura? Explique su respuesta.
 
+C++ si permite el incluir funciones dentro las estructuras, con estas funciones se permite manipular los datos que se encuentran dentro de la misma estructura.
 
+Sí, en una misma estructura se pueden almacenar tanto datos privados como publicos, estos se definen dentro de la estructura con las palabras clave "private" y "public", los datos privados pueden ser utilizados únicamente por datos pertencientes a la misma estrucutra.
 
+12. Explique por qué es útil y común dividir el código en archivos .hpp, .cpp y main.cpp en C++. Describa el propósito específico de cada tipo de archivo.
 
+Dividir un código en estos tres archivos es útil porque permite realizar un código más ordenado y legible, además de permitir realizar un código que sea reutilizable, al tener funciones que pueden ser útiles en otros proyectos separadas de un código main, además permite que sea más sencilla la división de trabajo en equipos cuando se quiere asignar a diferentes personas tareas específicas. 
 
+Los archivos de encabezado .hpp contiene las declaraciones de funciones, variables, además de otros objetos que serán utilizados en el programa. Este archivo es utilizado por los otros dos, llamándolo con la directiva #include y colocando el nombre del archivo entre comillas dobles.
+
+Por otra parte, el archivo .cpp incluye las definiciones de las funciones declaradas en el archivo .hpp, luego estás funciones a través del uso del archivo de encabezado .hpp, llegarán al archivo principal main.cpp.
+
+Finalmente, el main.cpp utilizará los otros dos archivos, llamando a las funciones del .cpp por medio del .hpp y de esta manera llevará a cabo la tarea que se desea ejecutar.
+
+13. Defina qué es el Type Casting en C++ y explique su utilidad. Proporcione ejemplos de situaciones en las que se emplea el Type Casting y cómo se realiza.
+
+El Type Casting consiste en realizar una conversión de un tipo de dato a otro, esto puede ser útil cuando se requiere que una variable pueda almacenar más información porque alcanzó el límite que posee antes de la conversión. El type casting puede ser utilizado cuando se busca pasar de una variable de tipo entera a una de tipo double y se puede realizar de una manera implicita o explicita, la manera implícita se da cuando, por ejemplo, se iguala una variable de tipo double a una tipo int, en este caso el valor de la variable de tipo int, se guardara en la variable de tipo double como un double. Por otra parte, en la manera explicita, si se iguala una variable de tipo int, a una double al valor double se le indica que pasara a ser una variable de tipo int, esto se puede hacer de dos maneras como se muestra a continuación:
+
+```
+//Casting explicito
+//Se inicializa variable tipo double
+double num_double = 3.56
+
+//Forma 1
+int num_int1 = (int)num_double;
+
+//Forma 2
+int num_int2 = int(num_double);
+```
+
+14.  ¿Por qué la sentencia goto no es recomendable en programación moderna? Mencione ejemplos de cómo se pueden lograr los mismos resultados sin el uso de goto.
+
+Esta sentencia no es recomendable porque provoca un salto a la sección que se desea del código, pero esto puede llevar a provocar que la lógica del programa se vuelva más compleja, llevando a que haya más posibilidades de error en la ejecución del programa. En lugar de unas la sentencia goto, es recomdable hacer uso de los comandos break y continue en los programas.
+
+15. 
