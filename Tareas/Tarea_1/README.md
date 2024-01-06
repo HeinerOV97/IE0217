@@ -110,4 +110,7 @@ int num_int2 = int(num_double);
 
 Esta sentencia no es recomendable porque provoca un salto a la sección que se desea del código, pero esto puede llevar a provocar que la lógica del programa se vuelva más compleja, llevando a que haya más posibilidades de error en la ejecución del programa. En lugar de unas la sentencia goto, es recomdable hacer uso de los comandos break y continue en los programas.
 
-15. 
+15. ¿Dónde y cómo se guardan las variables que se crean en C++? Explique la diferencia entre el almacenamiento de variables locales y globales
+
+Las variables de un código en C++ llegan a guardarse en diferentes secciones de la memoria del computador, esto depende del tipo de variable con la que se este trabajando, por ejemplo, las varias locales se guardan en la pila, en esta sección se guardan las variables que son enviadas como argumentos a funciones y diferentes procedimientos dentro del programa. Por otra parte, las variables globales, se guardan en el segmento de datos, en esta sección se guardan grupos de información, esta sección de memoria se mantiene estática durante de la ejecución del programa, esto quiere decir que su tamaño no varía.
+
