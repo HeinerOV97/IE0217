@@ -21,7 +21,7 @@ Por otra parte, el lenguaje de programación interpretado es más conveniente de
 
 3. Explique qué es un linker en el contexto de un lenguaje de programación compilado. ¿Cuál es su función principal y por qué es esencial en el proceso de compilación?
 
-El linker se encarga de resolver las referencias y enlazar los diferentes archivos de un código objeto (es un archivo binario que contiene código fuente ya compilado en código máquina, pero que no está enlazado) que fueron creados en la compilación del código fuente, de esta manera se crea finalmente un ejecutable. El linker también es encargado de gestionar la memoria que va a ser utilizada por el programa que se va a ejecutar. 
+El linker se encarga de resolver las referencias y enlazar los diferentes archivos de un código objeto (es un archivo binario que contiene código fuente ya compilado en código máquina, pero que no está enlazado) que fueron creados en la compilación del código fuente, de esta manera se crea finalmente un ejecutable. El linker también es encargado de gestionar la memoria que va a ser utilizada por el programa que se va a ejecutar. [1]
 El linker es una herramienta indispensable, ya que permite la creación de programas complejos partiendo de diferentes módulos y bibliotecas de código.
 
 4. Describa las diferencias clave entre los tipos de datos derivados y primarios en C++.
@@ -66,6 +66,8 @@ Estas variables globales son útiles si se tiene que usar una misma variable en 
 
 9. Investigue y explique tres métodos comunes de la biblioteca string en C++
 
+Se muestran 3 métodos comúnes de la biblioteca string [2]:
+
 - El método append agrega caracteres adicionales a una cadena al final.
 - El método assing reemplaza el string ya almacenado en una variable, por otro que se le indique.
 - El método string declara una variable para que sea de tipo string.
@@ -78,7 +80,7 @@ Su principal diferencia radica en que, el bucle do-while, realizá el ciclo dent
 
 C++ si permite el incluir funciones dentro las estructuras, con estas funciones se permite manipular los datos que se encuentran dentro de la misma estructura.
 
-Sí, en una misma estructura se pueden almacenar tanto datos privados como publicos, estos se definen dentro de la estructura con las palabras clave "private" y "public", los datos privados pueden ser utilizados únicamente por datos pertencientes a la misma estrucutra.
+Sí, en una misma estructura se pueden almacenar tanto datos privados como publicos, estos se definen dentro de la estructura con las palabras clave "private" y "public", los datos privados pueden ser utilizados únicamente por datos pertencientes a la misma estrucutra. [3]
 
 12. Explique por qué es útil y común dividir el código en archivos .hpp, .cpp y main.cpp en C++. Describa el propósito específico de cada tipo de archivo.
 
@@ -112,7 +114,7 @@ Esta sentencia no es recomendable porque provoca un salto a la sección que se d
 
 15. ¿Dónde y cómo se guardan las variables que se crean en C++? Explique la diferencia entre el almacenamiento de variables locales y globales
 
-Las variables de un código en C++ llegan a guardarse en diferentes secciones de la memoria del computador, esto depende del tipo de variable con la que se este trabajando, por ejemplo, las varias locales se guardan en la pila, en esta sección se guardan las variables que son enviadas como argumentos a funciones y diferentes procedimientos dentro del programa. Por otra parte, las variables globales, se guardan en el segmento de datos, en esta sección se guardan grupos de información, esta sección de memoria se mantiene estática durante de la ejecución del programa, esto quiere decir que su tamaño no varía.
+Las variables de un código en C++ llegan a guardarse en diferentes secciones de la memoria del computador, esto depende del tipo de variable con la que se este trabajando, por ejemplo, las varias locales se guardan en la pila, en esta sección se guardan las variables que son enviadas como argumentos a funciones y diferentes procedimientos dentro del programa. Por otra parte, las variables globales, se guardan en el segmento de datos, en esta sección se guardan grupos de información, esta sección de memoria se mantiene estática durante de la ejecución del programa, esto quiere decir que su tamaño no varía. [4]
 
 16. ¿Cuál es la diferencia entre pasar parámetros por valor, por referencia y por puntero?
 
@@ -138,17 +140,17 @@ Verifica si el archivo .hpp ya fue definido por medio de un identificador, y si 
 
 21. ¿Qué es el puntero this en C++?
 
-Durante el proceso de compilación del programa, el compilador por defecto agrega un puntero implícito oculto en las funciones miembro de la clase. Cuando la función miembro es llamada por un objeto de la clase, este objeto se proporciona como un argumento oculto para el puntero this. Esto quiere decir que, el puntero this le permite a la función miembro saber que objeto de la clase la está llamando.
+Durante el proceso de compilación del programa, el compilador por defecto agrega un puntero implícito oculto en las funciones miembro de la clase. Cuando la función miembro es llamada por un objeto de la clase, este objeto se proporciona como un argumento oculto para el puntero this. Esto quiere decir que, el puntero this le permite a la función miembro saber que objeto de la clase la está llamando. [5]
 
 22. ¿Qué es un puntero nullptr?
 
-Un punterlo nullptr representa un valor de puntero nulo. Este indica que el puntero no está apuntando hacía ningún objeto en el código.
+Un punterlo nullptr representa un valor de puntero nulo. Este indica que el puntero no está apuntando hacía ningún objeto en el código. [6]
 
 23. ¿Cuál es la diferencia entre un arreglo y una lista en C++?
 
 Por un lado los arreglos poseen un conjunto de datos que están almacenados en una secuencia contigua en la memoria, además de tener un tamaño fijo, que se determina al momento de la compilación.
 
-Por otra parte, las listas almacenan un conjunto de datos que están almacenas en nodos y cada uno de estos nodos poseen una referencia al elemento que sigue en la lista, esto provoca que los elementos de las listas sean más accesibles para manejarlos, a diferencia de los arreglos, las listas poseen un tamaño que puede variar.
+Por otra parte, las listas almacenan un conjunto de datos que están almacenas en nodos y cada uno de estos nodos poseen una referencia al elemento que sigue en la lista, esto provoca que los elementos de las listas sean más accesibles para manejarlos, a diferencia de los arreglos, las listas poseen un tamaño que puede variar. [7]
 
 24. ¿Qué es una función prototipo?
 
@@ -156,4 +158,8 @@ Una función prototipo es aquella donde solo se realiza la declaración de una f
 
 25. ¿Investigue qué es un memory leak?
 
-Un memory leak ocurre cuando un programa no libera bloques de memoria que no necesita, creando una acumulación de memoria sin utilizar. Esto sucede comúnmente cuando un objeto acumula referencias adicionales, pero al momento de dejar de utilizarlas no se liberan y aunque no se utilizan el espacio de memoria sigue ocupado.
+Un memory leak ocurre cuando un programa no libera bloques de memoria que no necesita, creando una acumulación de memoria sin utilizar. Esto sucede comúnmente cuando un objeto acumula referencias adicionales, pero al momento de dejar de utilizarlas no se liberan y aunque no se utilizan el espacio de memoria sigue ocupado. [8]
+
+Referencias bibliográficas
+
+[1] ALEGSA. (s.f). Definición de Linker (informática). [Online]. Obtenido de https://www.alegsa.com.ar/Dic/linker.php#h4&gsc.tab=0
