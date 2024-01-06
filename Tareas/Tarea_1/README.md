@@ -128,8 +128,32 @@ Para acceder a los elementos de un array por medio de un puntero se puede ver de
 Los punteros dobles se utilizan cuando se crea un puntero que almacene la dirección de memoria en la que está almacenada otro puntero que almacena la dirección de una variable.
 El uso de estos punteros dobles puede ser útil cuando se trabaja con memorias dinámicas, ya que en este caso se puede necesitar un mejor manejo de los elementos que están guardados en memoria. En el caso de necesitarse asignar o liberar memoria, por ejemplo.
 
+19. ¿Cuál es la diferencia entre un break y un continue en los bucles de C++?
 
+En este caso la sentencia break termina el bucle, la concluye aunquee falten ciclos por realizar. Por otra parte, la sentencia continue provoca que el código salte a la siguiente iteración.
 
+20. ¿Para qué se utiliza la directiva #ifndef?
 
+Verifica si el archivo .hpp ya fue definido por medio de un identificador, y si no es así, lo define, esto se realiza en casos donde el archivo de encabezado va a ser utilizado por más de un archivo .cpp, esto permite un programa más rápido y eficiente, ya que el encabezado sería inicializado por el primer archivo .cpp que lo necesite, y el segundo archivo no tendría la necesidad de inicializarlo porque ya el primer .cpp lo hizo, ahorrando también espacio en la memoria en este caso.
 
+21. ¿Qué es el puntero this en C++?
 
+Durante el proceso de compilación del programa, el compilador por defecto agrega un puntero implícito oculto en las funciones miembro de la clase. Cuando la función miembro es llamada por un objeto de la clase, este objeto se proporciona como un argumento oculto para el puntero this. Esto quiere decir que, el puntero this le permite a la función miembro saber que objeto de la clase la está llamando.
+
+22. ¿Qué es un puntero nullptr?
+
+Un punterlo nullptr representa un valor de puntero nulo. Este indica que el puntero no está apuntando hacía ningún objeto en el código.
+
+23. ¿Cuál es la diferencia entre un arreglo y una lista en C++?
+
+Por un lado los arreglos poseen un conjunto de datos que están almacenados en una secuencia contigua en la memoria, además de tener un tamaño fijo, que se determina al momento de la compilación.
+
+Por otra parte, las listas almacenan un conjunto de datos que están almacenas en nodos y cada uno de estos nodos poseen una referencia al elemento que sigue en la lista, esto provoca que los elementos de las listas sean más accesibles para manejarlos, a diferencia de los arreglos, las listas poseen un tamaño que puede variar.
+
+24. ¿Qué es una función prototipo?
+
+Una función prototipo es aquella donde solo se realiza la declaración de una función, especificando, el tipo de datos que recibe, que devuelve, así como el nombre de la función, esta función prototipo es la que se coloca en los archivos .hpp que declaran las funciones que serán utilizadas.
+
+25. ¿Investigue qué es un memory leak?
+
+Un memory leak ocurre cuando un programa no libera bloques de memoria que no necesita, creando una acumulación de memoria sin utilizar. Esto sucede comúnmente cuando un objeto acumula referencias adicionales, pero al momento de dejar de utilizarlas no se liberan y aunque no se utilizan el espacio de memoria sigue ocupado.
