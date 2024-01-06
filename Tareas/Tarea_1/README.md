@@ -114,3 +114,22 @@ Esta sentencia no es recomendable porque provoca un salto a la sección que se d
 
 Las variables de un código en C++ llegan a guardarse en diferentes secciones de la memoria del computador, esto depende del tipo de variable con la que se este trabajando, por ejemplo, las varias locales se guardan en la pila, en esta sección se guardan las variables que son enviadas como argumentos a funciones y diferentes procedimientos dentro del programa. Por otra parte, las variables globales, se guardan en el segmento de datos, en esta sección se guardan grupos de información, esta sección de memoria se mantiene estática durante de la ejecución del programa, esto quiere decir que su tamaño no varía.
 
+16. ¿Cuál es la diferencia entre pasar parámetros por valor, por referencia y por puntero?
+
+En este caso, el valor indica el valor que posee la variable, la referencia indica la dirección de memoria donde se encuentra la variable y el puntero tiene almacenada como tal la dirección de memoria de la variable, esto quiere decir que si por ejemplo, la variable es enviada como parámetro, pasará lo siguiente, si se envía el valor, quien reciba el parámetro tiene la opción de modificar la variable, si lo que recibe es la referencia, solo tendrá acceso a la dirección en memoria de la variable y si finalmente lo que recibe es el puntero, tendrá acceso a la dirección que tiene el puntero almacenada y si se utiliza una de-referencia, también tendrá acceso al valor que está almacenado en la dirección de memoria.
+
+17. Cuando se usa un puntero para apuntar a un arreglo en C++, ¿a qué valor o dirección apunta inicialmente? Describa cómo sería la forma de acceder a todos los datos de ese arreglo mediante el puntero.
+
+Inicialmente el puntero apuntará a la dirección donde está almacenado el primer elemento del arreglo.  
+Para acceder a los elementos de un array por medio de un puntero se puede ver de la siguiente manera, para almacenar las direcciones de un array en un puntero se realiza de la siguiente manera, ptr = arr, suponiendo que las variables ya fueron declaradas como un puntero y un array respectivamente, no es necesario el símbolo "&", ahora, inicialmente el puntero señaralá a la primera posición del array es decir, ptr señalará la dirección en memoria de arr[0] es decir ptr = &arr[0], si a este ptr se le suma 1, es decir ptr + 1, señalará la dirección en memoria de arr[1], es decir ptr + 1 = &arr[1] y así sucesivamente. Indiferente del tipo de dato sobre el que se trabaja, el compilador entenderá y siempre realizará el procedimiento de la misma manera.
+
+18. Explique para qué son empleados los punteros dobles en C++. Proporcione ejemplos de situaciones en las que los punteros dobles son necesarios o beneficiosos.
+
+Los punteros dobles se utilizan cuando se crea un puntero que almacene la dirección de memoria en la que está almacenada otro puntero que almacena la dirección de una variable.
+El uso de estos punteros dobles puede ser útil cuando se trabaja con memorias dinámicas, ya que en este caso se puede necesitar un mejor manejo de los elementos que están guardados en memoria. En el caso de necesitarse asignar o liberar memoria, por ejemplo.
+
+
+
+
+
+
