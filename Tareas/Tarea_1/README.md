@@ -114,7 +114,7 @@ Esta sentencia no es recomendable porque provoca un salto a la sección que se d
 
 15. ¿Dónde y cómo se guardan las variables que se crean en C++? Explique la diferencia entre el almacenamiento de variables locales y globales
 
-Las variables de un código en C++ llegan a guardarse en diferentes secciones de la memoria del computador, esto depende del tipo de variable con la que se este trabajando, por ejemplo, las varias locales se guardan en la pila, en esta sección se guardan las variables que son enviadas como argumentos a funciones y diferentes procedimientos dentro del programa. Por otra parte, las variables globales, se guardan en el segmento de datos, en esta sección se guardan grupos de información, esta sección de memoria se mantiene estática durante de la ejecución del programa, esto quiere decir que su tamaño no varía. [4]
+Las variables de un código en C++ llegan a guardarse en diferentes secciones de la memoria del computador, esto depende del tipo de variable con la que se este trabajando, por ejemplo, las varias locales se guardan en la pila, en esta sección se guardan las variables que son enviadas como argumentos a funciones y diferentes procedimientos dentro del programa. Por otra parte, las variables globales, se guardan en el segmento de datos si no son constantes, en esta sección se guardan grupos de información, esta sección de memoria se mantiene estática durante de la ejecución del programa, esto quiere decir que su tamaño no varía, por otra parte, si las variables globales son estáticas se almacenan en el segmento de código, en esta sección de memoria son almacenados los códigos de instrucciones y su tamaño no varía. [4][5]
 
 16. ¿Cuál es la diferencia entre pasar parámetros por valor, por referencia y por puntero?
 
@@ -140,17 +140,17 @@ Verifica si el archivo .hpp ya fue definido por medio de un identificador, y si 
 
 21. ¿Qué es el puntero this en C++?
 
-Durante el proceso de compilación del programa, el compilador por defecto agrega un puntero implícito oculto en las funciones miembro de la clase. Cuando la función miembro es llamada por un objeto de la clase, este objeto se proporciona como un argumento oculto para el puntero this. Esto quiere decir que, el puntero this le permite a la función miembro saber que objeto de la clase la está llamando. [5]
+Durante el proceso de compilación del programa, el compilador por defecto agrega un puntero implícito oculto en las funciones miembro de la clase. Cuando la función miembro es llamada por un objeto de la clase, este objeto se proporciona como un argumento oculto para el puntero this. Esto quiere decir que, el puntero this le permite a la función miembro saber que objeto de la clase la está llamando. [6]
 
 22. ¿Qué es un puntero nullptr?
 
-Un punterlo nullptr representa un valor de puntero nulo. Este indica que el puntero no está apuntando hacía ningún objeto en el código. [6]
+Un punterlo nullptr representa un valor de puntero nulo. Este indica que el puntero no está apuntando hacía ningún objeto en el código. [7]
 
 23. ¿Cuál es la diferencia entre un arreglo y una lista en C++?
 
 Por un lado los arreglos poseen un conjunto de datos que están almacenados en una secuencia contigua en la memoria, además de tener un tamaño fijo, que se determina al momento de la compilación.
 
-Por otra parte, las listas almacenan un conjunto de datos que están almacenas en nodos y cada uno de estos nodos poseen una referencia al elemento que sigue en la lista, esto provoca que los elementos de las listas sean más accesibles para manejarlos, a diferencia de los arreglos, las listas poseen un tamaño que puede variar. [7]
+Por otra parte, las listas almacenan un conjunto de datos que están almacenas en nodos y cada uno de estos nodos poseen una referencia al elemento que sigue en la lista, esto provoca que los elementos de las listas sean más accesibles para manejarlos, a diferencia de los arreglos, las listas poseen un tamaño que puede variar. [8]
 
 24. ¿Qué es una función prototipo?
 
@@ -158,8 +158,16 @@ Una función prototipo es aquella donde solo se realiza la declaración de una f
 
 25. ¿Investigue qué es un memory leak?
 
-Un memory leak ocurre cuando un programa no libera bloques de memoria que no necesita, creando una acumulación de memoria sin utilizar. Esto sucede comúnmente cuando un objeto acumula referencias adicionales, pero al momento de dejar de utilizarlas no se liberan y aunque no se utilizan el espacio de memoria sigue ocupado. [8]
+Un memory leak ocurre cuando un programa no libera bloques de memoria que no necesita, creando una acumulación de memoria sin utilizar. Esto sucede comúnmente cuando un objeto acumula referencias adicionales, pero al momento de dejar de utilizarlas no se liberan y aunque no se utilizan el espacio de memoria sigue ocupado. [9]
 
 Referencias bibliográficas
 
-[1] ALEGSA. (s.f). Definición de Linker (informática). [Online]. Obtenido de https://www.alegsa.com.ar/Dic/linker.php#h4&gsc.tab=0
+[1] ALEGSA. (s.f). Definición de Linker (informática). [Online]. Obtenido de https://www.alegsa.com.ar/Dic/linker.php#h4&gsc.tab=0. [Accedido Jan. 6, 2024].
+[2] cplusplus (s.f). std::string. [Online]. Obtenido de https://cplusplus.com/reference/string/string/. [Accedido Jan. 6, 2024].
+[3] Universidad Dos Bosco (s.f). Datos compuestos (struct). [Online]. Obtenido de https://www.udb.edu.sv/udb_files/recursos_guias/informatica-tecnologico/programacion-de-algoritmos/2020/i/guia-11.pdf#:~:text=C%2B%2B%2C%20permite%20incluir%20funciones%20en%20el%20interior%20de,muy%20relacionado%20con%20la%20programaci%C3%B3n%20orientada%20a%20objetos. [Accedido Jan. 6, 2024].
+[4] stackoverflow (s.f). Are global variables in C++ stored on the stack, heap or neither of them?. [Online]. Obtenido de https://stackoverflow.com/questions/44359953/are-global-variables-in-c-stored-on-the-stack-heap-or-neither-of-them. [Accedido Jan. 6, 2024].
+[5] Edu.Lat (s.f). Ensamblaje: segmentos de memoria. [Online]. Obtenido de https://tutoriales.edu.lat/pub/assembly-programming/assembly-memory-segments/ensamblaje-segmentos-de-memoria. [Accedido Jan. 6, 2024].
+[6] DelftStack (s.f). Usa el puntero this en C++. [Online]. Obtenido de https://www.delftstack.com/es/howto/cpp/this-operator-in-cpp/#:~:text=El%20puntero%20this%20es%20simplemente%20un%20puntero%20impl%C3%ADcitamente,definici%C3%B3n%2C%20veamos%20algunos%20fundamentos%20para%20entender%20el%20concepto. [Accedido Jan. 6, 2024].
+[7] Microsoft (2023, Jun 6). nullptr (C++/CLI y C++/CX). [Online]. Obtenido de https://learn.microsoft.com/es-es/cpp/extensions/nullptr-cpp-component-extensions?view=msvc-170
+[8] code genius (s.f). Array vs Lista en C++: Descubre cuál es tu mejor opción de programación. [Online]. Obtenido de https://codegenius.website/array-vs-lista-en-c-descubre-cual-es-tu-mejor-opcion-de-programacion/. [Accedido Jan. 6, 2024].
+[9] Keepcoding (s.f). ¿Qué es una memory leak y cómo evitarla?. [Online]. Obtenido de https://keepcoding.io/blog/que-es-un-memory-leak-y-como-evitarlo/. [Accedido Jan. 6, 2024].
