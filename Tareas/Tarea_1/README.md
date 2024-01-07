@@ -163,11 +163,19 @@ Un memory leak ocurre cuando un programa no libera bloques de memoria que no nec
 Referencias bibliográficas
 
 [1] ALEGSA. (s.f). Definición de Linker (informática). [Online]. Obtenido de https://www.alegsa.com.ar/Dic/linker.php#h4&gsc.tab=0. [Accedido Jan. 6, 2024].
+
 [2] cplusplus (s.f). std::string. [Online]. Obtenido de https://cplusplus.com/reference/string/string/. [Accedido Jan. 6, 2024].
+
 [3] Universidad Dos Bosco (s.f). Datos compuestos (struct). [Online]. Obtenido de https://www.udb.edu.sv/udb_files/recursos_guias/informatica-tecnologico/programacion-de-algoritmos/2020/i/guia-11.pdf#:~:text=C%2B%2B%2C%20permite%20incluir%20funciones%20en%20el%20interior%20de,muy%20relacionado%20con%20la%20programaci%C3%B3n%20orientada%20a%20objetos. [Accedido Jan. 6, 2024].
+
 [4] stackoverflow (s.f). Are global variables in C++ stored on the stack, heap or neither of them?. [Online]. Obtenido de https://stackoverflow.com/questions/44359953/are-global-variables-in-c-stored-on-the-stack-heap-or-neither-of-them. [Accedido Jan. 6, 2024].
+
 [5] Edu.Lat (s.f). Ensamblaje: segmentos de memoria. [Online]. Obtenido de https://tutoriales.edu.lat/pub/assembly-programming/assembly-memory-segments/ensamblaje-segmentos-de-memoria. [Accedido Jan. 6, 2024].
+
 [6] DelftStack (s.f). Usa el puntero this en C++. [Online]. Obtenido de https://www.delftstack.com/es/howto/cpp/this-operator-in-cpp/#:~:text=El%20puntero%20this%20es%20simplemente%20un%20puntero%20impl%C3%ADcitamente,definici%C3%B3n%2C%20veamos%20algunos%20fundamentos%20para%20entender%20el%20concepto. [Accedido Jan. 6, 2024].
-[7] Microsoft (2023, Jun 6). nullptr (C++/CLI y C++/CX). [Online]. Obtenido de https://learn.microsoft.com/es-es/cpp/extensions/nullptr-cpp-component-extensions?view=msvc-170
+
+[7] Microsoft (2023, Jun 6). nullptr (C++/CLI y C++/CX). [Online]. Obtenido de https://learn.microsoft.com/es-es/cpp/extensions/nullptr-cpp-component-extensions?view=msvc-170. [Accedido Jan. 6, 2024].
+
 [8] code genius (s.f). Array vs Lista en C++: Descubre cuál es tu mejor opción de programación. [Online]. Obtenido de https://codegenius.website/array-vs-lista-en-c-descubre-cual-es-tu-mejor-opcion-de-programacion/. [Accedido Jan. 6, 2024].
+
 [9] Keepcoding (s.f). ¿Qué es una memory leak y cómo evitarla?. [Online]. Obtenido de https://keepcoding.io/blog/que-es-un-memory-leak-y-como-evitarlo/. [Accedido Jan. 6, 2024].
