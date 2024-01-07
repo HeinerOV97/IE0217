@@ -22,10 +22,10 @@ void elegirOpcion(){
 
     switch (opcion){
         case 1: //Definir intervalo del juego
-        
+            definirIntervalo();
             break;
         case 2: //Definir la dificultad del juego
-            
+            //definirDificultad();
             break;
         case 3: //Se inicia el juego
             
@@ -36,4 +36,31 @@ void elegirOpcion(){
         default:
             std::cout << "Opcion no valida. Intente de nuevo...\n";
     }
+}
+
+void definirIntervalo(){
+    
+    int gPrimerValor, gSegValor, valorParaAdvinar, numRandom;
+    
+    std::cout << "Defina el primer valor del intervalo" << std::endl;
+    std::cin >> gPrimerValor;
+
+    std::cout << "Defina el primer valor del intervalo" << std::endl;
+    std::cin >> gSegValor;
+
+    std::cout << gPrimerValor << " " << gSegValor << std::endl;
+
+    if(gPrimerValor > gSegValor){
+        int cambioPos = gPrimerValor;
+        gPrimerValor = gSegValor;
+        gSegValor = cambioPos;
+        std::cout << gPrimerValor << gSegValor << std::endl;
+    }
+
+    numRandom = (rand() % (gSegValor - gPrimerValor + 1)) + gPrimerValor;
+    
+    gNumRandom = numRandom;
+
+    gNumIntentos = (gSegValor - gPrimerValor) / 3;
+
 }
