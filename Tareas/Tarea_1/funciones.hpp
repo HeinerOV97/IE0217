@@ -6,7 +6,7 @@
 
 void mostrarMenu();
 void elegirOpcion();
-
+void definirIntervalo();
 
 
 #endif
