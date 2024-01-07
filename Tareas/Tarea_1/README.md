@@ -160,6 +160,44 @@ Una función prototipo es aquella donde solo se realiza la declaración de una f
 
 Un memory leak ocurre cuando un programa no libera bloques de memoria que no necesita, creando una acumulación de memoria sin utilizar. Esto sucede comúnmente cuando un objeto acumula referencias adicionales, pero al momento de dejar de utilizarlas no se liberan y aunque no se utilizan el espacio de memoria sigue ocupado. [9]
 
+## Parte #2
+
+1. ¿Qué suelen contener las variables CC, CFLAGS, CXXFLAGS y LDFLAGS en un makefile?
+
+Se muestran algunas de las variables comúnmente utilizadas en un makefile y su utilidad [10]:
+
+- CC: Esta variable se utiliza para almacenar el compilador de C.
+- CFLAGS: Esta variable almacena las opciones de compilación en C.
+- CXXFLAGS: Esta variable almacena las opciones de compilación en C++.
+- LDFLAGS: Se utiliza para pasar indicaciones al linker.
+
+2. ¿De qué se compone una regla en un Makefile? 
+
+Una regla en un Makefile se compone de tres partes: el target, la lista de dependencias y comandos para construir el objetivo.
+
+3. Defina qué es un target y cómo se relaciona con sus prerequisitos.
+
+Un target es el resultado que se espera tener al ejecutar el Makefile, en este caso un target podría ser la compilación de un programa o limpiar archivos que fueron generados previamente. Los targets son las reglas definidas en un Makefile. 
+El target está relacionado con las dependencias y los comandos, ya que necesita de estos para construirse. Por ejemplo, las dependencias son elementos o archivos que se necesitan para construir al target, si una dependencia sufre un cambio, Make se encarga de reconstruir el target. Por otra parte, los comandos son instrucciones que sigue el Make para crear el target a partir de sus dependencias.
+
+4. ¿Para qué se utiliza la bandera -I, -c y -o del compilador gcc?
+
+- -I: Se utiliza para indicar directorios adicionales, donde están ubicados archivos de encabezado que serán utilizados. [11]
+- -c: Se utiliza para especificar el archivo fuente.
+- -o: Se utiliza para especificar el archivo ejecutable.
+
+5. ¿Cómo se definen y se utilizan las variables en un Makefile? ¿Qué utilidad tienen?
+
+Las variables se definen indicando su nombre seguido por un =, := ó ::=. Estas variables almacenan valores que serán utilizados en diferentes secciones del archivo. Son utilizados para que la modificación y personalización del Makefile sea más sencilla, sin tener que cambiar el valor necesitado en cada punto del archivo si se realiza alguna modificación [12].
+
+6. ¿Qué utilidad tiene un @ en un Makefile?
+
+El @ representa el target que se desea obtener al ejecutar el Makefile.
+
+7. ¿Para qué se utiliza .PHONY en un Makefile?
+
+Esto se utiliza para declarar targets que no representan ningún archivo físico, estos representan acciones que deben realizarse. Un ejemplo de esto es la acción clean, esto es un phony que es utilizado para eliminar archivos que han sido generados.
+
 Referencias bibliográficas
 
 [1] ALEGSA. (s.f). Definición de Linker (informática). [Online]. Obtenido de https://www.alegsa.com.ar/Dic/linker.php#h4&gsc.tab=0. [Accedido Jan. 6, 2024].
@@ -179,3 +217,9 @@ Referencias bibliográficas
 [8] code genius (s.f). Array vs Lista en C++: Descubre cuál es tu mejor opción de programación. [Online]. Obtenido de https://codegenius.website/array-vs-lista-en-c-descubre-cual-es-tu-mejor-opcion-de-programacion/. [Accedido Jan. 6, 2024].
 
 [9] Keepcoding (s.f). ¿Qué es una memory leak y cómo evitarla?. [Online]. Obtenido de https://keepcoding.io/blog/que-es-un-memory-leak-y-como-evitarlo/. [Accedido Jan. 6, 2024].
+
+[10] EARTHLY (2023, Jul 24). Understanding and Using Makefile Flags. [Online]. Obtenido de https://earthly.dev/blog/make-flags/. [Accedido Jan. 7, 2024].
+
+[11] Medium (2023, Jul 2). C Programming: Mastering Flags in GCC. [Online]. Obtenido de https://medium.com/@promisevector/c-programming-mastering-flags-in-gcc-32809491f340#:~:text=-I%20%60%3A%20This%20flag%20is%20used%20to%20specify,find%20the%20necessary%20headers%20when%20compiling%20the%20code. [Accedido Jan. 7, 2024].
+
+[12] EARTHLY (2023, Jul 19). Understanding and Using Makefile Variables. [Online]. Obtenido de https://earthly.dev/blog/makefile-variables/. [Accedido Jan. 7, 2024].
