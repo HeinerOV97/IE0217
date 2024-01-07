@@ -198,7 +198,7 @@ El @ representa el target que se desea obtener al ejecutar el Makefile.
 
 Esto se utiliza para declarar targets que no representan ningún archivo físico, estos representan acciones que deben realizarse. Un ejemplo de esto es la acción clean, esto es un phony que es utilizado para eliminar archivos que han sido generados.
 
-Referencias bibliográficas
+## Referencias bibliográficas
 
 [1] ALEGSA. (s.f). Definición de Linker (informática). [Online]. Obtenido de https://www.alegsa.com.ar/Dic/linker.php#h4&gsc.tab=0. [Accedido Jan. 6, 2024].
 
@@ -210,7 +210,7 @@ Referencias bibliográficas
 
 [5] Edu.Lat (s.f). Ensamblaje: segmentos de memoria. [Online]. Obtenido de https://tutoriales.edu.lat/pub/assembly-programming/assembly-memory-segments/ensamblaje-segmentos-de-memoria. [Accedido Jan. 6, 2024].
 
-[6] DelftStack (s.f). Usa el puntero this en C++. [Online]. Obtenido de https://www.delftstack.com/es/howto/cpp/this-operator-in-cpp/#:~:text=El%20puntero%20this%20es%20simplemente%20un%20puntero%20impl%C3%ADcitamente,definici%C3%B3n%2C%20veamos%20algunos%20fundamentos%20para%20entender%20el%20concepto. [Accedido Jan. 6, 2024].
+[6] DelftStack (s.f). Usa el puntero this en C++. [Online]. Obtenido de https://www.delftstack.com/es/howto/cpp/this-operator-in-cpp/. [Accedido Jan. 6, 2024].
 
 [7] Microsoft (2023, Jun 6). nullptr (C++/CLI y C++/CX). [Online]. Obtenido de https://learn.microsoft.com/es-es/cpp/extensions/nullptr-cpp-component-extensions?view=msvc-170. [Accedido Jan. 6, 2024].
 
@@ -220,6 +220,6 @@ Referencias bibliográficas
 
 [10] EARTHLY (2023, Jul 24). Understanding and Using Makefile Flags. [Online]. Obtenido de https://earthly.dev/blog/make-flags/. [Accedido Jan. 7, 2024].
 
-[11] Medium (2023, Jul 2). C Programming: Mastering Flags in GCC. [Online]. Obtenido de https://medium.com/@promisevector/c-programming-mastering-flags-in-gcc-32809491f340#:~:text=-I%20%60%3A%20This%20flag%20is%20used%20to%20specify,find%20the%20necessary%20headers%20when%20compiling%20the%20code. [Accedido Jan. 7, 2024].
+[11] Medium (2023, Jul 2). C Programming: Mastering Flags in GCC. [Online]. Obtenido de https://medium.com/@promisevector/c-programming-mastering-flags-in-gcc-32809491f340. [Accedido Jan. 7, 2024].
 
 [12] EARTHLY (2023, Jul 19). Understanding and Using Makefile Variables. [Online]. Obtenido de https://earthly.dev/blog/makefile-variables/. [Accedido Jan. 7, 2024].
