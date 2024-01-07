@@ -7,6 +7,8 @@
 void mostrarMenu();
 void elegirOpcion();
 void definirIntervalo();
+void definirDificultad();
+void iniciaJuego();
 
 
 #endif
