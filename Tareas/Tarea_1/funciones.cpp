@@ -1,6 +1,7 @@
 #include "funciones.hpp"
 #include <string>
 #include <random>
+#include <time.h>
 
 void mostrarMenu(){
     std::cout << "\n --- Menu ---\n";
@@ -53,10 +54,9 @@ void definirIntervalo(datosJuego *ptr, datosJuego &datos){
         std::cout << datos.gPrimerValor << datos.gSegValor << std::endl; //Borrar es para pruebas
     }
 
+    srand(time(0));
     numRandom = (rand() % (datos.gSegValor - datos.gPrimerValor + 1)) + datos.gPrimerValor;
-    
     datos.gNumRandom = numRandom;
-
     datos.gNumIntentos = (datos.gSegValor - datos.gPrimerValor) / 3;
 
 }
@@ -96,8 +96,8 @@ void iniciaJuego(datosJuego *ptr, datosJuego &datos){
         std::cout << "Los valores ingresados para el intervalo son iguales, seleccione un rango correcto para iniciar el juego" << std::endl;
         return;
     } else {
+        std::cout << "\n---Hora de iniciar el juego---\n" << std::endl;
         if (datos.gDificultad == 1){
-            std::cout << "Numero de intentos: " << datos.gNumIntentos << "\n";
             std::cout << "Numero para adivinar: " << datos.gNumRandom << "\n";
             std::cout << "Numero de intentos: " << datos.gNumIntentos << std::endl;
             for(int i = 0; i < datos.gNumIntentos; ++i){
@@ -115,6 +115,53 @@ void iniciaJuego(datosJuego *ptr, datosJuego &datos){
                         std::cout << "Escogio un valor menor que el numero objetivo, ha perdido un turno, le quedan "
                                 << i-datos.gNumIntentos << std::endl;
                         continue;
+                    } else if (numeroPrueba == datos.gNumRandom){
+                        std::cout << "Felicidades a escogido el numero objetivo" << std::endl;
+                        std::cout << "Volviendo al menu principal..." << std::endl;
+                        return;
+                    }
+                }
+            }
+            std::cout << "Ha perdido su oportunidad para adivinar el numero" << std::endl;
+            std::cout << "1. Para reintertarlo" << std::endl;
+            std::cout << "2. Volver al menu principal" << std::endl;
+            std::cin >> opcion;
+                
+            switch (opcion){
+            case 1: //Definir intervalo del juego
+                iniciaJuego(ptr, datos);
+                break;
+            case 2: //Definir la dificultad del juego
+                break;
+            default:
+                std::cout << "Opcion no valida. Intente de nuevo...\n\n";
+            }
+        // Modo dificil
+        } else if (datos.gDificultad == 2) {
+            std::cout << "Numero para adivinar: " << datos.gNumRandom << "\n";
+            std::cout << "Numero de intentos: " << datos.gNumIntentos << std::endl;
+            for(int i = 0; i < datos.gNumIntentos; ++i){
+                std::cout << "Ingresa un numero he intenta llegar al numero objetivo" << std::endl;
+                std::cin >> numeroPrueba;
+                if (numeroPrueba > datos.gSegValor || numeroPrueba < datos.gPrimerValor){
+                    std::cout << "Escogio un valor fuera del rango, ha perdido un turno" << std::endl;
+                    continue;
+                } else {
+                    if (numeroPrueba == datos.gNumRandom + 1 || numeroPrueba == datos.gNumRandom - 1){
+                        std::cout << "¡Esta hirviendo! " << std::endl;
+                        continue;
+                    } else if ((numeroPrueba <= datos.gNumRandom - 2 && numeroPrueba >= datos.gNumRandom - 4) || 
+                                (numeroPrueba >= datos.gNumRandom + 2 && numeroPrueba <= datos.gNumRandom + 4)) {
+                        std::cout << "¡Esta caliente!" << std::endl;
+                        continue;
+
+                    } else if ((numeroPrueba < datos.gNumRandom - 4 && numeroPrueba >= datos.gNumRandom - 8) || 
+                                (numeroPrueba > datos.gNumRandom + 2 && numeroPrueba <= datos.gNumRandom + 8)) {
+                        std::cout << "¡Esta frio!" << std::endl;
+
+                    } else if (numeroPrueba < datos.gNumRandom - 8 || numeroPrueba > datos.gNumRandom + 8) {
+                        std::cout << "¡Esta congelado!" << std::endl;
+
                     } else if (numeroPrueba == datos.gNumRandom){
                         std::cout << "Felicidades a escogido el numero objetivo" << std::endl;
                         std::cout << "Volviendo al menu principal..." << std::endl;
