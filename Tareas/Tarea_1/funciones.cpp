@@ -2,12 +2,6 @@
 #include <string>
 #include <random>
 
-int gNumRandom;
-int gNumIntentos;
-int gPrimerValor;
-int gSegValor;
-int gDificultad;
-
 void mostrarMenu(){
     std::cout << "\n --- Menu ---\n";
     std::cout << "1. Intervalo para adivinar el número\n";
@@ -16,20 +10,20 @@ void mostrarMenu(){
     std::cout << "4. Salir\n";
 }
 
-void elegirOpcion(){
+void elegirOpcion(datosJuego *ptr, datosJuego &datos){
     int opcion;
     std::cout << "Ingrese una opcion: ";
     std::cin >> opcion;
 
     switch (opcion){
         case 1: //Definir intervalo del juego
-            definirIntervalo();
+            definirIntervalo(ptr, datos);
             break;
         case 2: //Definir la dificultad del juego
-            definirDificultad();
+            definirDificultad(ptr, datos);
             break;
         case 3: //Se inicia el juego
-            iniciaJuego();
+            iniciaJuego(ptr, datos);
             break;
         case 4: //Salir
             std::cout << "Saliendo del programa...\n";
@@ -39,34 +33,35 @@ void elegirOpcion(){
     }
 }
 
-void definirIntervalo(){
+void definirIntervalo(datosJuego *ptr, datosJuego &datos){
     
-    int gPrimerValor, gSegValor, valorParaAdvinar, numRandom;
+    int valorParaAdvinar, numRandom;
+    
     
     std::cout << "Defina el primer valor del intervalo" << std::endl;
-    std::cin >> gPrimerValor;
+    std::cin >> ptr->gPrimerValor;
 
     std::cout << "Defina el primer valor del intervalo" << std::endl;
-    std::cin >> gSegValor;
+    std::cin >> ptr->gSegValor;
 
-    std::cout << gPrimerValor << " " << gSegValor << std::endl;
+    std::cout << datos.gPrimerValor << " " << datos.gSegValor << std::endl; //Borrar es para pruebas
 
-    if(gPrimerValor > gSegValor){
-        int cambioPos = gPrimerValor;
-        gPrimerValor = gSegValor;
-        gSegValor = cambioPos;
-        std::cout << gPrimerValor << gSegValor << std::endl;
+    if(datos.gPrimerValor > datos.gSegValor){
+        int cambioPos = datos.gPrimerValor;
+        datos.gPrimerValor = datos.gSegValor;
+        datos.gSegValor = cambioPos;
+        std::cout << datos.gPrimerValor << datos.gSegValor << std::endl; //Borrar es para pruebas
     }
 
-    numRandom = (rand() % (gSegValor - gPrimerValor + 1)) + gPrimerValor;
+    numRandom = (rand() % (datos.gSegValor - datos.gPrimerValor + 1)) + datos.gPrimerValor;
     
-    gNumRandom = numRandom;
+    datos.gNumRandom = numRandom;
 
-    gNumIntentos = (gSegValor - gPrimerValor) / 3;
+    datos.gNumIntentos = (datos.gSegValor - datos.gPrimerValor) / 3;
 
 }
 
-void definirDificultad(){
+void definirDificultad(datosJuego *ptr, datosJuego &datos){
     int opcion;
     std::cout << "Defina la dificultad con la que desea jugar:\n" << std::endl;
     std::cout << "1. Facil: Tendrá un tercio del intervalo escogido de oportunidades para adivinar el número."
@@ -79,13 +74,69 @@ void definirDificultad(){
                 
     switch (opcion){
         case 1: //Definir intervalo del juego
-            gDificultad = 1;
+            datos.gDificultad = 1;
             break;
         case 2: //Definir la dificultad del juego
-            gDificultad = 2;
+            datos.gDificultad = 2;
             break;
         default:
             std::cout << "Opcion no valida. Intente de nuevo...\n\n";
-            definirDificultad();
+            definirDificultad(ptr, datos);
+    }
+}
+
+void iniciaJuego(datosJuego *ptr, datosJuego &datos){
+    int numeroPrueba;
+    int opcion;
+
+    if(datos.gPrimerValor == 0 && datos.gSegValor == 0){
+        std::cout << "No a seleccionado un rango correcto para iniciar el juego" << std::endl;
+        return;
+    } else if (datos.gPrimerValor == datos.gSegValor) {
+        std::cout << "Los valores ingresados para el intervalo son iguales, seleccione un rango correcto para iniciar el juego" << std::endl;
+        return;
+    } else {
+        if (datos.gDificultad == 1){
+            std::cout << "Numero de intentos: " << datos.gNumIntentos << "\n";
+            std::cout << "Numero para adivinar: " << datos.gNumRandom << "\n";
+            std::cout << "Numero de intentos: " << datos.gNumIntentos << std::endl;
+            for(int i = 0; i < datos.gNumIntentos; ++i){
+                std::cout << "Ingresa un numero he intenta llegar al numero objetivo" << std::endl;
+                std::cin >> numeroPrueba;
+                if (numeroPrueba > datos.gSegValor || numeroPrueba < datos.gPrimerValor){
+                    std::cout << "Escogio un valor fuera del rango, ha perdido un turno" << std::endl;
+                    continue;
+                } else {
+                    if (numeroPrueba > datos.gNumRandom){
+                        std::cout << "Escogio un valor mayor que el numero objetivo, ha perdido un turno, le quedan " 
+                                << i-datos.gNumIntentos << std::endl;
+                        continue;
+                    } else if (numeroPrueba < datos.gNumRandom) {
+                        std::cout << "Escogio un valor menor que el numero objetivo, ha perdido un turno, le quedan "
+                                << i-datos.gNumIntentos << std::endl;
+                        continue;
+                    } else if (numeroPrueba == datos.gNumRandom){
+                        std::cout << "Felicidades a escogido el numero objetivo" << std::endl;
+                        std::cout << "Volviendo al menu principal..." << std::endl;
+                        return;
+                    }
+                }
+            }
+            std::cout << "Ha perdido su oportunidad para adivinar el numero" << std::endl;
+            std::cout << "1. Para reintertarlo" << std::endl;
+            std::cout << "2. Volver al menu principal" << std::endl;
+            std::cin >> opcion;
+                
+            switch (opcion){
+            case 1: //Definir intervalo del juego
+                iniciaJuego(ptr, datos);
+                break;
+            case 2: //Definir la dificultad del juego
+                break;
+            default:
+                std::cout << "Opcion no valida. Intente de nuevo...\n\n";
+            }
+            
+        }
     }
 }

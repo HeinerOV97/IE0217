@@ -3,9 +3,12 @@
 
 int main() {
 
+    datosJuego *ptr, datos;
+    ptr = &datos;
+
     while(1){
         mostrarMenu();
-        elegirOpcion();
+        elegirOpcion(ptr, datos);
     }
     return 0;
 

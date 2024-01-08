@@ -3,12 +3,19 @@
 #include <string>
 #include <iostream>
 
+struct datosJuego {
+    int gNumRandom;
+    int gNumIntentos;
+    int gPrimerValor;
+    int gSegValor;
+    int gDificultad;
+};
 
 void mostrarMenu();
-void elegirOpcion();
-void definirIntervalo();
-void definirDificultad();
-void iniciaJuego();
+void elegirOpcion(datosJuego *ptr, datosJuego &datos);
+void definirIntervalo(datosJuego *ptr, datosJuego &datos);
+void definirDificultad(datosJuego *ptr, datosJuego &datos);
+void iniciaJuego(datosJuego *ptr, datosJuego &datos);
 
 
 #endif
