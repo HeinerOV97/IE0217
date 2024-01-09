@@ -3,12 +3,13 @@
 #include <string>
 #include <iostream>
 
+
 struct datosJuego {
-    int gNumRandom;
-    int gNumIntentos;
-    int gPrimerValor;
-    int gSegValor;
-    int gDificultad;
+    int numRandom;
+    int numIntentos;
+    int primerValor;
+    int segValor;
+    int dificultad;
 };
 
 void mostrarMenu();
