@@ -15,7 +15,7 @@
 */
 void mostrarMenu(){
     std::cout << "\n --- Menu ---\n";
-    std::cout << "1. Intervalo para adivinar el número\n";
+    std::cout << "1. Intervalo para adivinar el numero\n";
     std::cout << "2. Indique la dificultad del juego\n";
     std::cout << "3. Inicio del juego\n";
     std::cout << "4. Salir\n";
@@ -96,11 +96,11 @@ void definirDificultad(datosJuego *ptr, datosJuego &datos){
     int opcion; // Se declara la variable local opcion, donde se almacenara la opcion elegida por el usuario para la dificultad
     //Se explican al usuario los dos modos de juego
     std::cout << "Defina la dificultad con la que desea jugar:\n" << std::endl;
-    std::cout << "1. Facil: Tendrá un tercio del intervalo escogido de oportunidades para adivinar el número."
-                << " El juego le indicará si el numero que prueba es mayor o menos al numero objetivo." << std::endl;
-    std::cout << "2. Dificil: Tendrá un tercio del intervalo escogido de oportunidades para adivinar el número."
-                << " El juego le indicará si el numero que prueba es cercano o no al numero objetivo por medio de palabras clave."
-                << " Estas serán: Congelado, Frio, Caliente o hirviendo" << std::endl;
+    std::cout << "1. Facil: Tendra un tercio del intervalo escogido de oportunidades para adivinar el numero."
+                << " El juego le indicara si el numero que prueba es mayor o menos al numero objetivo.\n" << std::endl;
+    std::cout << "2. Dificil: Tendra un tercio del intervalo escogido de oportunidades para adivinar el numero."
+                << " El juego le indicara si el numero que prueba es cercano o no al numero objetivo por medio de palabras clave."
+                << " Estas seran: Congelado, Frio, Caliente o hirviendo\n" << std::endl;
     std::cout << "Ingrese una opcion: ";
     std::cin >> opcion; // Se recibe la opcion escogida por el usuario
     
