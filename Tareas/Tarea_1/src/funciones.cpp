@@ -7,7 +7,6 @@
 
 #include "funciones.hpp"
 #include <string>
-#include <random>
 #include <time.h>
 
 /**
