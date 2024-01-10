@@ -67,15 +67,12 @@ void definirIntervalo(datosJuego *ptr, datosJuego &datos){
     std::cout << "Defina el segundo valor del intervalo" << std::endl;
     std::cin >> ptr->segValor;
 
-    std::cout << datos.primerValor << " " << datos.segValor << std::endl; //Borrar es para pruebas
-
     /*Si el valor ingresado por el usuario de primero es mayor que el segundo se invierten, esto para evitar conflictos
     al obtener el numero aleatorio*/
     if(datos.primerValor > datos.segValor){
         int cambioPos = datos.primerValor;
         datos.primerValor = datos.segValor;
         datos.segValor = cambioPos;
-        std::cout << datos.primerValor << datos.segValor << std::endl; //Borrar es para pruebas
     }
 
     //Se utiliza el metodo rand() para obtener el numero aleatorio
@@ -137,8 +134,6 @@ void iniciaJuego(datosJuego *ptr, datosJuego &datos){
     } else {
         std::cout << "\n---Hora de iniciar el juego---\n" << std::endl; //Se inicia el juego
         if (datos.dificultad == 1){ //Modo facil
-            std::cout << "Numero para adivinar: " << datos.numRandom << "\n"; //borrar
-            std::cout << "Numero de intentos: " << datos.numIntentos << std::endl; //borrar
             for(int i = 0; i < datos.numIntentos; ++i){ //Se hace un for que se repita el numero de intentos que posee el usuario
                 std::cout << "Ingresa un numero he intenta llegar al numero objetivo" << std::endl;
                 std::cin >> numeroPrueba; //Se recibe el valor indicado por el usuario para intentar adivinar
@@ -176,8 +171,6 @@ void iniciaJuego(datosJuego *ptr, datosJuego &datos){
             }
         // Modo dificil
         } else if (datos.dificultad == 2) {
-            std::cout << "Numero para adivinar: " << datos.numRandom << "\n"; //Borrar
-            std::cout << "Numero de intentos: " << datos.numIntentos << std::endl; //Borrar
             for(int i = 0; i < datos.numIntentos; ++i){  //Se hace un for que se repita el numero de intentos que posee el usuario
                 std::cout << "Ingresa un numero he intenta llegar al numero objetivo" << std::endl;
                 std::cin >> numeroPrueba; //Se recibe el valor indicado por el usuario para intentar adivinar
