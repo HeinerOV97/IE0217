@@ -1,3 +1,18 @@
+# Práctica Tarea #1
+
+## Ejecución del programa
+
+El programa se ejecutará a través de un Makefile, para ejecutarlo se debe estar ubicado en la carpeta src en el PATH, esta carpeta se encuentra en la carpeta general de la tarea, en esta carpeta se encuentran los archivos de código fuente y el Makefile.
+El Makefile, posee cuatro targets que realizan diferentes acciones automatizadas para la facilidad de ejecución del programa, estas cuatro indicaciones son:
+
+- build: Este target se encarga de compilar el código fuente y generar el ejecutable con el nombre adivina.exe, para su ejecución en Windows se utiliza el comando “mingw32-make build”.
+
+- run: Este target se encarga de ejecutar el programa adivina.exe, siempre y cuando se haya ejecutado el comando build primero, para su ejecución en Windows se utiliza el comando “mingw32-make run”. 
+
+- all: Este target se encarga de compilar el código fuente, generar un ejecutable con el nombre adivina.exe y ejecutar el programa, es decir, este comando realiza los targets build y run en un solo comando. Su ejecución en Windows se lleva acabo con el comando “mingw32-make all”.
+
+- clean: Este target se encarga de eliminar los archivos ejecutables y solo dejar los archivos fuente, para su ejecución en Windows se utiliza el comando “mingw32-make clean”.    
+
 # Teoría Tarea #1
 
 ## Parte #1
