@@ -64,7 +64,7 @@ void definirIntervalo(datosJuego *ptr, datosJuego &datos){
     std::cin >> ptr->primerValor;
 
     //Se solicita al usuario el segundo numero del intervalo
-    std::cout << "Defina el primer valor del intervalo" << std::endl;
+    std::cout << "Defina el segundo valor del intervalo" << std::endl;
     std::cin >> ptr->segValor;
 
     std::cout << datos.primerValor << " " << datos.segValor << std::endl; //Borrar es para pruebas
