@@ -7,7 +7,7 @@ CXX = g++
 # Se colocan las opciones para la compilacion
 CXXFLAGS =  -Wall -std=c++11
 
-# Se indican los archivos fuente con los que trabajara el makefile para compilar $(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCES)
+# Se indican los archivos fuente con los que trabajara el makefile para compilar
 SOURCES = main.cpp funciones.cpp
 
 # Target que compila y ejecuta el juego
@@ -18,7 +18,7 @@ build:
 	
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCES)
 
-# Target que compila el programa
+# Target que ejecuta el programa
 run:
 	$(TARGET)
 
