@@ -1,3 +1,10 @@
+/**
+ * \copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+ * @file main.cpp
+ * @date 09/01/2024
+ * @author Heiner Obando Vega
+*/
+
 #ifndef FUNCIONES_HPP
 #define FUNCIONES_HPP
 #include <string>
