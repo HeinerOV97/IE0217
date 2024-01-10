@@ -11,7 +11,9 @@ El Makefile, posee cuatro targets que realizan diferentes acciones automatizadas
 
 - all: Este target se encarga de compilar el código fuente, generar un ejecutable con el nombre adivina.exe y ejecutar el programa, es decir, este comando realiza los targets build y run en un solo comando. Su ejecución en Windows se lleva acabo con el comando “mingw32-make all”.
 
-- clean: Este target se encarga de eliminar los archivos ejecutables y solo dejar los archivos fuente, para su ejecución en Windows se utiliza el comando “mingw32-make clean”.    
+- clean: Este target se encarga de eliminar los archivos ejecutables y solo dejar los archivos fuente, para su ejecución en Windows se utiliza el comando “mingw32-make clean”. 
+
+Este programa utiliza las librerias: string, iostream, time.h propias del lenguaje C y C++, estas deben estar instaladas en el computador para que el programa funcione.
 
 # Teoría Tarea #1
 
