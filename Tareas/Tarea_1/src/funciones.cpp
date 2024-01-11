@@ -153,7 +153,7 @@ void iniciaJuego(datosJuego *ptr, datosJuego &datos){
                     }
                 }
             }
-            //Si pierda se le avisa que ha perdido, y se le da oportunidad de reintentar o volver al menu principal
+            //Si pierde se le avisa que ha perdido, y se le da oportunidad de reintentar o volver al menu principal
             std::cout << "Ha perdido su oportunidad para adivinar el numero" << std::endl;
             std::cout << "1. Para reintertarlo" << std::endl;
             std::cout << "2. Volver al menu principal" << std::endl;
@@ -203,7 +203,7 @@ void iniciaJuego(datosJuego *ptr, datosJuego &datos){
                     }
                 }
             }
-            //Si pierda se le avisa que ha perdido, y se le da oportunidad de reintentar o volver al menu principal
+            //Si pierde se le avisa que ha perdido, y se le da oportunidad de reintentar o volver al menu principal
             std::cout << "Ha perdido su oportunidad para adivinar el numero" << std::endl;
             std::cout << "1. Para reintertarlo" << std::endl;
             std::cout << "2. Volver al menu principal" << std::endl;
