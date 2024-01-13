@@ -77,7 +77,7 @@ En el caso de C++, se puede trabajar con distintos tipos de poliformismo, con re
 
 5. Abstracción: ¿Cómo se relaciona la abstracción con la programación orientada a objetos? Proporciona ejemplos de cómo aplicar la abstracción en un contexto de programación.
 
-En la OOP se puede realizar la creación de abstracciones, esto se trata de proporcionar solo la información importante sobre los datos con los que se trabaja a los demás, ocultando de esta manera los detalles de la implementación. En C++ se puede realizar el proceso de abstracción usando clases o los archivos de encabezado. En el caso de las clases, se utilizan los tipos de acceso mencionados anteriormente para realizar esto, por otra parte, en los archivos de encabezado, se le puede proporcionar a alguien el archivo de encabezado y que este utilice sus métodos, sin interesarle la implementación del código que se realiza para utilizar los métodos. [1]
+En la OOP se puede realizar la creación de abstracciones, esto se trata de proporcionar solo la información importante sobre los datos con los que se trabaja a los demás, ocultando de esta manera los detalles de la implementación. En C++ se puede realizar el proceso de abstracción usando clases o los archivos de encabezado. En el caso de las clases, se utilizan los tipos de acceso mencionados anteriormente para realizar esto, por otra parte, en los archivos de encabezado, se le puede proporcionar a alguien el archivo de encabezado y que este utilice sus métodos, sin interesarle la implementación del código que se realiza para utilizar los métodos.[1]
 
 6. Clases y Objetos: Diferencia entre una clase y un objeto en programación orientada a objetos. Proporciona un ejemplo de cada uno.
 
@@ -126,7 +126,7 @@ int main() {
 
 7. Métodos Virtuales: Explica la importancia de los métodos virtuales en C++ y cómo se utilizan en la implementación de polimorfismo.
 
-Los métodos virtuales son importantes ya que permiten utilizar versiones de una función dependiendo del objeto que las llame, por ejemplo, en las funciones virtuales, el método de una clase base puede ser o no, sobreescrito por un método de una clase derivada, esto dependiendo de los atributos del objeto que lo llame. Esto se utiliza especialmente cuando un puntero de la clase base apunta a un objeto de una clase derivdad. Este método es utilizado para llevar a cabo el poliformismo en tiempo de ejecución, el cual consiste en que el compilar realiza un enlace tardío donde busca hacer coincidir a un objeto con la función llamada correcta, y ejecuta esto en el tiempo de ejecución. [2]
+Los métodos virtuales son importantes ya que permiten utilizar versiones de una función dependiendo del objeto que las llame, por ejemplo, en las funciones virtuales, el método de una clase base puede ser o no, sobreescrito por un método de una clase derivada, esto dependiendo de los atributos del objeto que lo llame. Esto se utiliza especialmente cuando un puntero de la clase base apunta a un objeto de una clase derivdad. Este método es utilizado para llevar a cabo el poliformismo en tiempo de ejecución, el cual consiste en que el compilar realiza un enlace tardío donde busca hacer coincidir a un objeto con la función llamada correcta, y ejecuta esto en el tiempo de ejecución.[2]
 
 8. Constructores y Destructores: ¿Cuál es el propósito de un constructor y un destructor en una clase? Proporciona ejemplos de su uso.
 
@@ -232,6 +232,38 @@ int main()
 
 Ambos comandos son utilizados para limpiar la memoria que se solicita con el comando new pero se utiliza en casos diferentes, el comando *delete* se utiliza cuando queremos limpiar la memoria asignada a una variable, mientras que el comando *delete[]* se utiliza cuando se quiere limpiar la memoria asignada a un arreglo, ya que si se usara el comando *delete* en un arreglo, solo se liberaría el espacio de memoria utilizado por el primer elemento del arreglo.
 
+16. ¿Qué es un algoritmo de ordenamiento y por qué son importantes en programación?
+
+Los algoritmos de ordenamiento son utilizados para organizar los elementos de una matriz/lista en un orden específico, existen diferentes tipos de estos algoritmos y estos serán utilizados según el fin que se esté buscando. Estos son importantes ya que permiten una búsqueda más eficientes de datos en un conjuto. También el acceso a los datos es más eficiente, ya que al trabajar con datos ordenados el acceso a estos será más rápido. Además estos tienen aplicaciones en otros algoritmos.
+
+17. Explique el funcionamiento del algoritmo de ordenamiento ”Bubble Sort”. ¿Cuál es su complejidad temporal en el peor caso?
+
+Este algoritmo lo que hace es recorrer el arreglo las veces necesarias hasta que se cumpla el orden buscado, este va comparando los elementos adyacentes, y si el orden es incorrecto lo que hará será intercambiar los valores de lugar. En este caso su complejidad temporal en el peor de los casos es O(n^2), esto porque tiene que comparar cada par de elementos en todo el arreglo
+
+18. Describa el algoritmo de ordenamiento ”QuickSort”. ¿Cuál es su ventaja principal sobre otros algoritmos de ordenamiento?
+
+Este algoritmo elige un elemento pivote dentro del arreglo analizado, luego de esto divide el arreglo a su alrededor, colocando a su izquierda los valores menores al elemento pivote y a la derecha los mayores, este proceso se repite en todos los sub-arreglos tanto a la izquierda como a la derecha del elemento pivote, hasta que el arreglo tenga el orden deseado.
+Su ventaja sobre los otros algoritmos es su complejidad temporal, ya que, en el mejor de los casos su complejidad temporal será O(n*log n), al dividir el arreglo en sub-arreglos, no tendrá que recorrer todo el arreglo para revisar todos los elementos en cada revisión, como lo hacen otros algoritmos como el Bubble Sort con una complejidad temporal en el mejor de los casos de O(n), Selection Sort con una complejidad temporal en el mejor de los casos de O(n^2) o Insertion Sort con una complejidad temporal en el mejor de los casos de O(n), estos últimos tres métodos si deben revisar todo el arreglo varias veces para ordenarlo.
+
+Se debe tener cuidado con este algoritmo de ordenamiento ya que si se elige el pivote equivocado, en el peor de los casos la complejidad temporal puede ser O(n^2).
+
+19. ¿Cuál es la diferencia entre un algoritmo de ordenamiento estable y uno inestable? Proporcione ejemplos de cada uno.
+
+Por un lado, los algoritmos estables, estos mantienen el orden de los elementos que poseen valores iguales o claves en un arreglo. Mientras que por otro lado, los algoritmos inestables no buscan mantener estos valores que son iguales o clave en orden.[4] Un ejemplo de esto podría ser el siguiente:
+
+Teniendo el siguiente arreglo: [1, 7a, 15, 7b, 10] (el a y el b, a la par del numero 7 solo es para distinguir cual es primero)
+
+En un algoritmo de ordenamiento estable, la salida sería [1, 7a, 7b, 10, 15], hay un orden entre el primer y el segundo 7 en el arreglo, mientras que en un algoritmo de ordenamiento inestable, la salida podría ser [1, 7b, 7a, 10, 15], estos algoritmos no buscan un orden entre los valores iguales, pueden salir ordenados o no.
+
+- Ejemplos de algoritmos estables son[4]: El Bubble Sort y el Insertion Sort.
+- Ejemplos de algoritmos inestables son[4]: El Quick Sort y el Heap Sort.
+
+20. Hable sobre el algoritmo de ordenamiento ”Merge Sort”. ¿Cuál es su complejidad temporal y en qué situaciones es preferible su uso?
+
+El algoritmo de de ordenamiento Merge Sort, consiste en tomar un arreglo y dividirlo en dos sub-arreglos, luego cada uno de estos sub-arreglos será ordenado y así sucesivamente, creando más sub-arreglos, al final cada uno de los sub-arreglos se unirá con su respectiva pareja, dejando un arreglo ordenado. En este caso su complejidad temporal es un O(n*log n), ya que este no debe recorrer el arreglo completo varias veces para realizar el proceso de ordenado de los valores en el. [4] 
+
+Este podría ser utilizado en arreglos grandes que requieran ser ordenados, ya que al usar el método de divide y vencerás, realiza el proceso de ordenar de una manera más rápida y eficiente.
+
 ## Referencias bibliográficas
 
 [1] Barcelona Geeks. (2022, Jul 5). Abstracción en C++. [Online]. Obtenido de https://barcelonageeks.com/abstraccion-en-c/. [Accedido Ene. 13, 2024].
@@ -239,6 +271,9 @@ Ambos comandos son utilizados para limpiar la memoria que se solicita con el com
 [2] Barcelona Geeks. (2022, Jul 5). Funciones virtuales y polimorfismo en tiempo de ejecución en C++. [Online]. Obtenido de https://barcelonageeks.com/funciones-virtuales-y-polimorfismo-en-tiempo-de-ejecucion-en-c-conjunto-1-introduccion/. [Accedido Ene. 13, 2024].
 
 [3] GeeksforGeeks. (2024, Jan 11). Smart Pointers in C++. [Online]. Obtenido de https://www.geeksforgeeks.org/smart-pointers-cpp/. [Accedido Ene. 13, 2024].
+
+[4] freeCodeCamp (2024, May 1) Algoritmos de ordenación explicados con ejemplos en JavaScript, Python, Java y C++. [Online]. Obtenido de https://www.freecodecamp.org/espanol/news/algoritmos-de-ordenacion-explicados-con-ejemplos-en-javascript-python-java-y-c/. [Accedido Ene. 13, 2024].
+
 
 
 
