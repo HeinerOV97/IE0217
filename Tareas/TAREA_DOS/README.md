@@ -124,11 +124,69 @@ int main() {
 }
 ```
 
+7. Métodos Virtuales: Explica la importancia de los métodos virtuales en C++ y cómo se utilizan en la implementación de polimorfismo.
+
+Los métodos virtuales son importantes ya que permiten utilizar versiones de una función dependiendo del objeto que las llame, por ejemplo, en las funciones virtuales, el método de una clase base puede ser o no, sobreescrito por un método de una clase derivada, esto dependiendo de los atributos del objeto que lo llame. Esto se utiliza especialmente cuando un puntero de la clase base apunta a un objeto de una clase derivdad. Este método es utilizado para llevar a cabo el poliformismo en tiempo de ejecución, el cual consiste en que el compilar realiza un enlace tardío donde busca hacer coincidir a un objeto con la función llamada correcta, y ejecuta esto en el tiempo de ejecución. [2]
+
+8. Constructores y Destructores: ¿Cuál es el propósito de un constructor y un destructor en una clase? Proporciona ejemplos de su uso.
+
+- El constructor define como se inicializa un objeto de una clase, Este es utilizado para inicializar un objeto con valores en sus atributos definidos, solicitar datos al usuario, permite mostrar mensajes o llamar funciones.
+
+- El destructor es llamado cuando un objeto ya no será utilizado más, este por ejemplo es utilizado cuando se deben cerrar achivos utilizados en el programa o se desea liberar espacios de memorias solicitados explicitamente.
+
+9.  Sobrecarga de Operadores: Explica qué es la sobrecarga de operadores y proporciona un ejemplo de cómo se implementa en C++.
+
+Por medio de la sobrecarga de operadores se define el comportamiento de operadores tales como +, -, *, /, entre otros, estos pueden utilizarse en una clase que sea personaliza y permita que los resultados que den estas operaciones sean dados por el programador, a continuación se muestra un ejemplo de implementación.
+
+```
+#include <iostream>
+using namespace std;
+
+//Se crea la clase
+class Fraccion {
+    int numerador, denominador;
+    public:
+        Fraccion(int n, int d) : numerador(n), denominador(d) {}
+        //Se crea una variable de tipo fraccion, que da una indicacion especial a cada vez que se utilice el simbolo / con objetos de tipo fraccion
+        Fraccion operator/ (const Fraccion &f) {
+            Fraccion resultado(
+                //numerador y denominador pertenecen al primer objeto creado, f.numerador y f.denominador pertenecen al segundo
+                numerador * f.denominador,
+                denominador * f.numerador
+            );
+            return resultado;
+        }
+        //Se crea un metodo
+        void imprimir() {
+            cout << numerador << "/" << denominador << endl;
+        }
+};
+
+int main() {
+    //Se instacian los objetos
+    Fraccion f1(1, 2);
+    Fraccion f2(3, 4);
+    //Se realiza una division de fracciones por medio de la sobrecarga de operadoras, definiendo una accion al operador /
+    Fraccion f3 = f1 / f2;
+
+    // Se llama al metodo imprimir
+    f3.imprimir();
+
+    return 0;
+}
+```
+
+10. Templates: Describe el concepto de templates en C++. ¿En qué situaciones sería útil utilizar templates?
+
+Los templates son utilizados, para que las funciones o clases puedan trabajar con diferentes tipos de datos, por ejemplo se puede crear una función que sume dos números pero a esta no le importe si recibe un entero o un flotantes como argumentos, ya que el template permite que la función pueda recibir diferentes tipos de variables. Estos son útiles ya que permiten que se pueda trabajar con diferentes variables en diferentes funciones o clases, permitiendo así la reutilización de código.
+
 
 
 ## Referencias bibliográficas
 
 [1] Barcelona Geeks. (2022, Jul 5). Abstracción en C++. [Online]. Obtenido de https://barcelonageeks.com/abstraccion-en-c/. [Accedido Ene. 13, 2024].
+
+[2] Barcelona Geeks. (2022, Jul 5). Funciones virtuales y polimorfismo en tiempo de ejecución en C++. [Online]. Obtenido de https://barcelonageeks.com/funciones-virtuales-y-polimorfismo-en-tiempo-de-ejecucion-en-c-conjunto-1-introduccion/. [Accedido Ene. 13, 2024].
 
 
 
