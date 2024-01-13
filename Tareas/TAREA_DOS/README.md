@@ -180,13 +180,66 @@ int main() {
 
 Los templates son utilizados, para que las funciones o clases puedan trabajar con diferentes tipos de datos, por ejemplo se puede crear una función que sume dos números pero a esta no le importe si recibe un entero o un flotantes como argumentos, ya que el template permite que la función pueda recibir diferentes tipos de variables. Estos son útiles ya que permiten que se pueda trabajar con diferentes variables en diferentes funciones o clases, permitiendo así la reutilización de código.
 
+11. ¿Qué es la memoria dinámica en C++ y cuándo se utiliza comúnmente?
 
+La memoria dinámica es la posibilidad de solicitar memoria de acuerdo a la necesitada en tiempo de ejecución del programa, esta es almacena en el segmento de memoria llamada heap. Esta se utiliza comúnmente cuando el programador sabe cuanta memoria va a utilizar su programa, lo que permite un mejor manejo de la memoría y un programa más eficiente.
+
+12. Explique la diferencia entre new y malloc en C++. ¿Cuándo debería utilizar uno sobre el otro?
+
+Por un lado el comando new asigna una dirección de memoria a una variable dependiendo de su tipo, donde podrá almacenar sus datos, mientras que el comando malloc asigna un bloque de memoria de un tamaño en bytes declarado por el usuario, a este se le debe hacer casting al tipo de dato con el que se trabajará. Se debería utilizar malloc si se es consciente que se debe realizar alguna reasignación de memoria en algún punto del programa,si no es así, se puede trabajar con new.
+
+13. ¿Qué es una fuga de memoria (memory leak) y cómo puede evitarse en programas en C++?
+
+Una fuga de memoria se da cuando se solicita un segmento de memoria, este se utiliza y al terminar de utilizarlo este no se limpia, esto impide que ese segmento de memoria pueda ser utilizado por otros. Para evitar esto en C++ se debe tener la buena práctica de limpiar los segmentos de memoria utilizados cuando ya no se trabaja más con ellos.
+
+14. Explique el concepto de punteros inteligentes (smart pointers) y proporcione ejemplos de su uso.
+
+En este caso el smart pointer es una clase con un puntero, un destructor y operadores sobrecargados, la idea es crear un puntero al que se le asignará un espacio de memoria y que de forma automática cuando su alcance en en programa termine se limpiará solo el espacio de memoria asignado, un ejemplo de esto se muestra a continuación, ejemplo tomado de [3]:
+
+```
+/*Ejemplo tomado de https://www.geeksforgeeks.org/smart-pointers-cpp/*/
+
+#include <iostream>
+using namespace std;
+ 
+class SmartPtr {
+    int* ptr; // Pointer al que se asignará un espacio de memoria
+public:
+
+    /*Se crea el constructor, la palabra explicit provoca que el contructor no convierta tipos implicitamente*/
+    explicit SmartPtr(int* p = NULL) { ptr = p; }
+ 
+    // Destructor que liberará el espacio de memoria
+    ~SmartPtr() { delete (ptr); }
+ 
+    // Operador sobrecargado, encargado de la dereferencia del puntero
+    int& operator*() { return *ptr; }
+};
+ 
+int main()
+{
+    SmartPtr ptr(new int());
+    *ptr = 20;
+    cout << *ptr;
+    
+    //Despues de su uso la memoria se liberará automáticamente
+
+    return 0;
+}
+```
+
+15. ¿Cuál es la diferencia entre delete y delete[] en C++? ¿En qué contexto se utilizaría cada uno?
+
+Ambos comandos son utilizados para limpiar la memoria que se solicita con el comando new pero se utiliza en casos diferentes, el comando *delete* se utiliza cuando queremos limpiar la memoria asignada a una variable, mientras que el comando *delete[]* se utiliza cuando se quiere limpiar la memoria asignada a un arreglo, ya que si se usara el comando *delete* en un arreglo, solo se liberaría el espacio de memoria utilizado por el primer elemento del arreglo.
 
 ## Referencias bibliográficas
 
 [1] Barcelona Geeks. (2022, Jul 5). Abstracción en C++. [Online]. Obtenido de https://barcelonageeks.com/abstraccion-en-c/. [Accedido Ene. 13, 2024].
 
 [2] Barcelona Geeks. (2022, Jul 5). Funciones virtuales y polimorfismo en tiempo de ejecución en C++. [Online]. Obtenido de https://barcelonageeks.com/funciones-virtuales-y-polimorfismo-en-tiempo-de-ejecucion-en-c-conjunto-1-introduccion/. [Accedido Ene. 13, 2024].
+
+[3] GeeksforGeeks. (2024, Jan 11). Smart Pointers in C++. [Online]. Obtenido de https://www.geeksforgeeks.org/smart-pointers-cpp/. [Accedido Ene. 13, 2024].
+
 
 
 
