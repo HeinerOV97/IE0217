@@ -1,14 +1,14 @@
 #include "Podcast.hpp"
 
 Podcast::Podcast(string tituloAV, string grupoAV, string autorAV, string tipoDeMaterialAV,
-            string generoAV, int duracionAV, string estadoAV, double precioAV, string resumenContAVPod, string materialRelAVPod) :
+            string generoAV, string duracionAV, string estadoAV, string precioAV, string resumenContAVPod, string materialRelAVPod) :
             MaterialAV(tituloAV, grupoAV, autorAV, tipoDeMaterialAV, generoAV, duracionAV, estadoAV, precioAV), resumenContAVPod(resumenContAVPod), materialRelAVPod(materialRelAVPod){}
 
 void Podcast::extPod(){
 
-    if (duracionAV <= 30){
+    if (stoi(duracionAV) <= 30){
         cout << "El podcast es corto" << endl;
-    } else if (duracionAV > 30 && duracionAV <= 90 ) {
+    } else if (stoi(duracionAV) > 30 && stoi(duracionAV) <= 90 ) {
         cout << "La podcast es mediano" << endl;
     } else {
         cout << "La podcast es largo" << endl;

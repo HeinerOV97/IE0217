@@ -11,12 +11,12 @@ class MaterialAV {
         string autorAV;
         string tipoDeMaterialAV;
         string generoAV;
-        int duracionAV;
+        string duracionAV;
         string estadoAV;
-        double precioAV;
+        string precioAV;
     public:
         MaterialAV(string tituloAV, string grupoAV, string autorAV, string tipoDeMaterialAV,
-            string generoAV, int duracionAV, string estadoAV, double precioAV);
+            string generoAV, string duracionAV, string estadoAV, string precioAV);
 };
 
 #endif

@@ -1,7 +1,7 @@
 #include "MaterialLectura.hpp"
 
 MaterialLectura::MaterialLectura(string titulo, string grupo, string tipoDeMaterial, string autor, string editorial, 
-                            string genero, string estado, int cantidadHojas, double precio){
+                            string genero, string estado, string cantidadHojas, string precio){
     this->titulo = titulo;
     this->grupo = grupo;
     this->tipoDeMaterial = tipoDeMaterial;

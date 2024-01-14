@@ -6,13 +6,13 @@
 
 int main() {
 
-    Libro miLibro("Titulo", "grupo", "TipoDeMaterial", "Autor", "Editorial", "Genero", "Estado", 10, 1590, "Resumen", "Material");
+    Libro miLibro("Titulo", "grupo", "TipoDeMaterial", "Autor", "Editorial", "Genero", "Estado", "10", "1590", "Resumen", "Material");
 
-    Noticia miNoticia("Titulo", "grupo", "TipoDeMaterial", "Autor", "Editorial", "Genero", "Estado", 10, 1590, "Resumen", "Material");
+    Noticia miNoticia("Titulo", "grupo", "TipoDeMaterial", "Autor", "Editorial", "Genero", "Estado", "10", "1590", "Resumen", "Material");
    
-    Pelicula miPelicula("Titulo", "Grupo", "Autor", "Material", "Genero", 120, "Estado", 2000, "Resumen", "Material");
+    Pelicula miPelicula("Titulo", "Grupo", "Autor", "Material", "Genero", "120", "Estado", "2000", "Resumen", "Material");
 
-    Podcast miPodcast("Titulo", "Grupo", "Autor", "Material", "Genero", 120, "Estado", 2000, "Resumen", "Material");
+    Podcast miPodcast("Titulo", "Grupo", "Autor", "Material", "Genero", "120", "Estado", "2000", "Resumen", "Material");
 
 
 

@@ -1,15 +1,15 @@
 #include "Noticia.hpp"
 
 Noticia::Noticia(string titulo, string grupo, string tipoDeMaterial, string autor, string editorial, 
-    string genero, string estado, int cantidadHojas, double precio, string resumenContNot, string materialRelNot) :
+    string genero, string estado, string cantidadHojas, string precio, string resumenContNot, string materialRelNot) :
     MaterialLectura(titulo, grupo, tipoDeMaterial, autor, editorial, 
     genero, estado, cantidadHojas, precio),  resumenContNot(resumenContNot), materialRelNot(materialRelNot){}
 
 void Noticia::extNoticia(){
 
-    if (cantidadHojas <= 5){
+    if (stoi(cantidadHojas) <= 5){
         cout << "La noticia es corta" << endl;
-    } else if (cantidadHojas > 5 && cantidadHojas <= 10 ) {
+    } else if (stoi(cantidadHojas) > 5 && stoi(cantidadHojas) <= 10 ) {
         cout << "La noticia es mediana" << endl;
     } else {
         cout << "La noticia es larga" << endl;

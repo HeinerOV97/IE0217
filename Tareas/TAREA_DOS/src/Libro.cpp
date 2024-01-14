@@ -1,15 +1,15 @@
 #include "Libro.hpp"
 
 Libro::Libro(string titulo, string grupo, string tipoDeMaterial, string autor, string editorial, 
-    string genero, string estado, int cantidadHojas, double precio, string resumenCont, string materialRel) :
+    string genero, string estado, string cantidadHojas, string precio, string resumenCont, string materialRel) :
     MaterialLectura(titulo, grupo, tipoDeMaterial, autor, editorial, 
     genero, estado, cantidadHojas, precio),  resumenCont(resumenCont), materialRel(materialRel){}
 
 void Libro::extLibro(){
 
-    if (cantidadHojas <= 100){
+    if (stoi(cantidadHojas) <= 100){
         cout << "El libro es corto" << endl;
-    } else if (cantidadHojas > 100 && cantidadHojas <= 200 ) {
+    } else if (stoi(cantidadHojas) > 100 && stoi(cantidadHojas) <= 200 ) {
         cout << "El libro es mediado" << endl;
     } else {
         cout << "El libro es largo" << endl;

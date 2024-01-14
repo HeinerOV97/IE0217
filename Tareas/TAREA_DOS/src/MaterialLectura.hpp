@@ -13,11 +13,11 @@ class MaterialLectura {
         string editorial;
         string genero;
         string estado;
-        int cantidadHojas;
-        double precio;
+        string cantidadHojas;
+        string precio;
     public:
         MaterialLectura(string titulo, string grupo, string tipoDeMaterial, string autor, string editorial, 
-            string genero, string estado, int cantidadHojas, double precio);
+            string genero, string estado, string cantidadHojas, string precio);
 };
 
 #endif

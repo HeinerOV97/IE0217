@@ -1,14 +1,14 @@
 #include "Pelicula.hpp"
 
 Pelicula::Pelicula(string tituloAV, string grupoAV, string autorAV, string tipoDeMaterialAV,
-            string generoAV, int duracionAV, string estadoAV, double precioAV, string resumenContAVPeli, string materialRelAVPeli) :
+            string generoAV, string duracionAV, string estadoAV, string precioAV, string resumenContAVPeli, string materialRelAVPeli) :
             MaterialAV(tituloAV, grupoAV, autorAV, tipoDeMaterialAV, generoAV, duracionAV, estadoAV, precioAV), resumenContAVPeli(resumenContAVPeli), materialRelAVPeli(materialRelAVPeli){}
 
 void Pelicula::extPeli(){
 
-    if (duracionAV <= 90){
+    if (stoi(duracionAV) <= 90){
         cout << "La pelicula es corta" << endl;
-    } else if (duracionAV > 90 && duracionAV <= 150 ) {
+    } else if (stoi(duracionAV) > 90 && stoi(duracionAV) <= 150 ) {
         cout << "La pelicula es mediana" << endl;
     } else {
         cout << "La pelicula es corta" << endl;
