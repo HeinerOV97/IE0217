@@ -14,6 +14,7 @@ void Libro::extLibro(){
     } else {
         cout << "El libro es largo" << endl;
     }
+    
 }
 
 void Libro::imprimeInfo(){

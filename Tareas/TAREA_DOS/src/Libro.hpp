@@ -14,5 +14,4 @@ class Libro : public MaterialLectura {
         string materialRel; 
 };
 
-
 #endif
