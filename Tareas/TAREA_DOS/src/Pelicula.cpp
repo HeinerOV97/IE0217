@@ -1,14 +1,14 @@
 #include "Pelicula.hpp"
 
-Pelicula::Pelicula(string titulo, string grupo, string autor, string tipoDeMaterial,
-            string genero, int duracion, string estado, double precio, string resumenContPeli, string materialRelPeli) :
-            MaterialAV(titulo, grupo, autor, tipoDeMaterial, genero, duracion, estado, precio), resumenContPeli(resumenContPeli), materialRelPeli(materialRelPeli){}
+Pelicula::Pelicula(string tituloAV, string grupoAV, string autorAV, string tipoDeMaterialAV,
+            string generoAV, int duracionAV, string estadoAV, double precioAV, string resumenContAVPeli, string materialRelAVPeli) :
+            MaterialAV(tituloAV, grupoAV, autorAV, tipoDeMaterialAV, generoAV, duracionAV, estadoAV, precioAV), resumenContAVPeli(resumenContAVPeli), materialRelAVPeli(materialRelAVPeli){}
 
 void Pelicula::extPeli(){
 
-    if (duracion <= 90){
+    if (duracionAV <= 90){
         cout << "La pelicula es corta" << endl;
-    } else if (duracion > 90 && duracion <= 150 ) {
+    } else if (duracionAV > 90 && duracionAV <= 150 ) {
         cout << "La pelicula es mediana" << endl;
     } else {
         cout << "La pelicula es corta" << endl;
@@ -18,14 +18,14 @@ void Pelicula::extPeli(){
 
 void Pelicula::imprimeInfoPeli(){
     cout << "La informacion de la pelicula es la siguiente: " << endl;
-    cout << "Titulo: " << titulo << endl;
-    cout << "Grupo: " << grupo << endl;
-    cout << "Autor: " << autor << endl;
-    cout << "Material: " << tipoDeMaterial << endl;
-    cout << "Genero: " << genero << endl;
-    cout << "Duracion: " << duracion << endl;
-    cout << "Estado: " << estado << endl;
-    cout << "Precio: " << precio << endl;
-    cout << "Resumen: " << resumenContPeli << endl;
-    cout << "Material relacionado: " << materialRelPeli << endl;
+    cout << "Titulo: " << tituloAV << endl;
+    cout << "Grupo: " << grupoAV << endl;
+    cout << "Autor: " << autorAV << endl;
+    cout << "Material: " << tipoDeMaterialAV << endl;
+    cout << "Genero: " << generoAV << endl;
+    cout << "Duracion: " << duracionAV << endl;
+    cout << "Estado: " << estadoAV << endl;
+    cout << "Precio: " << precioAV << endl;
+    cout << "Resumen: " << resumenContAVPeli << endl;
+    cout << "Material relacionado: " << materialRelAVPeli << endl;
 }

@@ -6,17 +6,17 @@ using namespace std;
 
 class MaterialAV {
     protected:
-        string titulo;
-        string grupo;
-        string autor;
-        string tipoDeMaterial;
-        string genero;
-        int duracion;
-        string estado;
-        double precio;
+        string tituloAV;
+        string grupoAV;
+        string autorAV;
+        string tipoDeMaterialAV;
+        string generoAV;
+        int duracionAV;
+        string estadoAV;
+        double precioAV;
     public:
-        MaterialAV(string titulo, string grupo, string autor, string tipoDeMaterial,
-            string genero, int duracion, string estado, double precio);
+        MaterialAV(string tituloAV, string grupoAV, string autorAV, string tipoDeMaterialAV,
+            string generoAV, int duracionAV, string estadoAV, double precioAV);
 };
 
 #endif
