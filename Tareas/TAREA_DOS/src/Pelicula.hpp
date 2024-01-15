@@ -5,13 +5,13 @@
 
 class Pelicula : public MaterialAV {
     public:
-        Pelicula(string tituloAV, string grupoAV, string autorAV, string tipoDeMaterialAV,
-            string generoAV, string duracionAV, string estadoAV, string precioAV, string resumenContAVPeli, string materialRelAVPeli);
+        Pelicula(string titulo, string grupo, string autor, string tipoDeMaterial,
+            string genero, string duracion, string estado, string precio, string resumenCont, string materialRel);
         void extPeli();
-        void imprimeInfoPeli();
+        void imprimeInfo();
     protected:
-        string resumenContAVPeli;
-        string materialRelAVPeli;
+        string resumenCont;
+        string materialRel;
 };
 
 #endif

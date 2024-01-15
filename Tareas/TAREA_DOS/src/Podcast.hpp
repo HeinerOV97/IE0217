@@ -5,13 +5,13 @@
 
 class Podcast : public MaterialAV {
     public:
-        Podcast(string tituloAV, string grupoAV, string autorAV, string tipoDeMaterialAV,
-            string generoAV, string duracionAV, string estadoAV, string precioAV, string resumenContAVPod, string materialRelAVPod);
+        Podcast(string titulo, string grupo, string autor, string tipoDeMaterial,
+            string genero, string duracion, string estado, string precio, string resumenCont, string materialRel);
         void extPod();
-        void imprimeInfoPod();
+        void imprimeInfo();
     protected:
-        string resumenContAVPod;
-        string materialRelAVPod;
+        string resumenCont;
+        string materialRel;
 };
 
 #endif

@@ -1,14 +1,14 @@
 #include "Podcast.hpp"
 
-Podcast::Podcast(string tituloAV, string grupoAV, string autorAV, string tipoDeMaterialAV,
-            string generoAV, string duracionAV, string estadoAV, string precioAV, string resumenContAVPod, string materialRelAVPod) :
-            MaterialAV(tituloAV, grupoAV, autorAV, tipoDeMaterialAV, generoAV, duracionAV, estadoAV, precioAV), resumenContAVPod(resumenContAVPod), materialRelAVPod(materialRelAVPod){}
+Podcast::Podcast(string titulo, string grupo, string autor, string tipoDeMaterial,
+            string genero, string duracion, string estado, string precio, string resumenCont, string materialRel) :
+            MaterialAV(titulo, grupo, autor, tipoDeMaterial, genero, duracion, estado, precio), resumenCont(resumenCont), materialRel(materialRel){}
 
 void Podcast::extPod(){
 
-    if (stoi(duracionAV) <= 30){
+    if (stoi(duracion) <= 30){
         cout << "El podcast es corto" << endl;
-    } else if (stoi(duracionAV) > 30 && stoi(duracionAV) <= 90 ) {
+    } else if (stoi(duracion) > 30 && stoi(duracion) <= 90 ) {
         cout << "La podcast es mediano" << endl;
     } else {
         cout << "La podcast es largo" << endl;
@@ -16,16 +16,16 @@ void Podcast::extPod(){
     
 }
 
-void Podcast::imprimeInfoPod(){
+void Podcast::imprimeInfo(){
     cout << "La informacion del podcast es la siguiente: " << endl;
-    cout << "Titulo: " << tituloAV << endl;
-    cout << "Grupo: " << grupoAV << endl;
-    cout << "Autor: " << autorAV << endl;
-    cout << "Material: " << tipoDeMaterialAV << endl;
-    cout << "Genero: " << generoAV << endl;
-    cout << "Duracion: " << duracionAV << endl;
-    cout << "Estado: " << estadoAV << endl;
-    cout << "Precio: " << precioAV << endl;
-    cout << "Resumen: " << resumenContAVPod << endl;
-    cout << "Material relacionado: " << materialRelAVPod << endl;
+    cout << "Titulo: " << titulo << endl;
+    cout << "Grupo: " << grupo << endl;
+    cout << "Material: " << tipoDeMaterial << endl;
+    cout << "Autor: " << autor << endl;
+    cout << "Genero: " << genero << endl;
+    cout << "Duracion: " << duracion << endl;
+    cout << "Estado: " << estado << endl;
+    cout << "Precio: " << precio << endl;
+    cout << "Resumen: " << resumenCont << endl;
+    cout << "Material relacionado: " << materialRel << endl;
 }

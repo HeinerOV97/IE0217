@@ -1,5 +1,5 @@
-#ifndef LIBRO_CPP
-#define LIBRO_CPP
+#ifndef LIBRO_HPP
+#define LIBRO_HPP
 
 #include "MaterialLectura.hpp"
 

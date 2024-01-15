@@ -16,7 +16,7 @@ void Noticia::extNoticia(){
     }
 }
 
-void Noticia::imprimeInfNot(){
+void Noticia::imprimeInfo(){
     cout << "La informacion de la noticia es la siguiente: " << endl;
     cout << "Titulo: " << titulo << endl;
     cout << "Grupo: " << grupo << endl;

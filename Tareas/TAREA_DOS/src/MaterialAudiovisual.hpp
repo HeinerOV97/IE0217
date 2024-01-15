@@ -1,22 +1,18 @@
 #ifndef MATERIALAUDIOVISUAL_HPP
 #define MATERIALAUDIOVISUAL_HPP
 
+#include "MaterialesCompl.hpp"
 #include <iostream>
 using namespace std;
 
-class MaterialAV {
+class MaterialAV : public MaterialesCompl {
     protected:
-        string tituloAV;
-        string grupoAV;
-        string autorAV;
-        string tipoDeMaterialAV;
-        string generoAV;
-        string duracionAV;
-        string estadoAV;
-        string precioAV;
+        string duracion;
+
     public:
-        MaterialAV(string tituloAV, string grupoAV, string autorAV, string tipoDeMaterialAV,
-            string generoAV, string duracionAV, string estadoAV, string precioAV);
+        virtual void imprimeInfo();
+        MaterialAV(string titulo, string grupo, string tipoDeMaterial, string autor,
+            string genero, string duracion, string estado, string precio);
 };
 
 #endif
