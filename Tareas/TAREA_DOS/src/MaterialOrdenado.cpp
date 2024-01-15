@@ -16,8 +16,9 @@ void MaterialOrdenado::borrarMaterial(string elemento) {
     for (const auto& mat : material) {
         if(mat->titulo == elemento){
             delete material[i];
+            material.erase(material.begin() + i);
         }
-        i++;
+        i = i + 1;
     }
 
     /*

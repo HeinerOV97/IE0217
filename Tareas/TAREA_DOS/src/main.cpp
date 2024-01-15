@@ -10,7 +10,7 @@ int main() {
 
     //Libro miLibro("Titulo", "grupo", "TipoDeMaterial", "Autor", "Editorial", "Genero", "Estado", "10", "1590", "Resumen", "Material");
 
-   //Noticia miNoticia("Titulo", "grupo", "TipoDeMaterial", "Autor", "Editorial", "Genero", "Estado", "10", "1590", "Resumen", "Material");
+    //Noticia miNoticia("Titulo", "grupo", "TipoDeMaterial", "Autor", "Editorial", "Genero", "Estado", "10", "1590", "Resumen", "Material");
    
     //Pelicula miPelicula("Titulo", "Grupo", "Autor", "Material", "Genero", "120", "Estado", "2000", "Resumen", "Material");
 
@@ -24,7 +24,7 @@ int main() {
     Prueba.AgregarMaterial(new Podcast("Titulo", "grupo", "Podcast", "Autor", "Genero", "120", "Estado", "2560", "Resumen", "Material"));
     
     Prueba.imprimirDatos();
-    Prueba.borrarMaterial("Titulo2");
+    Prueba.borrarMaterial("Titulo");
     Prueba.imprimirDatos();
 
     /*
