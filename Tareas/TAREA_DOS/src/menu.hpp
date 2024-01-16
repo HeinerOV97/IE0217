@@ -15,5 +15,7 @@ void almacenarDatos();
 void almacenaMatLec();
 void almacenaMatAV();
 void borrarMatPorTit();
+void buscarMatPorTit();
+void buscarMatPorTip();
 
 #endif

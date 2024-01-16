@@ -23,10 +23,10 @@ void elegirOpcion(){
             almacenarDatos();
             break;
         case 2: //Definir la dificultad del juego
-            
+            buscarMatPorTit();
             break;
         case 3: //Se inicia el juego
-            
+            buscarMatPorTip();
             break;
         case 4: //Se inicia el juego
             borrarMatPorTit();
@@ -200,5 +200,39 @@ void borrarMatPorTit(){
     Material.borrarMaterial(tituloParaBorrar);
     cout << "Borrado exitoso, quedan los siguientes elementos en su base de datos" << endl;
     Material.imprimirDatos();
+    
+}
+
+void buscarMatPorTit(){
+
+    string tituloParaBuscar;
+
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout << "Ingrese el titulo del material que desea buscar" << endl;
+    getline(cin,tituloParaBuscar);
+    cout << "Posee los siguiente elementos con este titulo en su base de datos" << endl;
+    Material.imprimirInformacionTit(tituloParaBuscar);
+    
+
+}
+
+void buscarMatPorTip(){
+
+    string tipoParaBuscar;
+    int opcion;
+
+    cout << "Ingrese el tipo de material que desea buscar:\n1.Libro\n2.Noticia\n3.Pelicula\n4.Podcast" << endl;
+    cin >> opcion;
+    if (opcion == 1){
+        tipoParaBuscar = "Libro";
+    } else if (opcion == 2){
+        tipoParaBuscar = "Noticia";
+    } else if (opcion == 3){
+        tipoParaBuscar = "Pelicula";
+    } else if (opcion == 4){
+        tipoParaBuscar = "Podcast";
+    }
+    cout << "Posee los siguiente elementos con este titulo en su base de datos" << endl;
+    Material.imprimirInformacionTip(tipoParaBuscar);
     
 }
