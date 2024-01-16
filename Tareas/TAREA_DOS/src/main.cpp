@@ -4,9 +4,15 @@
 #include "Podcast.hpp"
 #include "MaterialOrdenado.hpp"
 #include "MaterialLectura.hpp"
+#include "menu.hpp"
 
 
 int main() {
+
+    while(1){
+        mostrarMenu(); //Llama a la funcion encargada de mostrar el menu al usuario
+        elegirOpcion(); //Llama a la funcion que permite al usuario elegir opciones en el menu
+    }
 
     //Libro miLibro("Titulo", "grupo", "TipoDeMaterial", "Autor", "Editorial", "Genero", "Estado", "10", "1590", "Resumen", "Material");
 
@@ -16,6 +22,7 @@ int main() {
 
     //Podcast miPodcast("Titulo", "Grupo", "Autor", "Material", "Genero", "120", "Estado", "2000", "Resumen", "Material");
 
+    /*
     MaterialOrdenado Prueba;
 
     Prueba.AgregarMaterial(new Libro("Titulo1", "grupo", "Libro", "Autor", "Editorial", "Genero", "Estado", "10", "1590", "Resumen", "Material"));
@@ -29,6 +36,7 @@ int main() {
     Prueba.imprimirDatos();
     Prueba.imprimirInformacionTit("Titulo2");
     Prueba.imprimirInformacionTip("Podcast");
+    */
 
     /*
     miLibro.extLibro();
