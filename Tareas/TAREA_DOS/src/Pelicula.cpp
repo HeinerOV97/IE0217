@@ -1,8 +1,8 @@
 #include "Pelicula.hpp"
 
-Pelicula::Pelicula(string titulo, string grupo, string autor, string tipoDeMaterial,
+Pelicula::Pelicula(string titulo, string grupo, string tipoDeMaterial, string autor,
             string genero, string duracion, string estado, string precio, string resumenCont, string materialRel) :
-            MaterialAV(titulo, grupo, autor, tipoDeMaterial, genero, duracion, estado, precio), resumenCont(resumenCont), materialRel(materialRel){}
+            MaterialAV(titulo, grupo, tipoDeMaterial, autor, genero, duracion, estado, precio), resumenCont(resumenCont), materialRel(materialRel){}
 
 void Pelicula::extPeli(){
 

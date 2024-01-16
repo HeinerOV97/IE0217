@@ -17,6 +17,8 @@ public:
     void AgregarMaterial(MaterialesCompl* mat);
     void imprimirDatos();
     void borrarMaterial(string elemento);
+    void imprimirInformacionTit(string tituloMat);
+    void imprimirInformacionTip(string tipoMat);
 };
 
 #endif

@@ -20,11 +20,24 @@ void MaterialOrdenado::borrarMaterial(string elemento) {
         }
         i = i + 1;
     }
-
-    /*
-    if (elemento >= 0 && elemento < material.size()) {
-    delete material[elemento];
-    material.erase(material.begin() + elemento);
-    */
 }
+
+void MaterialOrdenado::imprimirInformacionTit(string tituloMat) {
+
+    for (const auto& mat : material) {
+        if (mat->titulo == tituloMat){
+            mat->imprimeInfo();
+        }
+    }
+}
+
+void MaterialOrdenado::imprimirInformacionTip(string tipoMat) {
+        for (const auto& mat : material) {
+        if (mat->tipoDeMaterial == tipoMat){
+            mat->imprimeInfo();
+        }
+    }
+}
+
+
 

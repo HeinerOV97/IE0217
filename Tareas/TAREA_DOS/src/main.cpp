@@ -18,14 +18,17 @@ int main() {
 
     MaterialOrdenado Prueba;
 
-    Prueba.AgregarMaterial(new Libro("Titulo2", "grupo", "Libro", "Autor", "Editorial", "Genero", "Estado", "10", "1590", "Resumen", "Material"));
-    Prueba.AgregarMaterial(new Noticia("Titulo", "grupo", "Noticia", "Autor", "Editorial", "Genero", "Estado", "10", "1590", "Resumen", "Material"));
-    Prueba.AgregarMaterial(new Pelicula("Titulo2", "grupo", "Pelicula", "Autor", "Genero", "120", "Estado", "2560", "Resumen", "Material"));
-    Prueba.AgregarMaterial(new Podcast("Titulo", "grupo", "Podcast", "Autor", "Genero", "120", "Estado", "2560", "Resumen", "Material"));
+    Prueba.AgregarMaterial(new Libro("Titulo1", "grupo", "Libro", "Autor", "Editorial", "Genero", "Estado", "10", "1590", "Resumen", "Material"));
+    Prueba.AgregarMaterial(new Noticia("Titulo2", "grupo", "Noticia", "Autor", "Editorial", "Genero", "Estado", "10", "1590", "Resumen", "Material"));
+    Prueba.AgregarMaterial(new Podcast("Titulo4", "grupo", "Podcast", "Autor", "Genero", "120", "Estado", "2560", "Resumen", "Material"));
+    Prueba.AgregarMaterial(new Pelicula("Titulo3", "grupo", "Pelicula", "Autor", "Genero", "120", "Estado", "2560", "Resumen", "Material"));
+   
     
     Prueba.imprimirDatos();
-    Prueba.borrarMaterial("Titulo");
+    Prueba.borrarMaterial("Titulo1");
     Prueba.imprimirDatos();
+    Prueba.imprimirInformacionTit("Titulo2");
+    Prueba.imprimirInformacionTip("Podcast");
 
     /*
     miLibro.extLibro();
