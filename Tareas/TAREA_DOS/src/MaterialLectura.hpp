@@ -17,11 +17,32 @@ using namespace std;
 */
 class MaterialLectura : public MaterialesCompl {
     protected:
-        string editorial;
-        string cantidadHojas;
+        string editorial; /**< Se almacenara la editorial del material. */
+        string cantidadHojas; /**< Se almacenara la cantidad de hojas del material. */
     public:
+
+        /**
+        * @brief imprimeInfo: Metodo virtual que sera sustituido por los metodos de las clases hijo segun corresponda
+        */
         virtual void imprimeInfo();
+        
+        /**
+        * @brief imprimeInfo: Metodo virtual que sera sustituido por los metodos de las clases hijo segun corresponda
+        */
         virtual void ext();
+
+        /**
+        * @brief MaterialLectura: Constructor de la clase MaterialLectura
+        * @param titulo titulo del material
+        * @param grupo grupo del material
+        * @param tipoDeMaterial tipoDeMaterial
+        * @param autor Autor del material
+        * @param editorial editorial del material
+        * @param genero genero del material
+        * @param estado estado del material
+        * @param cantidadHojas cantidad de hojas del material 
+        * @param precio precio del material
+        */
         MaterialLectura(string titulo, string grupo, string tipoDeMaterial, string autor, string editorial, 
             string genero, string estado, string cantidadHojas, string precio);
 };

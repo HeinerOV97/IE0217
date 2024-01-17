@@ -7,10 +7,15 @@
 
 #include "Pelicula.hpp"
 
+// Se inicializa el constructor
 Pelicula::Pelicula(string titulo, string grupo, string tipoDeMaterial, string autor,
             string genero, string duracion, string estado, string precio, string resumenCont, string materialRel) :
             MaterialAV(titulo, grupo, tipoDeMaterial, autor, genero, duracion, estado, precio), resumenCont(resumenCont), materialRel(materialRel){}
 
+/* 
+Funcion que indica la duracion de la pelicula, hace casting del string duracion recibido a un entero 
+y realiza las comparaciones necesarias para comprobar la duracion de la pelicula
+*/
 void Pelicula::ext(){
 
     if (stoi(duracion) <= 90){
@@ -23,6 +28,9 @@ void Pelicula::ext(){
     
 }
 
+/*
+Imprime la informacion de la pelicula a partir de los strings entregados por el usuario
+*/
 void Pelicula::imprimeInfo(){
     cout << "La informacion de la pelicula es la siguiente: " << endl;
     cout << "Titulo: " << titulo << endl;

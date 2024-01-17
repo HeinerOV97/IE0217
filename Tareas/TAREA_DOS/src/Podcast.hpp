@@ -15,13 +15,36 @@
 */
 class Podcast : public MaterialAV {
     public:
+
+        /**
+        * @brief Podcast: Constructor de la clase Podcast
+        * @param titulo titulo del material
+        * @param grupo grupo del material
+        * @param tipoDeMaterial tipoDeMaterial
+        * @param autor Autor del material
+        * @param genero genero del material
+        * @param duracion duracion del material 
+        * @param estado estado del material
+        * @param precio precio del material
+        * @param resumenCont resumen del material
+        * @param materialRel material relacionado
+        */
         Podcast(string titulo, string grupo, string tipoDeMaterial, string autor,
             string genero, string duracion, string estado, string precio, string resumenCont, string materialRel);
+
+        /**
+        * @brief ext: Metodo que indica el tamano de la noticia
+        */
         void ext();
+
+        /**
+        * @brief imprimeInfo: Metodo que imprime la informacion de la noticia
+        */
         void imprimeInfo();
+
     protected:
-        string resumenCont;
-        string materialRel;
+        string resumenCont; /**< Se almacenara el resumen del material. */
+        string materialRel; /**< Se almacenara material relacionado al material. */
 };
 
 #endif

@@ -7,11 +7,15 @@
 
 #include "Podcast.hpp"
 
+// Se inicializa el constructor
 Podcast::Podcast(string titulo, string grupo, string tipoDeMaterial, string autor,
             string genero, string duracion, string estado, string precio, string resumenCont, string materialRel) :
             MaterialAV(titulo, grupo, tipoDeMaterial, autor, genero, duracion, estado, precio), resumenCont(resumenCont), materialRel(materialRel){}
 
-
+/* 
+Funcion que indica la duracion del podcast, hace casting del string duracion recibido a un entero 
+y realiza las comparaciones necesarias para comprobar la duracion del podcast
+*/
 void Podcast::ext(){
 
     if (stoi(duracion) <= 30){
@@ -24,6 +28,9 @@ void Podcast::ext(){
     
 }
 
+/*
+Imprime la informacion del podcast a partir de los strings entregados por el usuario
+*/
 void Podcast::imprimeInfo(){
     cout << "La informacion del podcast es la siguiente: " << endl;
     cout << "Titulo: " << titulo << endl;

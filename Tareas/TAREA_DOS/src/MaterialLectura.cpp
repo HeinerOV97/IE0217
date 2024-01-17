@@ -11,11 +11,12 @@ MaterialLectura::MaterialLectura(string titulo, string grupo, string tipoDeMater
                             string genero, string estado, string cantidadHojas, string precio) :
                             MaterialesCompl(titulo, grupo, tipoDeMaterial, autor, genero, estado, precio), editorial(editorial), cantidadHojas(cantidadHojas){
 
-    this->editorial = editorial;
-    this->cantidadHojas = cantidadHojas;
+    this->editorial = editorial; // Se almacena en editorial el string de editorial recibido 
+    this->cantidadHojas = cantidadHojas; // Se almacena en cantidadHojas el string de cantidadHojas recibido 
     
 }
 
+// Se inicializan funciones virtuales
 void MaterialLectura::imprimeInfo(){}
 void MaterialLectura::ext(){}
 

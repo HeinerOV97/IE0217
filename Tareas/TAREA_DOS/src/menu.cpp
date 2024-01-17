@@ -20,7 +20,7 @@ void mostrarMenu(){
     cout << "3. Ubicar material por tipo\n";
     cout << "4. Borrar material por titulo\n";
     cout << "5. Mostrar todos los materiales de la base de datos\n";
-    cout << "6. Salir";
+    cout << "6. Salir\n";
 }
 
 void elegirOpcion(){
@@ -44,6 +44,7 @@ void elegirOpcion(){
             break;
         case 5: //Salir
             MostrarMatComl();
+            break;
         case 6:    
             std::cout << "Saliendo del programa...\n";
             exit(0);

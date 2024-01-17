@@ -17,11 +17,30 @@ using namespace std;
 */
 class MaterialAV : public MaterialesCompl {
     protected:
-        string duracion;
+        string duracion; /**< Se almacenara la distancia del material. */
 
     public:
+        /**
+        * @brief ext: Metodo virtual que sera sustituido por los metodos de las clases hijo segun corresponda
+        */
         virtual void imprimeInfo();
+        
+        /**
+        * @brief ext: Metodo virtual que sera sustituido por los metodos de las clases hijo segun corresponda
+        */
         virtual void ext();
+
+        /**
+        * @brief MaterialAV: Constructor de la clase MaterialAV
+        * @param titulo titulo del material
+        * @param grupo grupo del material
+        * @param tipoDeMaterial tipoDeMaterial
+        * @param autor Autor del material
+        * @param genero genero del material
+        * @param duracion duracion del material
+        * @param estado estado del material
+        * @param precio precio del material
+        */
         MaterialAV(string titulo, string grupo, string tipoDeMaterial, string autor,
             string genero, string duracion, string estado, string precio);
 };
