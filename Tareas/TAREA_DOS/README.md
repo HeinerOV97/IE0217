@@ -22,6 +22,8 @@ Se implementaron los comandos para que el make identifique en que sistema operat
 
 En este caso el código no cuenta con la función de ordenar el material por precio, a partir del uso de bubble sort, las demás funciones solicitadas están todas implementas.
 
+Se solicita solo utilizar valores numéricos al momento de solicitarse cantidad de hojas, duracion y precio de los materiales, ya que el programa si se usan strings en estas variables, presentará problemas.
+
 # Teoría Tarea #2
 
 1. *Conceptos Fundamentales*: Define qué es la programación orientada a objetos y explica sus principios fundamentales.
