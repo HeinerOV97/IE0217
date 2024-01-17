@@ -11,6 +11,9 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief MaterialesCompl: Clase padre que heredara a las clases MaterialLectura y MaterialAV, los atributos principales con los que trabajaran
+*/
 class MaterialesCompl {
     protected:
         string titulo;

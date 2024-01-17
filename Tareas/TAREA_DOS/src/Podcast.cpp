@@ -31,7 +31,7 @@ void Podcast::imprimeInfo(){
     cout << "Material: " << tipoDeMaterial << endl;
     cout << "Autor: " << autor << endl;
     cout << "Genero: " << genero << endl;
-    cout << "Duracion: " << duracion << endl;
+    cout << "Duracion: " << duracion << " min" << endl;
     cout << "Estado: " << estado << endl;
     cout << "Precio: " << precio << endl;
     cout << "Resumen: " << resumenCont << endl;

@@ -12,6 +12,9 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief MaterialAV: Clase que hereda los atributos de la clase MaterialesCompl, agrega un atributo y metodos virtuales para imprimir informacion y extension de las clases Pelicula y Podcast
+*/
 class MaterialAV : public MaterialesCompl {
     protected:
         string duracion;

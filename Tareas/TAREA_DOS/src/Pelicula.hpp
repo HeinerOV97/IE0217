@@ -10,6 +10,9 @@
 
 #include "MaterialAudiovisual.hpp"
 
+/**
+ * @brief Pelicula: Clase que hereda los atributos de la clase MaterialAV, agrega dos atributos y metodos para imprimir informacion y extension de la pelicula
+*/
 class Pelicula : public MaterialAV {
     public:
         Pelicula(string titulo, string grupo, string tipoDeMaterial, string autor,

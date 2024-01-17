@@ -12,6 +12,9 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief MaterialLectura: Clase que hereda los atributos de la clase MaterialesCompl, agrega dos atributos y metodos virtuales para imprimir informacion y extension de clase Libro y Noticia
+*/
 class MaterialLectura : public MaterialesCompl {
     protected:
         string editorial;

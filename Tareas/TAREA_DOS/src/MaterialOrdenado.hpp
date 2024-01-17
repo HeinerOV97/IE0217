@@ -15,7 +15,9 @@
 #include "Pelicula.hpp"
 #include "Podcast.hpp"
 
-
+/**
+ * @brief MaterialOrdenad: Clase encargada de almacenar los objetos instaciados por las clases Libro, Noticia, Pelicula y Podcast, ademas ofrece metodos para buscar los objetos y borrarlos
+*/
 class MaterialOrdenado {
 private:
     std::vector<MaterialesCompl*> material;

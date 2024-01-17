@@ -10,6 +10,9 @@
 
 #include "MaterialAudiovisual.hpp"
 
+/**
+ * @brief Podcast: Clase que hereda los atributos de la clase MaterialAV, agrega dos atributos y metodos para imprimir informacion y extension del podcast
+*/
 class Podcast : public MaterialAV {
     public:
         Podcast(string titulo, string grupo, string tipoDeMaterial, string autor,

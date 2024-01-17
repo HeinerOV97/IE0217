@@ -10,6 +10,9 @@
 
 #include "MaterialLectura.hpp"
 
+/**
+ * @brief Noticia: Clase que hereda los atributos de la clase MaterialLectura, agrega dos atributos y metodos para imprimir informacion y extension de la noticia
+*/
 class Noticia : public MaterialLectura {
     public:
         Noticia(string titulo, string grupo, string tipoDeMaterial, string autor, string editorial, 
