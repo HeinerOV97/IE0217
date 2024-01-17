@@ -32,7 +32,7 @@ void Podcast::ext(){
 Imprime la informacion del podcast a partir de los strings entregados por el usuario
 */
 void Podcast::imprimeInfo(){
-    cout << "La informacion del podcast es la siguiente: " << endl;
+    cout << "\nLa informacion del podcast es la siguiente: " << endl;
     cout << "Titulo: " << titulo << endl;
     cout << "Grupo: " << grupo << endl;
     cout << "Material: " << tipoDeMaterial << endl;

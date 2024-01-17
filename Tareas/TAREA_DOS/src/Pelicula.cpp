@@ -23,7 +23,7 @@ void Pelicula::ext(){
     } else if (stoi(duracion) > 90 && stoi(duracion) <= 150 ) {
         cout << "La pelicula es mediana" << endl;
     } else {
-        cout << "La pelicula es corta" << endl;
+        cout << "La pelicula es larga" << endl;
     }
     
 }
@@ -32,7 +32,7 @@ void Pelicula::ext(){
 Imprime la informacion de la pelicula a partir de los strings entregados por el usuario
 */
 void Pelicula::imprimeInfo(){
-    cout << "La informacion de la pelicula es la siguiente: " << endl;
+    cout << "\nLa informacion de la pelicula es la siguiente: " << endl;
     cout << "Titulo: " << titulo << endl;
     cout << "Grupo: " << grupo << endl;
     cout << "Material: " << tipoDeMaterial << endl;

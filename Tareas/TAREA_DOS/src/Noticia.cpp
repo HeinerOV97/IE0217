@@ -33,7 +33,7 @@ void Noticia::ext(){
 Imprime la informacion de la noticia a partir de los strings entregados por el usuario
 */
 void Noticia::imprimeInfo(){
-    cout << "La informacion de la noticia es la siguiente: " << endl;
+    cout << "\nLa informacion de la noticia es la siguiente: " << endl;
     cout << "Titulo: " << titulo << endl;
     cout << "Grupo: " << grupo << endl;
     cout << "Material: " << tipoDeMaterial << endl;

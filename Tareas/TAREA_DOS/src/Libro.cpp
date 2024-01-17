@@ -33,7 +33,7 @@ void Libro::ext(){
 Imprime la informacion del libro a partir de los strings entregados por el usuario
 */
 void Libro::imprimeInfo(){
-    cout << "La informacion del libro es la siguiente: " << endl;
+    cout << "\nLa informacion del libro es la siguiente: " << endl;
     cout << "Titulo: " << titulo << endl;
     cout << "Grupo: " << grupo << endl;
     cout << "Material: " << tipoDeMaterial << endl;
