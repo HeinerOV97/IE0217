@@ -1,3 +1,10 @@
+/**
+ * \copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+ * @file Libro.cpp
+ * @date 16/01/2024
+ * @author Heiner Obando Vega
+*/
+
 #include "Libro.hpp"
 
 Libro::Libro(string titulo, string grupo, string tipoDeMaterial, string autor, string editorial, 
@@ -5,7 +12,7 @@ Libro::Libro(string titulo, string grupo, string tipoDeMaterial, string autor, s
     MaterialLectura(titulo, grupo, tipoDeMaterial, autor, editorial, 
     genero, estado, cantidadHojas, precio),  resumenCont(resumenCont), materialRel(materialRel){}
 
-void Libro::extLibro(){
+void Libro::ext(){
 
     if (stoi(cantidadHojas) <= 100){
         cout << "El libro es corto" << endl;

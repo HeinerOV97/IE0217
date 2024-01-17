@@ -1,3 +1,10 @@
+/**
+ * \copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+ * @file menu.hpp
+ * @date 16/01/2024
+ * @author Heiner Obando Vega
+*/
+
 #ifndef MENU_HPP
 #define MENU_HPP
 #include <string>

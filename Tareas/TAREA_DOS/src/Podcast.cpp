@@ -1,3 +1,10 @@
+/**
+ * \copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+ * @file Podcast.cpp
+ * @date 16/01/2024
+ * @author Heiner Obando Vega
+*/
+
 #include "Podcast.hpp"
 
 Podcast::Podcast(string titulo, string grupo, string tipoDeMaterial, string autor,
@@ -5,7 +12,7 @@ Podcast::Podcast(string titulo, string grupo, string tipoDeMaterial, string auto
             MaterialAV(titulo, grupo, tipoDeMaterial, autor, genero, duracion, estado, precio), resumenCont(resumenCont), materialRel(materialRel){}
 
 
-void Podcast::extPod(){
+void Podcast::ext(){
 
     if (stoi(duracion) <= 30){
         cout << "El podcast es corto" << endl;

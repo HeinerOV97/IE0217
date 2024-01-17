@@ -1,3 +1,10 @@
+/**
+ * \copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+ * @file Noticia.cpp
+ * @date 16/01/2024
+ * @author Heiner Obando Vega
+*/
+
 #include "Noticia.hpp"
 
 Noticia::Noticia(string titulo, string grupo, string tipoDeMaterial, string autor, string editorial, 
@@ -5,7 +12,7 @@ Noticia::Noticia(string titulo, string grupo, string tipoDeMaterial, string auto
     MaterialLectura(titulo, grupo, tipoDeMaterial, autor, editorial, 
     genero, estado, cantidadHojas, precio),  resumenContNot(resumenContNot), materialRelNot(materialRelNot){}
 
-void Noticia::extNoticia(){
+void Noticia::ext(){
 
     if (stoi(cantidadHojas) <= 5){
         cout << "La noticia es corta" << endl;

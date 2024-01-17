@@ -1,3 +1,10 @@
+/**
+ * \copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+ * @file menu.cpp
+ * @date 16/01/2024
+ * @author Heiner Obando Vega
+*/
+
 #include "menu.hpp"
 using namespace std;
 
@@ -75,7 +82,6 @@ void almacenaMatLec(){
     string precioRec;
     string resumenRec;
     string matRelaRec;
-    string duracionRec;
 
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     cout << "Ingresa el titulo del material" << endl;
@@ -83,7 +89,7 @@ void almacenaMatLec(){
     
     grupoRec = "Material de lectura";
     
-    cout << "Ingresa el tipo de material\n1. Libro\n2.Noticia" << endl;
+    cout << "Ingresa el tipo de material\n1. Libro\n2. Noticia" << endl;
     getline(cin, opcionMat);
 
     if (opcionMat == "1"){
@@ -133,10 +139,8 @@ void almacenaMatAV(){
     string grupoRec;
     string tipoMatRec;
     string autorRec;
-    string editorialRec;
     string generoRec;
     string estadoRec;
-    string cantHojasRec;
     string precioRec;
     string resumenRec;
     string matRelaRec;
@@ -148,9 +152,7 @@ void almacenaMatAV(){
     
     grupoRec = "Material audivisual";
     
-     grupoRec = "Material de lectura";
-    
-    cout << "Ingresa el tipo de material\n1. Pelicula\n2.Podcast" << endl;
+    cout << "Ingresa el tipo de material\n1. Pelicula\n2. Podcast" << endl;
     getline(cin, opcionMat);
 
     if (opcionMat == "1"){

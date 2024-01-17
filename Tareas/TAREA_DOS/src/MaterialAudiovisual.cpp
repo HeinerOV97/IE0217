@@ -1,3 +1,10 @@
+/**
+ * \copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+ * @file MaterialAudiovisual.cpp
+ * @date 16/01/2024
+ * @author Heiner Obando Vega
+*/
+
 #include "MaterialAudiovisual.hpp"
 
 MaterialAV::MaterialAV(string titulo, string grupo, string tipoDeMaterial, string autor,
@@ -8,3 +15,4 @@ MaterialAV::MaterialAV(string titulo, string grupo, string tipoDeMaterial, strin
 }
 
 void MaterialAV::imprimeInfo(){}
+void MaterialAV::ext(){}

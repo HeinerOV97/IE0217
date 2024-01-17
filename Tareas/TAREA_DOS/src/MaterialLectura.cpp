@@ -1,3 +1,10 @@
+/**
+ * \copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+ * @file MaterialLectura.cpp
+ * @date 16/01/2024
+ * @author Heiner Obando Vega
+*/
+
 #include "MaterialLectura.hpp"
 
 MaterialLectura::MaterialLectura(string titulo, string grupo, string tipoDeMaterial, string autor, string editorial, 
@@ -10,5 +17,6 @@ MaterialLectura::MaterialLectura(string titulo, string grupo, string tipoDeMater
 }
 
 void MaterialLectura::imprimeInfo(){}
+void MaterialLectura::ext(){}
 
 

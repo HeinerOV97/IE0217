@@ -1,10 +1,17 @@
+/**
+ * \copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+ * @file Pelicula.cpp
+ * @date 16/01/2024
+ * @author Heiner Obando Vega
+*/
+
 #include "Pelicula.hpp"
 
 Pelicula::Pelicula(string titulo, string grupo, string tipoDeMaterial, string autor,
             string genero, string duracion, string estado, string precio, string resumenCont, string materialRel) :
             MaterialAV(titulo, grupo, tipoDeMaterial, autor, genero, duracion, estado, precio), resumenCont(resumenCont), materialRel(materialRel){}
 
-void Pelicula::extPeli(){
+void Pelicula::ext(){
 
     if (stoi(duracion) <= 90){
         cout << "La pelicula es corta" << endl;
