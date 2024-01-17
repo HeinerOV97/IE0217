@@ -1,4 +1,28 @@
-# Teoría Tarea #
+# Práctica Tarea #2
+
+## Ejecución del programa
+
+El programa se ejecutará a través de un Makefile, para ejecutarlo se debe estar ubicado en la carpeta src en el PATH, esta carpeta se encuentra en la carpeta general de la tarea, en esta carpeta se encuentran los archivos de código fuente y el Makefile.
+
+Se solicita que si se presenta algún problema al ejecutar el programa, se revise si se tienen los archivos en una ruta de acceso muy larga, se comprobó que esto podía dar problemas en la ejecución del código.
+
+Como tal si solo se utiliza el comando “mingw32-make" se compilara el codigo, se ejecutara el programa, y el ejecutable será eliminado luego de su uso, tal y como indican las instrucciones de la tarea.
+
+El Makefile, posee cuatro targets que realizan diferentes acciones automatizadas para la facilidad de ejecución del programa, estas cuatro indicaciones son:
+
+- build: Este target se encarga de compilar el código fuente y generar el ejecutable con el nombre Libreria.exe, para su ejecución en Windows se utiliza el comando “mingw32-make build”.
+
+- run: Este target se encarga de ejecutar el programa Libreria.exe, siempre y cuando se haya ejecutado el comando build primero, para su ejecución en Windows se utiliza el comando “mingw32-make run”. 
+
+- clean: Este target se encarga de eliminar los archivos ejecutables y solo dejar los archivos fuente, para su ejecución en Windows se utiliza el comando “mingw32-make clean”. 
+
+- all: Este target se encarga de compilar el código fuente, generar un ejecutable con el nombre Libreria.exe, ejecutar el programa, y eliminar el ejecutable luego de su uso, es decir, este comando realiza los targets build y run y clean en un solo comando. Su ejecución en Windows se lleva acabo con el comando “mingw32-make all”.
+
+Se implementaron los comandos para que el make identifique en que sistema operativo se esta trabajando.
+
+En este caso el código no cuenta con la función de ordenar el material por precio, a partir del uso de bubble sort, las demás funciones solicitadas están todas implementas.
+
+# Teoría Tarea #2
 
 1. *Conceptos Fundamentales*: Define qué es la programación orientada a objetos y explica sus principios fundamentales.
 
