@@ -16,7 +16,7 @@ El Makefile, posee cuatro targets que realizan diferentes acciones automatizadas
 
 - clean: Este target se encarga de eliminar los archivos ejecutables y solo dejar los archivos fuente, para su ejecución en Windows se utiliza el comando “mingw32-make clean”. 
 
-- all: Este target se encarga de compilar el código fuente, generar un ejecutable con el nombre Libreria.exe, ejecutar el programa, y eliminar el ejecutable luego de su uso, es decir, este comando realiza los targets build y run y clean en un solo comando. Su ejecución en Windows se lleva acabo con el comando “mingw32-make all”.
+- all: Este target se encarga de compilar el código fuente, generar un ejecutable con el nombre Libreria.exe, ejecutar el programa, y eliminar el ejecutable luego de su uso, es decir, este comando realiza los targets build, run y clean en un solo comando. Su ejecución en Windows se lleva acabo con el comando “mingw32-make all”.
 
 Se implementaron los comandos para que el make identifique en que sistema operativo se esta trabajando.
 
