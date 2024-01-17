@@ -241,8 +241,7 @@ void borrarMatPorTit(){
     Material.borrarMaterial(tituloParaBorrar);
 
     // Se muestra una lista de los elementos que quedan en la base de datos para comprobar que fue borrado el material solicita
-    cout << "Borrado exitoso, quedan los siguientes elementos en su base de datos" << endl;
-    Material.imprimirDatos();
+    cout << "Borrado exitoso" << endl;
     
 }
 
