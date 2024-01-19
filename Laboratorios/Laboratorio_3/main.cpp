@@ -32,8 +32,12 @@ int main(){
         std::cerr << "Error al eliminar contacto: " << e.what() << std::endl;
     }
 
-    //Mostrar contactos
+    // Mostrar contactos
     std::cout << "Contactos en la agenda: " << std::endl;
     agenda.mostrarContactos();
+
+    // Buscar contactos
+    agenda.buscarContactos("Juan Santamaria");
+
 
 }
