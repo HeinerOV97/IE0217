@@ -59,11 +59,11 @@ Bloques para manejo de excepciones:
 
 Excepciones estándar de C++:
 
-- std::invalid_argument: Este error es utilizado cuando se reciben argumentos que no se esperaba recibir, por ejemplo, si se solicita al usuario un número para realizar una operación matemática y este recibe un string, este error sería adecuado para mostrar.
+- invalid_argument: Este error es utilizado cuando se reciben argumentos que no se esperaba recibir, por ejemplo, si se solicita al usuario un número para realizar una operación matemática y este recibe un string, este error sería adecuado para mostrar.
 
-- std::range_error: Este error es utilizado cuando se intenta almacenar un valor que esta fuera de un rango ya preestablecido.
+- range_error: Este error es utilizado cuando se intenta almacenar un valor que esta fuera de un rango ya preestablecido.
 
-std::overflow_error: Este error puede ser utilizado cuando sucede un overflow, esto quiere decir que el valor de una variable de un tipo alcanza el mayor valor que puede adquirir y lo sobrepasa.
+- overflow_error: Este error puede ser utilizado cuando sucede un overflow, esto quiere decir que el valor de una variable de un tipo alcanza el mayor valor que puede adquirir y lo sobrepasa.
 
 6. Política de Manejo de Excepciones: ¿Qué es una política de manejo de excepciones y por qué es importante considerarla al diseñar software?
 
@@ -75,11 +75,82 @@ Este comando especifica si una función o alguna expresión utilizada en el cód
 
 8. Contenedores STL: Nombre cinco contenedores diferentes de la STL y explique brevemente en qué situaciones sería apropiado usar cada uno.
 
+Algunos de los tipos de contenedores de STL son [2]:
 
+- vector: Este es un contenedor que almacena los elementos de manera desordenado, para posee un tamaño dinámico, por lo que, su tamaño variará de acuerdo a la cantidad de elementos que se solicite guardar en el, es apropiado utilizarlo, cuando no haya una cantidad definida de elementos que se desee almacenar.
 
+- list: Este tipo de contenedor es apropiado utilizarlo, cuando se busque una rápida inserción y eliminación de elementos del contenedor, además este proporciona la iteración en ambas direcciones.
 
+- map: Este tipo de contenedor permite almacenar elementos con una combinación de clave y valor, por lo que es apropiado utilizarlo, si esto es lo que se busca, almacenar elementos en condiciones donde se sepa la clave pero no el valor de un elementos.
 
+- set: Este contenedor puede ser útil cuando se desea almacenar valores en orden de menor a mayor y eliminando los valores repetidos, ya que esta es su función
+
+- queue: El contenedor de cola puede ser utilizada cuando se desea almacenar elementos y acceder a ellos de una manera secuencial, en este caso, el primer elemento en entrar será el primer elemento en salir.
+
+9.  Iteradores en STL: Explique el concepto de iteradores en la STL y cómo se utilizan para acceder a elementos en contenedores.
+
+Los iteradores son objetos que poseen una función similar a un puntero, en este caso los iteradores representan la posición de un elemento en un contenedor. Estos son utilizados para iterar sobre los elementos de un contenedor y la manera para hacerlo es la siguiente, las funciones begin() y end(), son funciones que devuelven iteradores que están apuntando al principio o al final de un contenedor respectivamente, por lo que si se posee un iterador nums.begin() este apuntará al elemento del índice 0, por lo que para acceder a cada uno de los elementos se tendría que usae nums.begin() + i, donde i representa cada uno de los indices del contenedor, hasta llegar a nums.end() que apunta al elemento siguiente del elemento final del vector.
+
+10. Algoritmos STL: Proporcione ejemplos de al menos tres algoritmos de la STL y describa sus funciones básicas.
+
+- Algoritmos de eliminación y modificación: Como su nombre lo indica, estos algoritmos se basan en métodos, dedicados a la modificación y eliminación de elementos en un rango, estos pueden eliminar o reemplazar los elementos de un rango con los comandos remove y replace respectivamente, así como invertir el orden en un rango con el comando reverse.
+
+- Algoritmos de ordenamiento: Estos algoritmos permiten ordenar un elemento los elementos de un rango, con estos comandos se puede ordenar un rango de forma ascendente con el comando sort, ordenar parcialmente el rango con el comando partial_sort o colocar el elemento n-ésimo de un rango en su posición correcta con el comando nth_element.
+
+- Algoritmos de búsqueda: Estos algoritmos permiten buscar elementos en un rango, por ejemplo, el comando find busca un elemento en un rango, el comando count cuenta el número de veces que aparece un elemento en el rango, el comando binary_search realiza una búsqueda binaria en un rango ordenado y el comando find_if busca el primer elemento que cumpla con un criterio dado.
+
+11. Algoritmos Personalizados: ¿Cómo podría utilizar un algoritmo personalizado con la STL?
+
+Los algoritmos trabajan con métodos por defecto para realizar sus funciones, pero al llamarlos se les puede dar como argumentos, algoritmos personalizados para que los ayuden a realizar sus funciones, por ejemplo, el comando sort tiene su propio método interno para ordenar los números en un contenedor de menor a mayor, pero dentro de los argumentos que sort recibe se puede incorporar un método propio que lo ayude a realizar el mismo ordenamiento pero con un algoritmo personalizado por el programador del código.
+
+12. Definición de Expresiones Regulares: Defina qué son las expresiones regulares y proporcione un ejemplo simple
+
+Las expresiones regulares son patrones, estos se utilizan poder manipular cadenas de texto, con estas expresiones se pueden validar cadenas, es decir, revisar que cumple con condiciones establecidas al recibirla, permite buscar patrones en las cadenas de texto, así como realizar sustituciones.
+
+Un ejemplo de una expresión regular se puede observar en un correo electrónico, ya que se puede solicitar que este tenga unas características establecidas, su uso también se podría utilizar en el uso de contraseñas, definiendo que características se desea que tenga.
+
+13. Caracteres Especiales: Enumere al menos tres caracteres especiales comúnmente utilizados en expresiones regulares y describa sus funciones.
+
+Algunos de los carácteres especiales utilizados para las expresiones regulares son:
+
+El signo más (+): Este representa que haya una o más repeticiones del elemento que se encuentra anterior a el. Por ejemplo, si se utiliza la expresión regular Do+g, esta coincidirá con las cadenas Dog, Doog, Dooooog, etc. Pero este no coincidirá con la cadena Dg, porque la letra o debería estar presente al menos una vez.
+
+El signo de interrogación (?): Este indica que el elemento que se encuentrar anterior a el, puede estar o no. Por ejemplo, si se utiliza la expresión regular Hor?se, esta coincidirá con Horse o Hose, ya que la letra r puede estar presente o no.
+
+El símbolo pipe (|): Este indice que pueden haber alternativas. Por ejemplo, si este se utiliza la expresión regular Dog|Cat, esta coincidirá con Dog o con Cat.
+
+14. Uso de Expresiones Regulares en C++: ¿Cómo se utilizan las expresiones regulares en C++? Proporciona un ejemplo.
+
+Estas se utilizan con la librería regex, la cual permite hacer uso de las expresiones regulares y utilizarlas en código de C++, un ejemplo de su uso se muestra a continuación:
+
+'''
+
+#include <iostream>
+#include <regex> // Para utilizar expresiones regulares en C++
+
+int main() {
+    auto const regex = std::regex("Dog|Cat"); // Con el pipe se indica que se encuentra Dog o Cat en el string que se revisa
+
+    auto const Dog = std::string("I love my Dog."); // Se guarda un string normal en una variable
+    auto const VerifDog = std::regex_search(Dog, regex); // regex_search busca la expresion regular que se desea 
+                                                         // comparar en el texto, nos da verdadero o falso
+
+    auto const Cat = std::string("I love my Cat."); // Se guarda un string normal en una variable
+    auto const VerifCat = std::regex_search(Cat, regex); // regex_search busca la expresion regular que se desea 
+                                                         // comparar en el texto, nos da verdadero o falso
+    std::cout << std::boolalpha
+              << VerifDog << '\n' // Se debe obtener verdadero ya que coincide la expresion regular
+              << VerifCat << '\n'; // Se debe obtener verdadero ya que coincide la expresion regular
+}
+
+'''
+
+15. Validación de Patrones: ¿Por qué las expresiones regulares son útiles para la validación de patrones en cadenas de texto?
+
+Estas son útiles porque permiten la verificación de la existencia de caractéres en una cadena, se puede verificar si lo ingresado en la cadena de texto corresponde con lo solicitado, ya sea por el orden en específico que se solicita, por los caracteres que se solicita utilizar o los que se solicita que no se use. Como se mencionó anteriormente, gracias a las expresiones regulares se podría verificar que una contraseña cumple con los requisitos solicitados al ingresarla.   
 
 # Referencias bibligráficas
 
 [1] GeeksforGeeks. (2023, Sep 22). noexcept Operator in C++ 11. [Online]. Obtenido de https://www.geeksforgeeks.org/noexcept-operator-in-cpp-11/. [Accedido Ene. 20, 2024]
+
+[2] CPlusPlus. (s.f). Standard Containers. [Online]. Obtenido de: https://cplusplus.com/reference/stl/. [Accedido Ene. 20, 2024] 
