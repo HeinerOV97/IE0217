@@ -1,6 +1,6 @@
 /**
  * \copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
- * @file MaterialesCompl.hpp
+ * @file Regex.hpp
  * @date 20/01/2024
  * @author Heiner Obando Vega
 */
