@@ -1,4 +1,32 @@
-# Teoría Tarea #2
+# Práctica Tarea #3
+
+## Ejecución del programa
+
+El programa se ejecutará a través de un Makefile, para ejecutarlo se debe estar ubicado en la carpeta src en el PATH, esta carpeta se encuentra en la carpeta general de la tarea, en esta carpeta se encuentran los archivos de código fuente y el Makefile.
+
+El Makefile, posee seis targets que realizan diferentes acciones automatizadas para la facilidad de ejecución de los programas, estas seis indicaciones son:
+
+- buildregex: Este target se encarga de compilar el código fuente y generar el ejecutable con el nombre regex.exe, para su ejecución en Windows se utiliza el comando “mingw32-make buildregex”.
+
+- buildmatriz: Este target se encarga de compilar el código fuente y generar el ejecutable con el nombre matriz.exe, para su ejecución en Windows se utiliza el comando “mingw32-make buildmatriz”.
+
+- runregex: Este target se encarga de ejecutar el programa regex.exe, siempre y cuando se haya ejecutado el comando buildregex primero, para su ejecución en Windows se utiliza el comando “mingw32-make runregex”. 
+
+- runmatriz: Este target se encarga de ejecutar el programa matriz.exe, siempre y cuando se haya ejecutado el comando buildmatriz primero, para su ejecución en Windows se utiliza el comando “mingw32-make runmatriz”. 
+
+- regex: Este target se encarga de compilar el código fuente, generar un ejecutable con el nombre regex.exe y ejecutar el programa. Su ejecución en Windows se lleva acabo con el comando “mingw32-make regex”.
+
+- matriz: Este target se encarga de compilar el código fuente, generar un ejecutable con el nombre matriz.exe y ejecutar el programa. Su ejecución en Windows se lleva acabo con el comando “mingw32-make matriz”.
+
+- clean: Este target se encarga de eliminar los archivos ejecutables y solo dejar los archivos fuente, para su ejecución en Windows se utiliza el comando “mingw32-make clean”. 
+
+Se implementaron los comandos para que el make identifique en que sistema operativo se esta trabajando.
+
+En este caso en la seccion de matrices, solo se realizó la clase que creara las matrices, la sección de operaciones no se logró realizar, al correr el programa se solicitará la información para crear una matriz de enteros, luego se imprimirá la matriz creada, luego se solicitará la información para crear la matriz de flotantes y se imprimirá la matriz creada, por último se solicitará la información para crear la matriz de números complejos y se imprimirá la matriz creada, en este caso para introducir los datos de la matriz de complejo estos deben ingresarse de la manera en que C++ los interpreta, es decir, (número real, número imaginario).
+
+Por otra parte, en la sección de expresiones regulares, el código cumple con todo lo solicitado, cuando el programa sea ejecutado, se indicarán todas las instrucciones para que el usuario ingrese el correo de la manera solicitada, en caso de que falle con respecto a las expresiones regulares solicitadas, se le solicitará que lo ingrese de nuevo, cuando el usuario coloque un correo adecuado, el programa se lo indicará y cerrará el programa. 
+
+# Teoría Tarea #3
 
  1. Definición de Templates: Explique el concepto de templates en C++ y proporcione un ejemplo simple.
 
