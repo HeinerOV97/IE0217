@@ -63,8 +63,70 @@ Un generador no es es más que una función que devuelve un iterador, este itera
 
 - Mientras que el método __call__ permite que los objetos de una clase se comporten como funciones y a su vez puedan ser llamados como una función. [1]
 
+8. ¿Cómo se organizan los módulos y paquetes en Python? ¿Qué es __init__.py?
 
+Los módulos de Python son archivos de Python que poseen la extensión .py, estos implementan conjuntos de funciones. Un módulo puede ser importado por otro módulo. Las variables dentro de un módulo son inicializadas solo una vez, esto quiere decir que un módulo que sea inicializado por un script de Python sólo lo hará una vez en todo el proceso de ejecución. [2]
+
+Los paquetes son directorios que contienen múltiples paquetes y módulos múltiples.
+
+Los paquetes de Python deben contener un archivo especial que es llamado __init__.py, el cual es un archivo que puede estar vacío, pero indica que los contenidos de un directorio son un paquete de Python, así estos pueden ser importados como cuando se importa un módulo.[2]
+
+9. Explique la diferencia entre métodos append() y extend() en listas de Python.
+
+Con el método append() se puede agregar un sólo elemento al final de una lista, por ejemplo si el método append se utiliza pasando como argumento una lista lo que se agregará en la lista original será la lista enviada como un solo elemento. Por ejemplo:
+
+'''
+lista = [1, 2, 3]
+lista.append([4, 5])
+\# La lista quedará de la siguiente manera: [1, 2, 3, [4, 5]]
+'''
+
+Por otra parte el método extend() se utiliza para agregar múltiples elementos en el final de una lista, en este caso si se pasa como argumento una lista en el método extend, lo que se agregará al final de la lista original, serán los elementos de la lista enviada uno por uno. Por ejemplo: 
+
+'''
+lista = [1, 2, 3]
+lista.extend([4, 5])
+\# La lista quedará de la siguiente manera: [1, 2, 3, 4, 5]
+'''
+
+10. ¿Cuál es la diferencia entre un método de clase y un método estático en Python?
+
+Un método de clase, recibe como argumento a la clase misma, esto permite que este método pueda acceder y modificar los atributos de una clase, esto quiere decir que este método modifica la clase como tal, no a un objeto instanciado. Estos métodos se definen utilizando el decorador @classmethod. [3]
+
+Por otra parte, los métodos estáticos no reciben argumentos de la clase, por lo que no pueden acceder ni modificar los atributos de la clase o del objeto, estos son utilizados para agregar métodos a la clase, pero que no utilicen los atributos de la clase o del objeto. Estos métodos se definen utilizando el decorador @staticmethod. [3]
+
+11. Hable sobre las diferencias entre herencia simple y herencia múltiple en Python.
+
+Con la herencia simple, una clase hereda los atributos y métodos de una clase base, mientras que en herencia múltiple una clase derivada hereda los atributos de múltiples clases base.
+
+12. ¿Cómo se manejan los errores de importación de módulos en Python?
+
+Estos se pueden manejar haciendo uso de excepciones y los bloques try and except, y utilizando la excepción por defecto que tiene Python ImportError, que indica que un módulo que se estaba buscando para importar no pudo ser encontrado.
+
+Otra forma es utilizando la biblioteca imporlib y el método importlib.util.find_spec(), este puede hacer la revisión y darse cuenta si el módulo que se desea importar está disponible en el sistema o no. [4]
+
+13. ¿Cuál es la diferencia entre una clase y un objeto en Python?
+
+La clase es el modelo de un objeto, esta va a definir las características que va a poseer el objeto, tales como atributos y métodos. Por otra parte, el objeto es una instancia de la clase, es decir, es una entidad creada a partir de las caracterísiicas que la clase definió que iba a poseer, en este caso el objeto va a poseer atributos y métodos.
+
+14. Hable sobre la diferencia entre una clase abstracta y una interfaz en Python.
+
+Una clase abstracta, es una plantilla creada para otras clases, como tal, no se van a crear instancias de la clase abstracta, esta sólo va a heredar a sus clases hijas, métodos abstractos y los métodos concretos, siendo un método abstracto, métodos que van a ser implementados por las clases hijas, pero que no están definidos en la clase abstracta, estos se definen con el decorador @abstracmethod. Y un método concreto, que son métodos ya definidos en la clase padre para que sean utilizados por la clases hija. Estas clases se definen utilizando el módulo abc. [5]
+
+Por otra parte, una interfez es similar a una clase abstracta, pero en este caso una interfaz solo va a definir métodos abstractos que van a utilizar las clases hijas. [5]
+
+15. Explique el concepto de sobreescritura de métodos en Python y cómo se realiza.
+
+La sobreescritura de métodos se trata de la posibilidad que tiene una clase hija de sobreescribir un método definido por la clase padre para aplicar una definición propia de la clase hija. Esto se realiza creando en la clase hija un método con el mismo nombre y parámetros que el método de la clase padre, por lo que, cuando se instancie un objeto de la clase hija y se utilice el método, se hará uso de la definición del método de la clase hija, no de la clase padre. 
 
 ## Referencias bibliográficas
 
 [1] GeeksforGeeks. (2020, Feb 27). __call__ in Python. [Online]. Obtenido de https://www.geeksforgeeks.org/__call__-in-python/. [Accedido Ene. 27, 2024].
+
+[2] Learnpython. (s.f.). Modules and Packages. [Online]. Obtenido de https://www.learnpython.org/es/Modules%20and%20Packages. [Accedido Ene. 27, 2024].
+
+[3] GeeksforGeeks. (2022, Dic 30). Class method vs Static method in Python. [Online]. Obtenido de https://www.geeksforgeeks.org/class-method-vs-static-method-python/. [Accedido Ene. 27, 2024].
+
+[4] Python docs. (s.f.). importlib — The implementation of import. [Online]. Obtenido de https://docs.python.org/3/library/importlib.html. [Accedido Ene. 27, 2024].
+
+[5] GeeksforGeeks. (2023, Feb 5). Difference between abstract class and interface in Python. [Online]. Obtenido de https://www.geeksforgeeks.org/difference-between-abstract-class-and-interface-in-python/. [Accedido Ene. 27, 2024].
