@@ -9,19 +9,20 @@ a partir de una puntuacion dada
 
 
 class EvaluacionEspecifica(Alergia):
-    def __init__(self, puntuacion):
+    def __init__(self):
         # Se llama al inicializador de la clase alergia
         # Esto para tener acceso a los atributos de la clase
         # Alergia
         super().__init__()
-        self.puntuacion = puntuacion  # Valor entrega por el usuario
+        self.puntuacion = 0  # Valor entrega por el usuario
         self.alergias_detectadas = {}  # Se almacenaran las alergias detectadas
 
     '''
     Metodo que calculara de cuales alergias padece el paciente
     y las agregara a la lista de alergias detectadas.
     '''
-    def evaluar_alergias(self):
+    def evaluar_alergias(self, puntuacion):
+        self.puntuacion = puntuacion
         self.alergias_detectadas = {}
         # Se itera sobre la lista de alergias predefinidas en el sistema
         for alergia, valor_alergia in self.alergias.items():
