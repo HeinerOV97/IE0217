@@ -1,16 +1,15 @@
 from EvaluacionEspecifica import EvaluacionEspecifica
 
-'''
-Se crea la clse TiposDeAlergias
-esta se encarga de recibir las
-alergias del paciente, crear una
-lista con las alergias que padece, asi
-como encontrar las alergias y puntajes
-que no estan en el sistema
-'''
-
 
 class TiposDeAlergias(EvaluacionEspecifica):
+    '''
+    Se crea la clse TiposDeAlergias
+    esta se encarga de recibir las
+    alergias del paciente, crear una
+    lista con las alergias que padece, asi
+    como encontrar las alergias y puntajes
+    que no estan en el sistema
+    '''
     def __init__(self):
         # Se llama al inicializador de la clase alergia
         # Esto para tener acceso a los atributos de la clase
@@ -28,14 +27,15 @@ class TiposDeAlergias(EvaluacionEspecifica):
         self.solo_puntaje = []
         self.alergias_paciente = {}
 
-    '''
-    Metodo que permitira obtener datos del usuario,
-    si el usuario agrega una alergia y esta no esta
-    presente en el lista, creara una lista nueva
-    con estos datos, hara lo mismo si se ingresan puntajes
-    que no estan presentes en el sistema
-    '''
-    def alergia_del_paciente(self, nombre=None, puntaje=None):       
+    def alergia_del_paciente(self, nombre=None, puntaje=None):
+        '''
+        Metodo que permitira obtener datos del usuario,
+        si el usuario agrega una alergia y esta no esta
+        presente en el lista, creara una lista nueva
+        con estos datos, hara lo mismo si se ingresan puntajes
+        que no estan presentes en el sistema
+        '''
+
         # Se verifica si el usuario no ingreso ningun dato, ni alergia ni valor
         # De ser asi esto se le indica al usuario
         if nombre is None and puntaje is None:
@@ -56,12 +56,13 @@ class TiposDeAlergias(EvaluacionEspecifica):
         elif puntaje is not None:
             self.solo_puntaje.append(puntaje)
 
-    '''
-    Metodo que hara las relaciones con valores sueltos que de el usuario
-    por ejemplo, si el usuario escribe huevos, el automaticamente lo
-    relacionara con el puntaje 1.
-    '''
     def revision_datos_incompletos(self):
+        '''
+        Metodo que hara las relaciones con valores sueltos que de el usuario
+        por ejemplo, si el usuario escribe huevos, el automaticamente lo
+        relacionara con el puntaje 1.
+        '''
+
         '''
         Primero se crea una copia de las listas de puntajes y alergias
         sin pareja que agrega el usuario, se realiza así porque
