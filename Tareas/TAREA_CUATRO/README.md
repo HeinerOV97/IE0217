@@ -1,3 +1,129 @@
+# Práctica Tarea #4
+
+Se realizan pruebas con el modulo Timeit de Python, las pruebas a realizar son las siguientes:
+
+* Primeramente se corre el programa con la lista inicial de alergias y se corren las siguientes pruebas:
+
+- Opción 1 del menú: Se ingresa el puntaje de 2047 para que el programa deba recorrer todo el diccionario y se obtiene un resultado en 4.80 s.
+
+- Opción 2 del menú: Se agregan las alergias del usuario, se agrega un nombre de una alergia que está en el sistema, se agrega un puntaje que está en el sistema, se agrega una alergia con nombre y puntaje, se agrega una alergia que no está en el sistema y por último se agrega una puntuación que no está en el sistema, y se llama a la opción 3 que imprime esta información el puntaje y el porcentaje de alergias encontradas, el resultado obtenido es 32.65 s.
+
+- Opción 4 del menú: Se ingresa una nueva alergia y se utiliza la opción 5, para observar que esta alergia si fue ingresada con éxito, el resultado de tiempo obtenido fue de 13.94 s.
+
+- Opción 6 del menú: Se busca una alergia en específico del diccionario por su nombre, en este caso se ingresa el nombre de la última alergia del diccionario, para ver cuanto dura el sistema en recorrer el diccionario, el resultado de tiempo obtenido fue de 5.39 s.
+
+* Ahora se realizan las mismas pruebas pero utilizando la lista proporcionada por el documento alergias.txt proporcionado con la tarea:
+
+- Opción 1 del menú: Se ingresa el puntaje de 1 125 899 906 842 623 para que el programa deba recorrer todo el diccionario y se obtiene un resultado en 12.93 s.
+
+- Opción 2 del menú: Se agregan las alergias del usuario, se agrega un nombre de una alergia que está en el sistema, se agrega un puntaje que está en el sistema, se agrega una alergia con nombre y puntaje, se agrega una alergia que no está en el sistema y por último se agrega una puntuación que no está en el sistema, y se llama a la opción 3 que imprime esta información el puntaje y el porcentaje de alergias encontradas, el resultado obtenido es 47.49 s
+
+- Opción 4 del menú: Se ingresa una nueva alergia y se utiliza la opción 5, para observar que esta alergia si fue ingresada con éxito, el resultado de tiempo obtenido fue de 16.28 s.
+
+- Opción 6 del menú: Se busca una alergia en específico del diccionario por su nombre, en este caso se ingresa el nombre de la última alergia del diccionario, para ver cuanto dura el sistema en recorrer el diccionario, el resultado de tiempo obtenido fue de 6.40.
+
+Con los resultados obtenidos se observa una diferencia del tiempo de ejecución de los diferentes métodos de las clases del programa, si existe una diferencia cuando el programa debe recorrer toda la lista de alergias y esta lista es cada vez más grande como se observa en los resultados anteriores, aún así los cambios de tiempo no son muy grandes, por lo que se podría concluir que no se están produciendo cuellos de botella en el sistema, ya que los cambios al no ser tan grandes, pueden resultar del uso de una lista de datos más grande que el sistema debe recorrer, considerando que Python es un lenguaje interprete, por lo cual, va ejecutando línea por línea. No se considera la existencia de un cuello de botella, debido a que se realiza uso de herencia multinivel, por lo que el llamado entre clases no debería representar una carga para el sistema.
+
+Por otra parte, se tiene el uso del modulo cProfile para realizar las pruebas de perfilado del codigo, primeramente se realizan las pruebas mencionadas anteriormente con la lista original de alergias y se obtienen los siguientes resultados:
+
+'''
+         193 function calls in 69.621 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   69.621   69.621 <string>:1(<module>)
+        1    0.000    0.000    0.001    0.001 Alergia.py:108(imprimir_alergia_especifica)
+        1    0.000    0.000    0.000    0.000 Alergia.py:124(agregar_alergia)
+        1    0.000    0.000    0.000    0.000 Alergia.py:19(__init__)
+        1    0.000    0.000    0.004    0.004 Alergia.py:96(imprimir_todas_alergias)
+        1    0.000    0.000    0.000    0.000 EvaluacionEspecifica.py:18(__init__)
+        1    0.000    0.000    0.000    0.000 EvaluacionEspecifica.py:30(evaluar_alergias)
+        1    0.000    0.000    0.004    0.004 EvaluacionEspecifica.py:62(imprimir_evaluacion)
+        1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:21(__init__)
+        1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:28(calcular_puntuacion_general)
+        3    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:33(<genexpr>)
+        1    0.000    0.000    0.002    0.002 EvaluacionGeneral.py:36(imprimir_alergias_paciente)
+        1    0.000    0.000    0.001    0.001 EvaluacionGeneral.py:59(calcular_promedio)
+        1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:67(<listcomp>)
+        1    0.000    0.000   69.621   69.621 PruebaProfile.py:6(run_menu)
+        1    0.000    0.000    0.000    0.000 TiposDeAlergias.py:21(__init__)
+        5    0.000    0.000    0.000    0.000 TiposDeAlergias.py:35(alergia_del_paciente)
+        4    0.000    0.000    0.000    0.000 TiposDeAlergias.py:67(revision_datos_incompletos)
+        1    0.000    0.000   69.621   69.621 menu.py:12(main)
+        1    0.000    0.000   69.621   69.621 {built-in method builtins.exec}
+       23   69.592    3.026   69.592    3.026 {built-in method builtins.input}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+       96    0.028    0.000    0.028    0.000 {built-in method builtins.print}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.sum}
+        4    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        8    0.000    0.000    0.000    0.000 {method 'copy' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        6    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        3    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+        5    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        9    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
+'''
+
+Con la lista de 50 alergias se tienen los siguientes resultados:
+
+'''
+         273 function calls in 98.875 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   98.875   98.875 <string>:1(<module>)
+        1    0.000    0.000    0.001    0.001 Alergia.py:108(imprimir_alergia_especifica)
+        1    0.000    0.000    0.000    0.000 Alergia.py:124(agregar_alergia)
+        1    0.000    0.000    0.000    0.000 Alergia.py:19(__init__)
+        1    0.000    0.000    0.008    0.008 Alergia.py:96(imprimir_todas_alergias)
+        1    0.000    0.000    0.000    0.000 EvaluacionEspecifica.py:18(__init__)
+        1    0.000    0.000    0.000    0.000 EvaluacionEspecifica.py:30(evaluar_alergias)
+        1    0.000    0.000    0.009    0.009 EvaluacionEspecifica.py:62(imprimir_evaluacion)
+        1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:21(__init__)
+        1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:28(calcular_puntuacion_general)
+        4    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:33(<genexpr>)
+        1    0.000    0.000    0.002    0.002 EvaluacionGeneral.py:36(imprimir_alergias_paciente)
+        1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:59(calcular_promedio)
+        1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:67(<listcomp>)
+        1    0.000    0.000   98.875   98.875 PruebaProfile.py:6(run_menu)
+        1    0.000    0.000    0.000    0.000 TiposDeAlergias.py:21(__init__)
+        5    0.000    0.000    0.000    0.000 TiposDeAlergias.py:35(alergia_del_paciente)
+        4    0.000    0.000    0.000    0.000 TiposDeAlergias.py:67(revision_datos_incompletos)
+        1    0.000    0.000   98.875   98.875 menu.py:12(main)
+        1    0.000    0.000   98.875   98.875 {built-in method builtins.exec}
+       23   98.841    4.297   98.841    4.297 {built-in method builtins.input}
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+      175    0.033    0.000    0.033    0.000 {built-in method builtins.print}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.sum}
+        4    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        8    0.000    0.000    0.000    0.000 {method 'copy' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        6    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        3    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+        5    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        9    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
+'''
+
+Primero se debe aclarar que el script llamado PruebaProfile.py, contiene un pequeño conjunto de comandos para hacer uso del método cProfile. Dejando esto en claro podemos observar la siguiente:
+
+- El tiempo total de ejecución del programa en ambos casos se da en el menú, esto es así, porque desde este punto se llaman a todas las clases.
+
+- No existe diferencia en los tiempos de ejecución de los métodos que no imprimen listas de datos cuando la lista de revisión aumenta.
+
+- Los métodos que aumentan sus tiempos, son los métodos que imprimen listas de datos, y esto es así porque las listas aumentaron su tamaño, teniendo esto sentido, ya que en las revisiones de impresion se busco que el sistema tuviera que revisar la mayor cantidad de datos posible de la lista, pasando en algunas casos de tener que imprimir 11 datos, a tener que imprimir 50 datos.
+
+- Los métodos que sufrieron un aumento del tiempo de ejecuación fueron: imprimir_todas_alergias(), método que imprime toda la lista de alergias por defecto que tiene el sistema, con una lista de 11 datos su tiempo de ejecución fue 0.004s mientras que con una lista de 50 datos su tiempo de ejecución fue 0.008s. El método imprimir_evaluacion() imprime el desglose de alergias que tiene la persona a partir de un puntaje dado, en este caso se busco que el sistema tuviera que imprimir todas las alergias posibles, colocando un puntaje que obligara al sistema a imprimir todas las alergias, con una lista de 11 datos su tiempo de ejecución fue 0.004s mientras que con una lista de 50 datos su tiempo de ejecución fue 0.009s.
+
+- Los comandos input y print fueron los más utilizados en el programa y consumieron más tiempo de ejecución del programa también, esto tiene sentido, ya que el programa es interactivo con el usuario, por lo que, la entrada e impresión de datos es constante. Estos también sufrieron un aumento al aumentar la lista de alergias, lo cual tiene sentido ya que hay más datos con los cuales trabajar.
+
+- Por último, los métodos que consumieron más tiempo en la ejecución del programa fueron, tal y como se comentó anteriormente, los métodos imprimir_todas_alergias() e imprimir_evaluacion(), así como el método imprimir_alergias_paciente(), que no fue mencionado anteriormente, ya que este no sufrió cambios al aumentar la lista.
+
 # Teoría Tarea #4
 
 1. Explique la diferencia entre una lista y una tupla en Python.
