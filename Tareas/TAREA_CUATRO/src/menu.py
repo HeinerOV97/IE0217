@@ -1,8 +1,8 @@
 """
- * \copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
- * @file menu.py
- * @date 28/01/2024
- * @author Heiner Obando Vega
+@copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+@file menu.py
+@date 28/01/2024
+@author Heiner Obando Vega
 """
 
 import timeit
@@ -10,6 +10,11 @@ from EvaluacionGeneral import EvaluacionGeneral
 
 
 def main():
+    """
+    Funcion main que llamara a todas las clases
+    que trabajan en conjunto
+    """
+
     '''
     Se crea una instacia de Evaluacion General
     como se trabajo con herencia multinivel
@@ -17,7 +22,7 @@ def main():
     de las demas clases, lo que evita conflictos
     al agregar una alergia luego
     '''
-    tipos_alergias = EvaluacionGeneral()
+    objeto_paciente = EvaluacionGeneral()
     print("\n---Bienvenido---")
 
     '''
@@ -49,8 +54,8 @@ def main():
             '''
             try:
                 puntuacion = int(input("Ingrese su puntuación de alergia: "))
-                tipos_alergias.evaluar_alergias(puntuacion)
-                tipos_alergias.imprimir_evaluacion()
+                objeto_paciente.evaluar_alergias(puntuacion)
+                objeto_paciente.imprimir_evaluacion()
             except ValueError:
                 print("Error: Por favor ingresar un valor entero.")
 
@@ -82,8 +87,8 @@ def main():
                     # y se revisa si este esta en la lista predeterminada del sistema
                     # para unirlo con su puntaje y colocarlo en la lista de alergias
                     # si el nombre no esta, se coloca en la seccion de datos desconocidos
-                    tipos_alergias.alergia_del_paciente(nombre=nombre)
-                    tipos_alergias.revision_datos_incompletos()
+                    objeto_paciente.alergia_del_paciente(nombre=nombre)
+                    objeto_paciente.revision_datos_incompletos()
                 elif opcion == '2':
                     puntaje_nuevo_usuario = input("Ingrese el puntaje de la alergia: ").strip()
                     # Se coloca una excepcion para asegurar que el usuario solo ingrese
@@ -97,8 +102,8 @@ def main():
                     # y se revisa si este esta en la lista predeterminada del sistema
                     # para unirlo con su nombre y colocarlo en la lista de alergias
                     # si el nombre no esta, se coloca en la seccion de datos desconocidos
-                    tipos_alergias.alergia_del_paciente(puntaje=puntaje)
-                    tipos_alergias.revision_datos_incompletos()
+                    objeto_paciente.alergia_del_paciente(puntaje=puntaje)
+                    objeto_paciente.revision_datos_incompletos()
                 elif opcion == '3':
                     # En este caso el usuario ingresa los dos datos de la alergia
                     # se colocan los mismos metodos y excepciones que en los casos individuales
@@ -109,7 +114,7 @@ def main():
                     except ValueError:
                         print("El puntaje debe ser un entero.")
                         continue
-                    tipos_alergias.alergia_del_paciente(nombre=nombre, puntaje=puntaje)
+                    objeto_paciente.alergia_del_paciente(nombre=nombre, puntaje=puntaje)
                 else:
                     print("Opción no válida.")
 
@@ -117,9 +122,9 @@ def main():
         # Tambien se imprime el puntaje que obtiene el paciente, de las alergias
         # que estan inscritas en el sistema solamente
         elif opcion == "3":
-            tipos_alergias.imprimir_alergias_paciente()
-            tipos_alergias.calcular_puntuacion_general()
-            tipos_alergias.calcular_promedio()
+            objeto_paciente.imprimir_alergias_paciente()
+            objeto_paciente.calcular_puntuacion_general()
+            objeto_paciente.calcular_promedio()
 
         # En esta opcion se permite al usuario modificar la lista del sistema
         # y agregar una alergia con su respectivo puntaje
@@ -133,16 +138,16 @@ def main():
             except ValueError:
                 print("El puntaje debe ser un número entero.")
                 continue
-            tipos_alergias.agregar_alergia(nombre=nombre, puntaje=puntaje)
+            objeto_paciente.agregar_alergia(nombre=nombre, puntaje=puntaje)
 
         # Opcion para imprimir las alergias en el sistema
         elif opcion == "5":
-            tipos_alergias.imprimir_todas_alergias()
+            objeto_paciente.imprimir_todas_alergias()
 
         # Opcion para imprimir informacion de una alergia en especifico
         elif opcion == "6":
             nombre_para_buscar = input("Ingrese el nombre de la alergia que desea buscar: ").strip().lower()
-            tipos_alergias.imprimir_alergia_especifica(nombre_para_buscar)
+            objeto_paciente.imprimir_alergia_especifica(nombre_para_buscar)
 
         # Opcion para salir del sistema
         elif opcion == "7":

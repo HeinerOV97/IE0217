@@ -1,32 +1,43 @@
+"""
+@copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+@file EvaluacionGeneral.py
+@date 28/01/2024
+@author Heiner Obando Vega
+"""
+
+
 from TiposDeAlergias import TiposDeAlergias
 
 
 class EvaluacionGeneral(TiposDeAlergias):
 
-    '''
+    """
     Clase Evaluacion Alergias, esta va a devolver
     la puntuacion en alergias que tiene el paciente
     asi como las alergias que posee y las puntuaciones
     que posee y no estan presentes en el sistema
-    '''
+    """
+
     def __init__(self):
-        # Se llama al inicializador de la clase tipos de alergia
-        # Esto para tener acceso a los atributos de esta clase
+        """
+        Inicializador de la clase.
+        Llama al inicializador de la clase padre.
+        """
         super().__init__()
 
     def calcular_puntuacion_general(self):
-        '''
+        """
         Metodo que calcula la puntuacion que posee el usuario
         a partir de las alergias que estan en el sistema
-        '''
+        """
         total_puntaje = sum(puntaje for puntaje in self.alergias_paciente.values())
         print("Puntuación total de alergias del usuario:", total_puntaje)
 
     def imprimir_alergias_paciente(self):
-        '''
+        """
         Se imprimen las alergias que posee el paciente y estan en la lista
         predeterminada de alergias
-        '''
+        """
 
         # Alergias en el sistema
         print("Alergias del paciente:")
@@ -46,11 +57,12 @@ class EvaluacionGeneral(TiposDeAlergias):
                 print(puntaje)
 
     def calcular_promedio(self):
-        '''
+        """
         Se calcula el porcentaje de alergias que fueron
         ingresadas y que estan en el sistema, asi
         como las que no estan
-        '''
+        """
+
         # Se calcula el tamaño del diccionario con alergias conocidas
         total_alergias_conocidas = len([nombre for nombre, puntaje in self.alergias_paciente.items()])
         total_alergias_solo_puntaje = len(self.solo_puntaje)

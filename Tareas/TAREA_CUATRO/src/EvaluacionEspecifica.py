@@ -1,26 +1,40 @@
+"""
+@copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+@file EvaluacionEspecifica.py
+@date 28/01/2024
+@author Heiner Obando Vega
+"""
+
 from Alergia import Alergia
 
 
 class EvaluacionEspecifica(Alergia):
-    '''
+    """
     Se crea la clase Evaluacion Especifica
     esta contiene un metodo para detectar
     cuales alergias padece el paciente
     a partir de una puntuacion dada
-    '''
+    """
     def __init__(self):
-        # Se llama al inicializador de la clase alergia
-        # Esto para tener acceso a los atributos de la clase
-        # Alergia
+        """
+        Inicializador de la clase.
+        Llama al inicializador de la clase padre.
+
+        param: puntuacion: Puntuacion de alergia que recibe del usuario
+        param: alergias_detectadas: Diccionario de alergias detectadas
+        """
         super().__init__()
-        self.puntuacion = 0  # Valor entrega por el usuario
+        self.puntuacion = 0  # Valor entregado por el usuario
         self.alergias_detectadas = {}  # Se almacenaran las alergias detectadas
 
     def evaluar_alergias(self, puntuacion):
-        '''
+        """
         Metodo que calculara de cuales alergias padece el paciente
         y las agregara a la lista de alergias detectadas.
-        '''
+
+        param: puntuacion: puntuacion a evaluar
+        param: Diccionario que almacena alergias
+        """
         self.puntuacion = puntuacion
         self.alergias_detectadas = {}
         # Se itera sobre la lista de alergias predefinidas en el sistema
@@ -46,10 +60,10 @@ class EvaluacionEspecifica(Alergia):
                 self.alergias_detectadas[alergia] = valor_alergia
 
     def imprimir_evaluacion(self):
-        '''
+        """
         Metodo que imprime en pantalla las alergias a las cuales
         la persona es alergica junto con su puntuacion asociada.
-        '''
+        """
         print("La puntuación de alergias del paciente es la siguiente:", self.puntuacion)
         '''
         Se revisa si el diccionario no esta vacio, si no esta vacia
