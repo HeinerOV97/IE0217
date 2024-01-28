@@ -44,7 +44,15 @@ class Alergia:
         # Se comprueba si la alergia existe en la lista
         # si existe se imprime
         if nombre_alergia in self.alergias:
+            print("Informacion de la alergia solicitada")
             print(f"{nombre_alergia}: {self.alergias[nombre_alergia]}")
         # Si no existe se indica al usuario
         else:
             print("La alergia no existe en nuestra lista.")
+
+    '''
+    Se crea un metodo que permita al usuario ingresar una nueva alergia
+    en la lista predeterminadad
+    '''
+    def agregar_alergia(self, nombre, puntaje):
+        self.alergias[nombre] = puntaje
