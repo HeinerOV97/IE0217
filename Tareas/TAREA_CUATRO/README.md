@@ -61,38 +61,71 @@ Por otra parte, se tiene el uso del modulo cProfile para realizar las pruebas de
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+
         1    0.000    0.000   69.621   69.621 <string>:1(<module>)
+
         1    0.000    0.000    0.001    0.001 Alergia.py:108(imprimir_alergia_especifica)
+
         1    0.000    0.000    0.000    0.000 Alergia.py:124(agregar_alergia)
+
         1    0.000    0.000    0.000    0.000 Alergia.py:19(__init__)
+
         1    0.000    0.000    0.004    0.004 Alergia.py:96(imprimir_todas_alergias)
+
         1    0.000    0.000    0.000    0.000 EvaluacionEspecifica.py:18(__init__)
+
         1    0.000    0.000    0.000    0.000 EvaluacionEspecifica.py:30(evaluar_alergias)
+
         1    0.000    0.000    0.004    0.004 EvaluacionEspecifica.py:62(imprimir_evaluacion)
+
         1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:21(__init__)
+
         1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:28(calcular_puntuacion_general)
+
         3    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:33(<genexpr>)
+
         1    0.000    0.000    0.002    0.002 EvaluacionGeneral.py:36(imprimir_alergias_paciente)
+
         1    0.000    0.000    0.001    0.001 EvaluacionGeneral.py:59(calcular_promedio)
+
         1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:67(<listcomp>)
+
         1    0.000    0.000   69.621   69.621 PruebaProfile.py:6(run_menu)
+
         1    0.000    0.000    0.000    0.000 TiposDeAlergias.py:21(__init__)
+
         5    0.000    0.000    0.000    0.000 TiposDeAlergias.py:35(alergia_del_paciente)
+
         4    0.000    0.000    0.000    0.000 TiposDeAlergias.py:67(revision_datos_incompletos)
+
         1    0.000    0.000   69.621   69.621 menu.py:12(main)
+
         1    0.000    0.000   69.621   69.621 {built-in method builtins.exec}
+
        23   69.592    3.026   69.592    3.026 {built-in method builtins.input}
+
         3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+
        96    0.028    0.000    0.028    0.000 {built-in method builtins.print}
+
         1    0.000    0.000    0.000    0.000 {built-in method builtins.sum}
+
         4    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+
         8    0.000    0.000    0.000    0.000 {method 'copy' of 'list' objects}
+
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
         6    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+
         3    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+
         5    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+
         2    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+
         9    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+
         3    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
 '''
 
@@ -104,39 +137,73 @@ Con la lista de 50 alergias se tienen los siguientes resultados:
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+
         1    0.000    0.000   98.875   98.875 <string>:1(<module>)
+
         1    0.000    0.000    0.001    0.001 Alergia.py:108(imprimir_alergia_especifica)
+
         1    0.000    0.000    0.000    0.000 Alergia.py:124(agregar_alergia)
+
         1    0.000    0.000    0.000    0.000 Alergia.py:19(__init__)
+
         1    0.000    0.000    0.008    0.008 Alergia.py:96(imprimir_todas_alergias)
+
         1    0.000    0.000    0.000    0.000 EvaluacionEspecifica.py:18(__init__)
+
         1    0.000    0.000    0.000    0.000 EvaluacionEspecifica.py:30(evaluar_alergias)
+
         1    0.000    0.000    0.009    0.009 EvaluacionEspecifica.py:62(imprimir_evaluacion)
+
         1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:21(__init__)
+
         1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:28(calcular_puntuacion_general)
+
         4    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:33(<genexpr>)
+
         1    0.000    0.000    0.002    0.002 EvaluacionGeneral.py:36(imprimir_alergias_paciente)
+
         1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:59(calcular_promedio)
+
         1    0.000    0.000    0.000    0.000 EvaluacionGeneral.py:67(<listcomp>)
+
         1    0.000    0.000   98.875   98.875 PruebaProfile.py:6(run_menu)
+
         1    0.000    0.000    0.000    0.000 TiposDeAlergias.py:21(__init__)
+
         5    0.000    0.000    0.000    0.000 TiposDeAlergias.py:35(alergia_del_paciente)
+
         4    0.000    0.000    0.000    0.000 TiposDeAlergias.py:67(revision_datos_incompletos)
+
         1    0.000    0.000   98.875   98.875 menu.py:12(main)
+
         1    0.000    0.000   98.875   98.875 {built-in method builtins.exec}
+
        23   98.841    4.297   98.841    4.297 {built-in method builtins.input}
+
         3    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+
       175    0.033    0.000    0.033    0.000 {built-in method builtins.print}
+
         1    0.000    0.000    0.000    0.000 {built-in method builtins.sum}
+
         4    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+
         8    0.000    0.000    0.000    0.000 {method 'copy' of 'list' objects}
+
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
         6    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+
         3    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+
         5    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+
         2    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+
         9    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+
         3    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
+        
 '''
 
 Primero se debe aclarar que el script llamado PruebaProfile.py, contiene un pequeño conjunto de comandos para hacer uso del método cProfile. Dejando esto en claro podemos observar la siguiente:
