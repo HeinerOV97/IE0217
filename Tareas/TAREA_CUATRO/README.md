@@ -53,7 +53,7 @@ Con los resultados obtenidos se observa una diferencia del tiempo de ejecución 
 
 ### Uso de cProfile
 
-Por otra parte, se tiene el uso del modulo cProfile para realizar las pruebas de perfilado del codigo, primeramente se realizan las pruebas realizadas en la sección anterior, es decir, se ingresa un puntaje para obtener las alergias del paciente, el puntaje fue el máximo puntaje que imprimiera todas las alergias de la lista, luego se agrega una alergia solo por su nombre, una solo por su puntaje, una con nombre y puntaje, otra con un nombre que no está en el sistema y por último sólo un puntaje que no está en el sistema, luego se imprimen estos resultados. Para continuar con la prueba se ingresa una nueva alergia, se imprimen todas las alergias del sistema y para finalizar se obtiene sólo la información de la última alergia de la foto.
+Por otra parte, se tiene el uso del modulo cProfile para realizar las pruebas de perfilado del codigo, primeramente se realizan las pruebas realizadas en la sección anterior, es decir, se ingresa un puntaje para obtener las alergias del paciente, el puntaje fue el máximo puntaje que imprimiera todas las alergias de la lista, luego se agrega una alergia solo por su nombre, una solo por su puntaje, una con nombre y puntaje, otra con un nombre que no está en el sistema y por último sólo un puntaje que no está en el sistema, luego se imprimen estos resultados. Para continuar con la prueba se ingresa una nueva alergia, se imprimen todas las alergias del sistema y para finalizar se obtiene sólo la información de la última alergia de la lista.
 
 Con la lista original de alergias se obtienen los siguientes resultados:
 
