@@ -62,7 +62,7 @@ Por otra parte, se tiene el uso del modulo cProfile para realizar las pruebas de
 
         ncalls  tottime  percall  cumtime  percall filename:lineno(function)
 
-        1    0.000    0.000   69.621   69.621 <string>:1(<module>)
+           1    0.000    0.000   69.621   69.621 <string>:1(<module>)
 
         1    0.000    0.000    0.001    0.001 Alergia.py:108(imprimir_alergia_especifica)
 
