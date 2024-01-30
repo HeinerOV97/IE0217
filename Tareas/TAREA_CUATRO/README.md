@@ -1,5 +1,32 @@
 # Práctica Tarea #4
 
+## Ejecución del programa
+
+Primero se debe indicar que para que el programa se ejecute, se debe estar ubicado en el directorio de la tarea, esto es decir, en el directorio TAREA_CUATRO, la tarea cuenta con un Makefile, que ejecutará el archivo principal que se encuentra en el directorio src, donde están todos los archivos fuente. Para ejecutar el programa en Windows, debe utilizar el comando mingw32-make, mientras que si se está en Linux se ejecuta el comando make.
+
+Ahora, el programa iniciará en el menú principal el cuál tiene las siguientes opciones:
+
+1. Ingresar puntuacion obtenida de su prueba de alergias: Al elegir esta opción, el usuario ingresará su puntuación de alergias y el programa devolverá un desglose de las alergias que padece el paciente.
+
+2. Ingresar alergias que el paciente padece: Al elegir esta opción, al usuario se le desplegarán las siguientes opciones:
+
+- 1. Posee solo el nombre de la alergia: El paciente ingresará solo el nombre de su alergia.
+- 2. Posee solo el puntaje de la alergia: El paciente ingresará solo el puntaje de su alergia.
+- 3. Posee tanto el nombre como el puntaje de la alergia: El paciente ingresará tanto el nombre como el puntaje de su alergia.
+- 4. Presione esta opcion cuando termine de ingresar sus alergias: Está opción es para que el paciente salga de nuevo al menú principal luego de ingresar sus alergias.
+
+3. Obtener puntaje de las alergias ingresadas: El paciente obtendrá un puntaje en base a las alergias que ingresó en el punto 2, un desglose de las alergias conocidas y las desconocidas, así como un porcentaje de alergias conocidas y otro porcentaje de alergias desconocidas.
+
+4. Ingresar nueva alergia y puntaje: El usuario puede agregar alergias al sistema, con el fin de utilizarlas para los procesos de las opciones 1, 2 y 3.
+
+5. Si desea acceder a la lista de alergias del sistema: Se desplega la lista de alergias que están en el sistema.
+
+6. Si desea acceder a la informacion de una alergia en especifico: El usuario puede buscar la información de una alergia en especifico
+
+## Parte #2 de la parte práctica
+
+### Uso de timeit
+
 Se realizan pruebas con el modulo Timeit de Python, las pruebas a realizar son las siguientes:
 
 * Primeramente se corre el programa con la lista inicial de alergias y se corren las siguientes pruebas:
@@ -23,6 +50,8 @@ Se realizan pruebas con el modulo Timeit de Python, las pruebas a realizar son l
 - Opción 6 del menú: Se busca una alergia en específico del diccionario por su nombre, en este caso se ingresa el nombre de la última alergia del diccionario, para ver cuanto dura el sistema en recorrer el diccionario, el resultado de tiempo obtenido fue de 6.40.
 
 Con los resultados obtenidos se observa una diferencia del tiempo de ejecución de los diferentes métodos de las clases del programa, si existe una diferencia cuando el programa debe recorrer toda la lista de alergias y esta lista es cada vez más grande como se observa en los resultados anteriores, aún así los cambios de tiempo no son muy grandes, por lo que se podría concluir que no se están produciendo cuellos de botella en el sistema, ya que los cambios al no ser tan grandes, pueden resultar del uso de una lista de datos más grande que el sistema debe recorrer, considerando que Python es un lenguaje interprete, por lo cual, va ejecutando línea por línea. No se considera la existencia de un cuello de botella, debido a que se realiza uso de herencia multinivel, por lo que el llamado entre clases no debería representar una carga para el sistema.
+
+### Uso de cProfile
 
 Por otra parte, se tiene el uso del modulo cProfile para realizar las pruebas de perfilado del codigo, primeramente se realizan las pruebas mencionadas anteriormente con la lista original de alergias y se obtienen los siguientes resultados:
 
