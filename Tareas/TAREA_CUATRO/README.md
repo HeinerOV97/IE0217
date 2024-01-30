@@ -10,10 +10,10 @@ Ahora, el programa iniciará en el menú principal el cuál tiene las siguientes
 
 2. Ingresar alergias que el paciente padece: Al elegir esta opción, al usuario se le desplegarán las siguientes opciones:
 
-- 1. Posee solo el nombre de la alergia: El paciente ingresará solo el nombre de su alergia.
-- 2. Posee solo el puntaje de la alergia: El paciente ingresará solo el puntaje de su alergia.
-- 3. Posee tanto el nombre como el puntaje de la alergia: El paciente ingresará tanto el nombre como el puntaje de su alergia.
-- 4. Presione esta opcion cuando termine de ingresar sus alergias: Está opción es para que el paciente salga de nuevo al menú principal luego de ingresar sus alergias.
+- 1 Posee solo el nombre de la alergia: El paciente ingresará solo el nombre de su alergia.
+- 2 Posee solo el puntaje de la alergia: El paciente ingresará solo el puntaje de su alergia.
+- 3 Posee tanto el nombre como el puntaje de la alergia: El paciente ingresará tanto el nombre como el puntaje de su alergia.
+- 4 Presione esta opcion cuando termine de ingresar sus alergias: Está opción es para que el paciente salga de nuevo al menú principal luego de ingresar sus alergias.
 
 3. Obtener puntaje de las alergias ingresadas: El paciente obtendrá un puntaje en base a las alergias que ingresó en el punto 2, un desglose de las alergias conocidas y las desconocidas, así como un porcentaje de alergias conocidas y otro porcentaje de alergias desconocidas.
 
