@@ -4,6 +4,8 @@
 
 Primero se debe indicar que para que el programa se ejecute, se debe estar ubicado en el directorio de la tarea, esto es decir, en el directorio TAREA_CUATRO, la tarea cuenta con un Makefile, que ejecutará el archivo principal que se encuentra en el directorio src, donde están todos los archivos fuente. Para ejecutar el programa en Windows, debe utilizar el comando mingw32-make, mientras que si se está en Linux se ejecuta el comando make.
 
+Dentro del directorio src, se encuentra un archivo llamado PruebaProfile.py, este fue utilizado para la parte 2 de la tarea, no se incluye su uso en el Makefile, para no imprimir cada vez que se ejecuta el código los resultados de cProfile, pero el archivo se incorpora como muestra de que si se implementó.
+
 Ahora, el programa iniciará en el menú principal el cuál tiene las siguientes opciones:
 
 1. Ingresar puntuacion obtenida de su prueba de alergias: Al elegir esta opción, el usuario ingresará su puntuación de alergias y el programa devolverá un desglose de las alergias que padece el paciente.
