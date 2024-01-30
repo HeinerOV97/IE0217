@@ -29,7 +29,7 @@ Ahora, el programa iniciará en el menú principal el cuál tiene las siguientes
 
 Se realizan pruebas con el modulo Timeit de Python, las pruebas a realizar son las siguientes:
 
-* Primeramente se corre el programa con la lista inicial de alergias y se corren las siguientes pruebas:
+Primeramente se corre el programa con la lista inicial de alergias y se corren las siguientes pruebas:
 
 - Opción 1 del menú: Se ingresa el puntaje de 2047 para que el programa deba recorrer todo el diccionario y se obtiene un resultado en 4.80 s.
 
@@ -39,7 +39,7 @@ Se realizan pruebas con el modulo Timeit de Python, las pruebas a realizar son l
 
 - Opción 6 del menú: Se busca una alergia en específico del diccionario por su nombre, en este caso se ingresa el nombre de la última alergia del diccionario, para ver cuanto dura el sistema en recorrer el diccionario, el resultado de tiempo obtenido fue de 5.39 s.
 
-* Ahora se realizan las mismas pruebas pero utilizando la lista proporcionada por el documento alergias.txt proporcionado con la tarea:
+Ahora se realizan las mismas pruebas pero utilizando la lista proporcionada por el documento alergias.txt proporcionado con la tarea:
 
 - Opción 1 del menú: Se ingresa el puntaje de 1 125 899 906 842 623 para que el programa deba recorrer todo el diccionario y se obtiene un resultado en 12.93 s.
 
