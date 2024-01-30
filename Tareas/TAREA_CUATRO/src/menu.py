@@ -161,5 +161,6 @@ def main():
 # Esto se ejecuta cuando el script es llamado como funcion principal del sistema
 # Si este script fuera llamado desde otro modulo, este no se ejecuataria
 if __name__ == "__main__":
+    # Comando para ejecutar el módulo timeit para la revisión de tiempo
     tiempo_ejecucion = timeit.timeit("main()", setup="from __main__ import main", number=1)
     print(f"Tiempo de ejecución: {tiempo_ejecucion} segundos")
