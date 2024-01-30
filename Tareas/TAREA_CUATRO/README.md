@@ -60,7 +60,7 @@ Por otra parte, se tiene el uso del modulo cProfile para realizar las pruebas de
 
    Ordered by: standard name
 
-   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        ncalls  tottime  percall  cumtime  percall filename:lineno(function)
 
         1    0.000    0.000   69.621   69.621 <string>:1(<module>)
 
@@ -136,7 +136,7 @@ Con la lista de 50 alergias se tienen los siguientes resultados:
 
    Ordered by: standard name
 
-   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        ncalls  tottime  percall  cumtime  percall filename:lineno(function)
 
         1    0.000    0.000   98.875   98.875 <string>:1(<module>)
 
@@ -203,7 +203,7 @@ Con la lista de 50 alergias se tienen los siguientes resultados:
         9    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
 
         3    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
-        
+
 '''
 
 Primero se debe aclarar que el script llamado PruebaProfile.py, contiene un pequeño conjunto de comandos para hacer uso del método cProfile. Dejando esto en claro podemos observar la siguiente:
