@@ -34,7 +34,7 @@ for ax in axs:
     ax.legend()
 
 # Se ajusta la disposicion
-plt.tight_layout
+plt.tight_layout()
 
 # Se imprime los graficos, no se crea una variable, todo se crea sobre plt
 plt.show()
