@@ -114,13 +114,14 @@ def main():
               prestamo_solicitado.tasa_interes_anual, "%"
               "\nEl numero de cuotas a pagar son:", prestamo_solicitado.cuotas)
 
-        # Graficar la amortizacion
+        # Se grafica la amortizacion de la deuda
         prestamo_solicitado.graficar_amortizacion()
 
-        # manejo de excepciones ValueError y generico
+    # Se utiliza un manejo de error generico
     except ValueError as error:
         print(error)
 
 
+# Se ejecuta el main si este script es llamado como principal
 if __name__ == '__main__':
     main()
