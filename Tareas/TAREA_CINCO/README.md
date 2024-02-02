@@ -82,7 +82,7 @@ Estos son algunas de las maneras de tratas valores nulos con Pandas, su uso depe
 
 3. ¿Cuál es la diferencia entre loc y iloc en Pandas?
 
-Estos son métodos utilizados para acceder a los datos de un DataFrame de Pandas, cada uno accede a los datos de maneras diferentes. Por un lado el loc accede a los datos tanto de filas y/o columnas utilizando las etiquetas que posee el DataFrame, esto quiere decir los nombres de las filas y las columnas dentro del DataFrame. Mientras que iloc utiliza indices enteros, esto quiere decir que accede al dato por la posición númerica que posee el dato dentro del DataFrame [4]. Otra diferencia, es que loc recibe booleanos, para realizar una selección más especifica de datos, mientras que iloc no permite el uso de booleanos.
+Estos son métodos utilizados para acceder a los datos de un DataFrame de Pandas, cada uno accede a los datos de maneras diferentes. Por un lado el loc accede a los datos tanto de filas y/o columnas utilizando las etiquetas que posee el DataFrame, esto quiere decir los nombres de las filas y las columnas dentro del DataFrame. Mientras que iloc utiliza indices enteros, esto quiere decir que accede al dato por la posición númerica que posee el dato dentro del DataFrame. Otra diferencia, es que loc recibe booleanos, para realizar una selección más especifica de datos, mientras que iloc no permite el uso de booleanos. [4]
 
 # Referencias bibliográficas
 
