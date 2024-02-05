@@ -17,9 +17,12 @@ class CargarDatos:
     """
     def __init__(self, datos):
         """
+        Metodo constructor
         Se obtiene el conjunto de datos,
-        almacenados en el csv conseguido en la
-        pagina web
+        almacenados en el csv conseguido
+        en la pagina web
+
+        param: datos: csv para analizar
         """
         self.datos = datos
 
@@ -43,4 +46,4 @@ class CargarDatos:
 
         # Si el archivo no se encuentra mostrara un error
         except FileNotFoundError:
-            print('El archivo que se intenta cargar esta vacio')
+            print('El archivo que se intenta cargar no fue encontrado')
