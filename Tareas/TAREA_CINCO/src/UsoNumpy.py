@@ -10,7 +10,7 @@ import numpy as np
 
 
 # Se crea un conjunto de datos con el uso de
-# de np.array, lo crea viene siendo una matriz
+# de np.array, lo que crea viene siendo una matriz
 # donde en este caso, cada uno de los siguientes
 # conjuntos es una fila que representara las notas
 # de un estudiante y cada columna representara la asignatura.
@@ -94,7 +94,7 @@ def main():
     # Establezco la cantidad de decimales con las que se van a
     # imprimir los datos dentro del array, en este caso establezco
     # el uso de 1 decimal, esto lo hago por medio del metodo
-    # set_printoptionons() de Numpy que permite configurar opciones
+    # set_printoptions() de Numpy que permite configurar opciones
     # de impresion en los array, en este caso con el argumento formatter
     # que es un diccionario, indicamos como clave que deseamos trabajar con
     # numeros flotantes en el array, y como valor de la clave tomamos

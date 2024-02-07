@@ -218,7 +218,7 @@ def main():
     plt.show()
 
     # # # # # # # # # # # # # # # # # # # # # # # # #
-    # Aerolineas que más vuelos realizaron por mes  #
+    # Aerolineas que mas vuelos realizaron por mes  #
     # # # # # # # # # # # # # # # # # # # # # # # # #
 
     # Se llama al metodo que devuelve un DataFrame con los datos de

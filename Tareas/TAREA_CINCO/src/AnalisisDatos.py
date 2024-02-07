@@ -4,7 +4,7 @@
 @date 06/02/2024
 @author Heiner Obando Vega
 """
-# Se importa Pandas par el analisis de datos
+# Se importa Pandas para el analisis de datos
 # de los diferentes vuelos
 import pandas as pd
 
@@ -51,7 +51,7 @@ class AnalisisDatos(LimpiezaDatos):
         for empresa_aerolinea in empresas_aerolineas:
             # Se realiza un filtro, se comparan los valores
             # del DataFrame original contra las aerolineas que
-            # se empecifican en la variable empresas_aerolineas,
+            # se especifican en la variable empresas_aerolineas,
             # se devuelve la cantidad de veces que el nombre de
             # esa aerolinea se repite, esto se logra realizar con
             # el metodo shape, este valor se devuelve y se almacena.
@@ -139,11 +139,11 @@ class AnalisisDatos(LimpiezaDatos):
 
     def DatosDescriptivos(self):
         """
-        Se obtiene un análisis descriptivo de
+        Se obtiene un analisis descriptivo de
         de los datos en el conjunto, algunos
         de estos datos no son utiles pero
-        estos serán filtrados al realizar el
-        análisis escrito
+        estos seran filtrados al realizar el
+        analisis escrito
         """
         # Se obtienen datos estadisticos basicos del
         # conjunto de datos almacenado

@@ -13,7 +13,7 @@ from CargarDatos import CargarDatos
 
 class LimpiezaDatos(CargarDatos):
     """
-    Esta clase heredara de CargarDatos, recibiendo
+    Esta clase heredara de CargarDatos,
     se llamara al metodo CargaDeDatos de la clase
     CargarDatos, esto para obtener acceso al DataFrame
     creado y de esta manera trabajarlo en las siguientes
