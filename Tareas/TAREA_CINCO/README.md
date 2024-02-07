@@ -112,7 +112,7 @@ Con el fin de observar con mayor claridad la gran cantidad de datos anterior se 
 
 <a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/grafico_1.png"></a>
 
-(Se recomienda hacer la imagen para poder observar de una mejor manera los datos)
+(Se recomienda acercar la imagen para poder observar de una mejor manera los datos)
 
 A partir de este gráfico, se logra observar que American Airlines Inc. y United Air Lines Inc., son las empresas que más vuelos realizaron en el periodo entre Enero y Octubre del 2023, esto se da ya que ambas empresas son lideres en trasporte de pasajeros por vía aérea internacionalmente y nacionalmente dentro de Estados Unidos, mientras que otras empresas que aparecen en el gráfico como Asia Pacific son empresas que se dedican al transporte de carga, lo que lleva a que la frecuencia de sus vuelos no sea tan alta. Como también hay presentes empresas como KaiserAir que se dedican a brindar el servicio privado de transporte aéreo a corporaciones, equipos deportivos entre otros entes, por lo que la regularidad de sus vuelos no es tan altas tampoco.
 
@@ -190,7 +190,7 @@ Se procede a crear un gráfico para tener un mejor entendimiento de los datos ob
 
 <a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/grafico_2.png"></a>
 
-(Se recomienda hacer la imagen para poder observar de una mejor manera los datos)
+(Se recomienda acercar la imagen para poder observar de una mejor manera los datos)
 
 Con este gráfico, se puede reafirmar lo análizado en el caso anterior, en este caso se obtiene el total de pasajeros que viajaron con cada aerolínea en el período entre Enero y Octubre del 2023, y en este caso siguen siendo American Airlines Inc. y United Air Lines Inc. las empresas que más personas transportaron, lo que deja ver que el fin de estás empresas es el transporte de las personas por vía aérea,  mientras que en Asia Pacific la cantidad de pasajeros transportada fue 0, ya que es una empresa encargada del transporte de cargamentos vía aérea.
 
