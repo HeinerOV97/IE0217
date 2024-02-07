@@ -1,11 +1,10 @@
 # Practica Tarea #5
 
+## Ejecución de los códigos
+
+Junto con los códigos en la carpeta src se adjunta un Makefile que ayuda a que se puedan correr ambos códigos de la parte práctica, para poder correr estos códigos se debe estar ubicado en la carpeta src, luego de esto se debe utilizar el comando *mingw32-make*, este comando hará que primeramente se ejecute el código de la parte 1 de la tarea, este código, irá imprimiendo datos en la consola sobre datos que se pueden analizar del csv, cada vez que termine la lista de datos se imprimirá un gráfico asociado a está lista, se debe ir cerrando cada gráfico para que el código continúe, al llegar al último gráfico y cerrarlo, se saltará al código de la parte dos, se colocó un print como indicativo de esto, este código mostrará el arreglo de numpy y mostrará los cálculos solicitados, en este caso se realizó una matriz raw para hacer los cálculos, las filas de la matriz son los estudiantes y las columnas son las asignaturas.
 
 ## Análisis de datos
-
-
-
-
 
 Como datos iniciales, se tienen los siguientes datos estadísticos, con respecto a los pasajeros por vuelo.
 
