@@ -6,7 +6,7 @@ Junto con los códigos en la carpeta src se adjunta un Makefile que ayuda a que 
 
 ## Análisis de datos
 
-Como datos iniciales, se tienen los siguientes datos estadísticos, con respecto a los pasajeros por vuelo.
+Como datos iniciales, se tienen los siguientes datos estadísticos, con respecto a los pasajeros por vuelo, los demás datos descriptivos obtenidos no muestran posibles datos para analizar por lo que no se colocan aquí.
 
 ```
         PASSENGERS
@@ -33,7 +33,7 @@ En este caso, se muestra que en el 50% de los vuelos entre enero y octubre por v
 
 Este es el mismo gráfico anterior pero permitiendo que los datos atípicos sean presentados, como se observa existe una gran cantidad de datos atípicos, estos podrían darse por diferentes razones, tales como épocas que afecten la cantidad de personas que realizan viajes, haciendo esto referencia a época de vacaciones, o posibles ofertas de las aerolíneas en diferentes momentos del año. 
 
-Por otra parte, al obtener datos generales de un conjunto de datos, se busca obtener datos específicos de los datos, por lo que se decició revisar los siguientes datos:
+Por otra parte, al obtener datos generales de un conjunto de datos, se busca obtener datos específicos de los datos, por lo que se decidió revisar los siguientes datos:
 
 ### Vuelos Totales entre Enero y Octubre
 
@@ -194,7 +194,7 @@ Con este gráfico, se puede reafirmar lo análizado en el caso anterior, en este
 
 ### Modelo de aeronave más utilizado por las empresas
 
-Como dato adicional a lo referente con los vuelos, se decidió observar el modelo de avión más utilizado por las empresas, para esto primero se obtuvo el modelo de avión más utilizado por cada empresa y se realizó un conteo de cual modelo de avión era más recurrente que fuera el favorito de las empresas encargadas del transporte aéreo. Los datos de la aeronave más utilizada se muestran a continuación.  
+Como dato adicional a lo referente con los vuelos, se decidió observar el modelo de avión más utilizado por las empresas, para esto primero se obtuvo el modelo de avión más utilizado por cada empresa y se realizó un conteo de cual modelo de avión era más recurrente que fuera el favorito de las empresas encargadas del transporte aéreo. Los datos de las aeronaves más utilizada se muestran a continuación.  
 
 ```
 Empresa Aerolinea: ABX Air Inc, Modelo con el cual trabaja mas la aerolinea: 626
@@ -266,7 +266,7 @@ Luego con los datos obtenidos se obtuvo un gráfico que muestra el resultado obt
 
 <a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/grafico_3.png"></a>
 
-Con la gráfica del conteo se muestra que los modelos de avión más utilizados por las aerolíneas son los modelos, 626, 614 y 673, donde estos son modelos comerciales, Se observa una tendencia por el tipo de aeronave 614 en aquellas empresas destinadas al transporte de pasajeros, siendo este el modelo más utilizado por empresas como American Airlines Inc. y United Air Lines Inc, que se dedican a este fin. 
+Con la gráfica del conteo obtenida con Seaborn se muestra que los modelos de avión más utilizados por las aerolíneas son los modelos, 626, 614 y 673, donde estos son modelos comerciales, Se observa una tendencia por el tipo de aeronave 614 en aquellas empresas destinadas al transporte de pasajeros, siendo este el modelo más utilizado por empresas como American Airlines Inc. y United Air Lines Inc, que se dedican a este fin. 
 
 ### Empresas que realizaron más vuelos por mes
 
@@ -289,7 +289,7 @@ Por medio de Seaborn se obtuvo una visualización de estos resultados.
 
 <a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/grafico_4.png"></a>
 
-Como bien se podía suponer de los datos anteriores, las empresas que más vuelos realizaron en los diferentes meses fueron American Airlines Inc. y United Air Lines Inc, mostrándose una superioridad por parte de United Air Lines Inc. Curiosamente esto contradice las encuestas revisadas de internet donde las personas prefieren American Airlines, aún así esto se puede deber a que United Air Lines posee un mayor de número de destinos a nivel nacional dentro de los Estados Unidos, por lo que la frecuencia de sus vuelos es mayor.
+Como bien se podía suponer de los datos anteriores, las empresas que más vuelos realizaron en los diferentes meses fueron American Airlines Inc. y United Air Lines Inc, mostrándose una superioridad por parte de United Air Lines Inc. Curiosamente esto contradice las encuestas revisadas de internet donde las personas prefieren American Airlines, aún así esto se puede deber a que United Air Lines posee un mayor número de destinos a nivel nacional dentro de los Estados Unidos, por lo que la frecuencia de sus vuelos es mayor.
 
 # Teoría Tarea #5
 
