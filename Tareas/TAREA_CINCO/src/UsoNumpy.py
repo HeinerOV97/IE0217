@@ -100,6 +100,7 @@ def main():
     np.set_printoptions(formatter={'float': lambda x: "{:.1f}".format(x)})
 
     # Se imprime la matriz de datos creada
+    print("\n\nComienza Parte 2 de la tarea\n")
     print("Los datos de las calificaciones son los siguientes:")
     print(conjunto_calificaciones)
 
