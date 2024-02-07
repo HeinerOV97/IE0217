@@ -1,3 +1,9 @@
+"""
+@copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
+@file UsoNumpy.py
+@date 06/02/2024
+@author Heiner Obando Vega
+"""
 # Se importa la biblioteca Numpy para hacer uso
 # de sus herramientas
 import numpy as np

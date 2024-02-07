@@ -1,4 +1,4 @@
-# Directorio donde estaran los archivos fuente
+# Archivos fuente a ejecutar
 ARCHIVO_PARTE_1 = ManejoClases.py
 ARCHIVO_PARTE_2 = UsoNumpy.py
 

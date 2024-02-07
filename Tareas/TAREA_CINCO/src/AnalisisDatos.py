@@ -1,7 +1,7 @@
 """
 @copyright Copyright 2024 Heiner Obando Vega. All right reserved. This project is released under the MIT License
 @file AnalisisDatos.py
-@date 28/01/2024
+@date 06/02/2024
 @author Heiner Obando Vega
 """
 # Se importa Pandas par el analisis de datos
