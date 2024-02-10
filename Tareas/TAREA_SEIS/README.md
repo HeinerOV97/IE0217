@@ -58,13 +58,41 @@ Por otra parte, los datos no estructurados, no poseen una definición, estos no 
 
 1. ¿Qué es un paquete en Python y cómo se diferencia de un módulo?
 
+Por un lado los módulos de Python son archivos de Python que poseen la extensión .py, y estos se encargan de implementar un conjunto de funciones. Los módulos pueden ser importados por otros módulos. Es importante destacar que las variables dentro de un módulo son inicializadas solo una vez, esto quiere decir que un módulo que sea inicializado por un script de Python sólo lo hará una vez en todo el proceso de ejecución. [4]
+
+Mientras que por otra parte, los paquetes de Python son directorios que contienen múltiples paquetes y módulos múltiples. [4]
+
 2. ¿Cuál es la función del archivo __init__.py dentro de un paquete de Python?
+
+El archivo __init__.py, es un archivo que puede estar vacío, este indica que el contenido que está dentro de un directorio es un paquete, lo que permite que este pueda ser importado como si de un módulo se tratáse. [4]
 
 3. ¿Cómo se importa un módulo o función desde un paquete en Python?
 
+Estos se importan como importamos los módulos que usualmente utilizamos en los diferentes proyectos, por ejemplo, si tenemos un paquete que se llama cars_analysis y este paquete tiene un módulo llamado regression.py, para llamar este módulo en otro archivo python podemos hacer lo siguiente:
+
+```
+# Primera opción
+import cars_analysis.regression.py
+
+# Segunda opción
+from cars_analysis import regression.py
+
+```
+
 4. ¿Qué es la variable __all__ en el archivo __init__.py y cuál es su propósito?
 
+Con la variable __all__ dentro del archivo __init__.py se puede definir que módulos del paquete se desea que puedan ser importados y cuales no, para esto la variable se puede declarar de la siguiente manera [4]:
+
+```
+__all__ = ["regression"]
+
+```
+
+De esta manera cuando algún script haga una importación del paquete cars_analysis sólo tendrá acceso al módulo regression, en caso de haber más módulos, estos se mantendrán de forma interna en el paquete [4].
+
 5. ¿Cuál es la ventaja de organizar el código en paquetes y módulos en Python?
+
+Al organizar los códigos de python de esta manera se logra obtener un código modular, donde cada pequeño fragmento de código tendrá diferentes tareas que cumplir, se podrá realizar una reutilización de código más eficiente, y será un código escalable, donde a medida que el trabajo crezca, así podrá crecer la cantidad de módulos, para trabajar.
 
 ## Python HTTP y Servicios Web (API)
 
@@ -74,11 +102,11 @@ Una API es un conjunto de diferentes reglas y definiciones. La función de una A
 
 2. ¿Cuál es la diferencia entre una API RESTful y una API SOAP?
 
-SOAP es un protocolo simple de acceso a objetos, esto permite la comuniación entre aplicaciones que han sido diseñadas en diferentes lenguajes, este impone reglas integradas, las cuales aumentan la complejidad y la sobrecarga, esto puede llegar a retrasar el tiempo que tardan las páginas en lograr cargarse, este estandariza la forma de proteger y transferir datos y controlar los errores.  El envío de una solicitud de datos a una API SOAP, puede ser administrado a través de cualquiera de los protocolos en la capa de aplicación tales como: HTTP, SMTP, TCP, entre otros. [4]
+SOAP es un protocolo simple de acceso a objetos, esto permite la comuniación entre aplicaciones que han sido diseñadas en diferentes lenguajes, este impone reglas integradas, las cuales aumentan la complejidad y la sobrecarga, esto puede llegar a retrasar el tiempo que tardan las páginas en lograr cargarse, este estandariza la forma de proteger y transferir datos y controlar los errores.  El envío de una solicitud de datos a una API SOAP, puede ser administrado a través de cualquiera de los protocolos en la capa de aplicación tales como: HTTP, SMTP, TCP, entre otros. [5]
 
-Por otra parte, las API REST, es un conjunto de diferentes reglas que permiten una implementación más flexible, estas son más ligeras, son ideales para contextos de trabajo más recientes, como lo es el IoT el desarrollo de aplicaciones móviles y la informática sin servidor. [4] 
+Por otra parte, las API REST, es un conjunto de diferentes reglas que permiten una implementación más flexible, estas son más ligeras, son ideales para contextos de trabajo más recientes, como lo es el IoT el desarrollo de aplicaciones móviles y la informática sin servidor. [5] 
 
-El REST por un lado es un conjunto de principios arquitectónicos, mientras que el SOAP es un protocolo oficial. [4]
+El REST por un lado es un conjunto de principios arquitectónicos, mientras que el SOAP es un protocolo oficial. [5]
 
 3. Describa los pasos básicos para consumir una API utilizando Python.
 
@@ -92,7 +120,7 @@ El REST por un lado es un conjunto de principios arquitectónicos, mientras que 
 
 4. ¿Qué es la autenticación de API y por qué es importante?
 
-La autenticación es el proceso mediante el cuál se comprueba la identidad de un usuario o alguna aplicación que intenta acceder a la API. Este autenticación se da mediante credenciales, tales como el nombre de usuario y la contraseña, u otros métodos [5]. Esto es importante ya que es la forma de proteger las API, de esta manera se controla quien tiene acceso a la API y que acciones puede realizar o no quien está intentando realizar solicitudes.
+La autenticación es el proceso mediante el cuál se comprueba la identidad de un usuario o alguna aplicación que intenta acceder a la API. Este autenticación se da mediante credenciales, tales como el nombre de usuario y la contraseña, u otros métodos [6]. Esto es importante ya que es la forma de proteger las API, de esta manera se controla quien tiene acceso a la API y que acciones puede realizar o no quien está intentando realizar solicitudes.
 
 5. ¿Cuál es el papel de los verbos HTTP (GET, POST, PUT, DELETE) en las solicitudes a una API y HTTP?
 
@@ -114,7 +142,9 @@ DELETE: El método delete permite eliminar datos.
 
 [3] Oracle. (s.f.). Tipos de datos estructurados frente a no estructurados. [Online]. Obtenido de https://www.oracle.com/mx/big-data/structured-vs-unstructured-data/. [Accedido Feb. 8, 2024].
 
-[4] Red Hat. (2019, Apr 8). REST versus SOAP: diferencias. [Online]. Obtenido de https://www.redhat.com/es/topics/integration/whats-the-difference-between-soap-rest. [Accedido Feb. 8, 2024].
+[4] Learnpython. (s.f.). Modules and Packages. [Online]. Obtenido de https://www.learnpython.org/es/Modules%20and%20Packages. [Accedido Ene. 27, 2024].
 
-[5] Microsoft Learn. (2023, Nov 8). Autenticación y autorización para las API en Azure API Management. [Online]. Obtenido de https://learn.microsoft.com/es-es/azure/api-management/authentication-authorization-overview. [Accedido Feb. 8, 2024].
+[5] Red Hat. (2019, Apr 8). REST versus SOAP: diferencias. [Online]. Obtenido de https://www.redhat.com/es/topics/integration/whats-the-difference-between-soap-rest. [Accedido Feb. 8, 2024].
+
+[6] Microsoft Learn. (2023, Nov 8). Autenticación y autorización para las API en Azure API Management. [Online]. Obtenido de https://learn.microsoft.com/es-es/azure/api-management/authentication-authorization-overview. [Accedido Feb. 8, 2024].
 
