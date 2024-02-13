@@ -182,9 +182,9 @@ def RegresionLinealPrecioVsKilometraje(data):
 
     # Se visualiza la primera regresion lineal
     # Se crea un grafico de dispersion
-    plt.scatter(X_simple, y_simple, color='red')
+    plt.scatter(X_simple, y_simple, color='blue')
     # Se crea un grafico lineal
-    plt.plot(X_test, y_pred_simple, color='blue', linewidth=3)
+    plt.plot(X_test, y_pred_simple, color='red', linewidth=3)
 
     # Titulo de la grafica
     plt.title("Comportamiento del precio de los autos vs. Kilometraje")
