@@ -1,3 +1,133 @@
+# Practica Tarea #5
+
+## Ejecución de los códigos
+
+En la carpeta src donde se encuentra el paquete cars_anaylisis se adjunta también un Makefile, este ayuda a que se pueda correr el script main.py, para poder correr este script se debe estar ubicado en la carpeta src, luego de esto se debe utilizar el comando *mingw32-make* si se está en Windows, con esto se correra el archivo main.py, el cual estará encargado de realizar el llamado a los modulos creados en el paquete cars_analysis junto con el archivo main.py que se encuentra en el mismo paquete. El programa comenzará a imprimir las gráficas de las regresiones y de los clustering. Junto con cada regresión también se imprimen sus datos para la evaluación del modelo respectivo.
+
+Antes de que se imprima cada gráfica en la terminal aparecerá un texto indicando que información es la que se está graficando y los datos de evaluación.
+
+Para la obtención de los datos desde la página de Kaggle se utilizó un url proporcionado por el archivo "metadata.json" que se podía obtener en el link que fue proporcionado para la tarea, a continuación se muestra una captura de pantalla de la página y se indica con amarillo de donde se obtuvo el archivo que poseía el link utilizado.
+
+<a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/pagina.PNG"></a>
+
+## Análisis de datos
+
+### Regresiones
+
+Para la primer sección de la parte práctica se solicitó hacer regresiones mostrando como se comporta una variable dependiente con respecto a una indipendiente, primero se realiza una regresión lineal utilizando dos variables y luego de esto se utilizan las mismas variables pero se realiza una regresión no lineal, para comparar los modelos de ajuste en ambas regresiones.
+
+#### Precio de los automóviles vs. Año de fabricación
+
+Primeramente se observa el comportamiento del precio de los automóviles comparandolo con el año de su fabricación. Primero de hablará de los modelos creados con las regresiones, luego se colocaran los resultados de evaluación de ambas regresiones y luego se analizaran los datos obtenidos.
+
+1. Gráfica de Precio vs. Año utilizando regresión lineal
+
+<a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/Figure_1.png"></a>
+
+Como se puede observar en la gráfica anterior, el utilizar una regresión lineal para realizar una predicción de como puede variar el precio de los automóviles con respecto a su año de fabricación no ofrece un modelo del todo adecuado, ya que si se observamos la pendiente azul que representa el modelo y que fue realizado con una muestra del 80% de los datos está no coindice con el comportamiento del otro 20% de los datos que fue utilizado como prueba.
+
+A parte de las gráficas se obtuvieron los siguientes resultados al evaluar la regresión:
+
+Error cuadrático medio (MSE): 267737137875.10327
+
+Como podemos ver el valor del MSE es muy alto, esto viene siendo un indicativo de que el modelo realizado para el conjunto de datos no es apropiado, como se mencionó anteriormente en el análisis del gráfico.
+
+Error absoludio medio (MAE): 236626.94069403742
+
+El valor del MAE nos indica la lejanía existente entre los valores en las predicciones del modelo y los valores reales, este valor nos indica que la predicción del modelo no es representativa al referirse al comportamiento de los precios de los autos con respecto a su año de fabricación. 
+
+Coeficiente de determinacion (R2): 0.16886241633651733
+
+Al igual que los datos anteriores, el valor de R2 entre más cercano sea a 1, indica que el modelo se ajusta mejor a los datos, por lo tanto el valor que tenemos, nos indica que, el modelo no representa correctamente como varían los datos.
+
+2. Gráfica de Precio vs. Año utilizando regresión no lineal
+
+<a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/Figure_3.png"></a>
+
+La gráfica anterior donde se utiliza regresión no lineal y se crea un modelo de grado 2 a partir del 80% de los datos representa un poco mejor el comportamiento del precio de los automóviles con respecto a su año de fabricación, ya que como podemos observa la curva generada tiende a seguir de una mejor manera el comportamiento del 20% de los datos utilizados como prueba.
+
+Para esta prueba también se obtienen los datos de evaluación del modelo:
+
+Error cuadrático medio (MSE): 262286222685.91968
+
+Error absoludio medio (MAE): 224620.38822891717   
+
+Coeficiente de determinacion (R2): 0.18578371651567294
+
+Podemos observar que los datos de evaluación mejoraron levemente utilizando una regresión no lineal, pero estos siguen siendo indicativos que el modelo realizado para el conjunto de datos no representa bien el conjunto de datos, aunque este mejoró levemente no es la mejor opción. Se indica que se realizaron diferentes pruebas aumentando el grado del modelo pero esto no provocó mayor cambio en los resultados.
+
+3. Datos obtenidos
+
+Si bien los modelos no predicen totalmente los datos, esto es normal, se puede deber a la densidad de datos, donde existen autos de todos muchos precios diferentes pero que poseen el mismo año de fabricación, con respecto a los datos en el gráfico de dispersión estos no siguen una tendencia completamente lineal, ya que los aumentos de precio no son constantes en cada año si no que estos sufrieron aumentos en secciones de 5 a 10 años aproximadamente, lo cuál tiene sentido, ya que, aunque normalmente el año de fabricación del automóvil si representa una afectación en su precio, no es una característica totalmente determinante, si se analizan diferentes automóviles como en este conjunto de datos, se puede esperar que haya características de más peso para aumentar el precio del auto como el modelo, es normal ver autos del año 2010 con precios mayores a autos del 2020 por ejemplo, y esto debido a su marca o modelo.
+
+#### Precio de los automóviles vs. Kilometraje
+
+Ahora se procede a observar el comportamiento del precio de los automóviles comparandolo con su kilometraje. Al igual que en el caso anterior primero de hablará de los modelos creados con las regresiones, luego se colocaran los resultados de evaluación de ambas regresiones y luego se analizaran los datos obtenidos.
+
+1. Gráfica de Precio vs. Kilometraje utilizando regresión lineal
+
+<a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/Figure_9.png"></a>
+
+A partir de lo obtenido con la gráfica anterior el utilizar una regresión lineal para realizar la predicción del comportamiento el precio de los automóviles dependiendo de su kilometraje no ofrece un modelo realmente adecuado, la pendiente roja que representa el modelo y que fue realizado con una muestra del 80% de los datos, no coindice con el comportamiento del otro 20% de los datos que fue utilizado como prueba.
+
+A partir de las métricas de evaluación de los equipos se tiene lo siguiente:
+
+Error cuadrático medio (MSE): 307988220482.47314
+
+Error absoludio medio (MAE): 292401.46063219226
+
+Coeficiente de determinacion (R2): 0.043910802213658284
+
+Como se mencionó en los casos anteriores, estos resultados no son buenos indicativos sobre el modelo utilizado, ya que, el MSE con un valor tan alto nos puede indicar que el modelo utilizado no es el adecuado, ya que este nos indica que existen grandes errores en la predicción hecha con respecto a los valores reales. Por otra parte, el MAE indica que la variaciación entre los puntos de la predicción y los valores reales es alta. Finalmente, el R2 muestra que la variabilidad de la variable dependiente no se logra apreciar con el modelo, ya que el valor de R2 es muy lejano a 1. 
+
+2. Gráfica de Precio vs. Kilometraje utilizando regresión no lineal
+
+<a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/Figure_4.png"></a>
+
+Utilizando regresión no lineal y creando un modelo de grado 2 a partir del 80% de los datos representa un poco mejor el comportamiento del precio de los automóviles con respecto a su kilometro, ya que como se logra observar la curva generada tiende a seguir de una mejor manera el comportamiento del 20% de los datos utilizados como prueba.
+
+Para esta prueba también se obtienen los datos de evaluación del modelo:
+
+Error cuadrático medio (MSE) en regresión no lineal: 303669170312.9427
+
+Error absoludio medio (MAE) en regresión no lineal: 289585.5996081953
+
+Coeficiente de determinacion (R2) en regresión no lineal: 0.057318448796103705
+
+Al observar estos valores de las métricas de evaluación podemos observar una leve mejora con respecto a la regresión lineal de los datos, pero estos siguen siendo indicadores de que el modelo no se ajusta de la mejor manera a los datos, al realizar pruebas creando diferentes modelos con grados más altos las evaluaciones del modelo no mostraron una gran mejora.
+
+3. Datos obtenidos
+
+En este caso los modelos no logran predecir de la mejor manera los datos, esto puede deberse a la gran densidad de datos que se encuentran acumulados a la izquierda de la gráfica, por lo que la gran cantidad de datos provocan que haya automóviles con todo tipo de kilometrajes y no se vea con claridad el comportamiento de los datos a través del modelo, aún así en el gráfico de dispersión muestra una tendencia a la disminución del precio de los automóviles cuando el kilometraje aumenta, esto tiene sentido ya que el kilometraje de un automóvil representa su uso, entre más ha sido este utilizado, mayor es la cantidad de mantenimientos y posibles daños que este ha tenido, además podemos observar que los datos se acumulan a la izquierda de los 300000 km recorridos, esto es normal, ya que no es tan común ver automóviles que superen esta cantidad de kilometraje.
+
+### Clustering
+
+Ahora se procede a realizar dos clustering a partir de características de los automóviles.
+
+#### Agrupamiento por año y kilometraje de los autos
+
+Primeramente, se realiza el proceso para conocer cuál es la cantidad adecuada de clusters a declarar para realizar el clustering, para esto se utiliza el método del codo y se obtiene el siguiente gráfico:
+
+<a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/Figure_5.png"></a>
+
+A partir de este gráfico se observa donde está el codo, este se encuentra en k = 4 aproximadamente, por lo que se procede a colocar 4 clusters para realizar el agrupamiento con K-Means, el resultado de este agrupamiento se muestra en el siguiente gráfico:
+
+<a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/Figure_6.png"></a>
+
+En el gráfico anterior se puede observar como se realiza un agrupamiento de los datos en 4 grupos como se definió, donde la mayoría de datos son automóviles que poseen un kilometraje en 100000 y 200000 kilometros y son modelos mayormente del año 2005 al año 2017.
+
+#### Agrupamiento por año y precio
+
+Primeramente, se realiza el proceso para conocer cuál es la cantidad adecuada de clusters a declarar para realizar el clustering, para esto se utiliza el método del codo y se obtiene el siguiente gráfico:
+
+<a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/Figure_7.png"></a>
+
+A partir de este gráfico se observa donde está el codo, este se encuentra en k = 4 aproximadamente, por lo que se procede a colocar 4 clusters para realizar el agrupamiento con K-Means, el resultado de este agrupamiento se muestra en el siguiente gráfico:
+
+<a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/Figure_8.png"></a>
+
+En este gráfico se realiza el agrupamiento en los 4 grupos definidos para K-Means, en este caso se puede observar que la mayor acumulación de datos se da en automóviles que poseen precios entre los 500000 y los 1400000 (No se coloca moneda ya que no se especifica), y siendo estos en su mayoría modelos entre el 2009 y el 2020.
+
 # Teoría Tarea #6
 
 ## Regresión 
