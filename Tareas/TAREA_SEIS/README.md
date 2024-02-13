@@ -1,4 +1,4 @@
-# Practica Tarea #5
+# Práctica Tarea #5
 
 ## Ejecución de los códigos
 
@@ -6,7 +6,7 @@ En la carpeta src donde se encuentra el paquete cars_anaylisis se adjunta tambi�
 
 Antes de que se imprima cada gráfica en la terminal aparecerá un texto indicando que información es la que se está graficando y los datos de evaluación.
 
-Para la obtención de los datos desde la página de Kaggle se utilizó un url proporcionado por el archivo "metadata.json" que se podía obtener en el link que fue proporcionado para la tarea, a continuación se muestra una captura de pantalla de la página y se indica con amarillo de donde se obtuvo el archivo que poseía el link utilizado.
+Para la obtención de los datos desde la página de Kaggle se utilizó un url proporcionado por el archivo "metadata.json" que se podía obtener en el link que fue proporcionado para la tarea, a continuación se muestra una captura de pantalla de la página y se indica con amarillo de donde se obtuvo el archivo que poseía el link utilizado. Al presionar ahí se descargaba el metadata.json que tenía el link.
 
 <a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/pagina.PNG"></a>
 
