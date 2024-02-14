@@ -2,7 +2,7 @@
 
 ## Ejecución de los códigos
 
-En la carpeta src donde se encuentra el paquete cars_anaylisis se adjunta también un Makefile, este ayuda a que se pueda correr el script main.py, para poder correr este script se debe estar ubicado en la carpeta src, luego de esto se debe utilizar el comando *mingw32-make* si se está en Windows, con esto se correra el archivo main.py, el cual estará encargado de realizar el llamado a los modulos creados en el paquete cars_analysis junto con el archivo main.py que se encuentra en el mismo paquete. El programa comenzará a imprimir las gráficas de las regresiones y de los clustering. Junto con cada regresión también se imprimen sus datos para la evaluación del modelo respectivo.
+En la carpeta src donde se encuentra el paquete cars_anaylisis se adjunta también un Makefile, este ayuda a que se pueda correr el script main.py, para poder correr este script se debe estar ubicado en la carpeta src, luego de esto se debe utilizar el comando *mingw32-make* si se está en Windows, con esto se correra el archivo main.py, el cual estará encargado de realizar el llamado a los modulos creados en el paquete cars_analysis junto con el archivo main.py que se encuentra en el mismo paquete. El programa comenzará por realizar el análisis exploratorio y limpiará los datos que se obtienen del .cvs, luego procederá a imprimir las gráficas de las regresiones y de los clustering. Junto con cada regresión también se imprimen sus datos para la evaluación del modelo respectivo.
 
 Antes de que se imprima cada gráfica en la terminal aparecerá un texto indicando que información es la que se está graficando y los datos de evaluación.
 
