@@ -2,7 +2,7 @@
 
 ## Ejecución de los códigos
 
-En la carpeta src donde se encuentra el paquete cars_anaylisis se adjunta también un Makefile, este ayuda a que se pueda correr el script main.py, para poder correr este script se debe estar ubicado en la carpeta src, luego de esto se debe utilizar el comando *mingw32-make* si se está en Windows, con esto se correra el archivo main.py, el cual estará encargado de realizar el llamado a los modulos creados en el paquete cars_analysis junto con el archivo main.py que se encuentra en el mismo paquete. El programa comenzará por realizar el análisis exploratorio y limpiará los datos que se obtienen del .cvs, luego procederá a imprimir las gráficas de las regresiones y de los clustering. Junto con cada regresión también se imprimen sus datos para la evaluación del modelo respectivo.
+En la carpeta src donde se encuentra el paquete cars_anaylisis se adjunta también un Makefile, este ayuda a que se pueda correr el script main.py, para poder correr este script se debe estar ubicado en la carpeta src, luego de esto se debe utilizar el comando *mingw32-make* si se está en Windows, con esto se correra el archivo main.py, el cual estará encargado de realizar el llamado a los modulos creados en el paquete cars_analysis junto con el archivo main.py que se encuentra en el mismo paquete. El programa comenzará por realizar el análisis exploratorio y limpiará los datos que se obtienen del .csv, luego procederá a imprimir las gráficas de las regresiones y de los clustering. Junto con cada regresión también se imprimen sus datos para la evaluación del modelo respectivo.
 
 Antes de que se imprima cada gráfica en la terminal aparecerá un texto indicando que información es la que se está graficando y los datos de evaluación.
 
@@ -58,7 +58,7 @@ Podemos observar que los datos de evaluación mejoraron levemente utilizando una
 
 3. Datos obtenidos
 
-Si bien los modelos no predicen totalmente los datos, esto es normal, se puede deber a la densidad de datos, donde existen autos de todos muchos precios diferentes pero que poseen el mismo año de fabricación, con respecto a los datos en el gráfico de dispersión estos no siguen una tendencia completamente lineal, ya que los aumentos de precio no son constantes en cada año si no que estos sufrieron aumentos en secciones de 5 a 10 años aproximadamente, lo cuál tiene sentido, ya que, aunque normalmente el año de fabricación del automóvil si representa una afectación en su precio, no es una característica totalmente determinante, si se analizan diferentes automóviles como en este conjunto de datos, se puede esperar que haya características de más peso para aumentar el precio del auto como el modelo, es normal ver autos del año 2010 con precios mayores a autos del 2020 por ejemplo, y esto debido a su marca o modelo.
+Si bien los modelos no predicen totalmente los datos, esto es normal, se puede deber a la densidad de datos, donde existen autos de muchos precios diferentes pero que poseen el mismo año de fabricación, con respecto a los datos en el gráfico de dispersión estos no siguen una tendencia completamente lineal, ya que los aumentos de precio no son constantes en cada año si no que estos sufrieron aumentos en secciones de 5 a 10 años aproximadamente, lo cuál tiene sentido, ya que, aunque normalmente el año de fabricación del automóvil si representa una afectación en su precio, no es una característica totalmente determinante, si se analizan diferentes automóviles como en este conjunto de datos, se puede esperar que haya características de más peso para aumentar el precio del auto como el modelo, es normal ver autos del año 2010 con precios mayores a autos del 2020 por ejemplo, y esto debido a su marca o modelo.
 
 #### Precio de los automóviles vs. Kilometraje
 
@@ -84,7 +84,7 @@ Como se mencionó en los casos anteriores, estos resultados no son buenos indica
 
 <a><img src="https://github.com/HeinerOV97/Imagenes/blob/main/Figure_4.png"></a>
 
-Utilizando regresión no lineal y creando un modelo de grado 2 a partir del 80% de los datos representa un poco mejor el comportamiento del precio de los automóviles con respecto a su kilometro, ya que como se logra observar la curva generada tiende a seguir de una mejor manera el comportamiento del 20% de los datos utilizados como prueba.
+Utilizando regresión no lineal y creando un modelo de grado 2 a partir del 80% de los datos representa un poco mejor el comportamiento del precio de los automóviles con respecto a su kilometraje, ya que como se logra observar la curva generada tiende a seguir de una mejor manera el comportamiento del 20% de los datos utilizados como prueba.
 
 Para esta prueba también se obtienen los datos de evaluación del modelo:
 
@@ -272,7 +272,7 @@ DELETE: El método delete permite eliminar datos.
 
 [3] Oracle. (s.f.). Tipos de datos estructurados frente a no estructurados. [Online]. Obtenido de https://www.oracle.com/mx/big-data/structured-vs-unstructured-data/. [Accedido Feb. 8, 2024].
 
-[4] Learnpython. (s.f.). Modules and Packages. [Online]. Obtenido de https://www.learnpython.org/es/Modules%20and%20Packages. [Accedido Ene. 27, 2024].
+[4] Learnpython. (s.f.). Modules and Packages. [Online]. Obtenido de https://www.learnpython.org/es/Modules%20and%20Packages. [Accedido Feb. 8, 2024].
 
 [5] Red Hat. (2019, Apr 8). REST versus SOAP: diferencias. [Online]. Obtenido de https://www.redhat.com/es/topics/integration/whats-the-difference-between-soap-rest. [Accedido Feb. 8, 2024].
 
