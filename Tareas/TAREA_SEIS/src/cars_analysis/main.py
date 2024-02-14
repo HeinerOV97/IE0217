@@ -112,7 +112,7 @@ def main():
           "respecto a su kilometraje")
     RegresionLinealPrecioVsKilometraje(data)
 
-    # Se realiza el analisis de datos utilizando regresion lineal
+    # Se realiza el analisis de datos utilizando regresion NO lineal
     # se predice el comportamiento del precio de los autos segun
     # el anno de fabricacion
     print("\nSe realiza un analisis utilizando regresion NO lineal,",
